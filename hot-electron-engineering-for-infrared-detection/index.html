@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Hot Electron Engineering for Infrared Detection — Electronic Devices using Low-Dimensional van der Waals Materials and Their Heterojunctions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="/sakura.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.0.0/tex-mml-chtml-nofont.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<ul class="topnav">
+      <li><a class="active" href="/dual-channel-high-performance-fet" style="margin-right: 2rem;">⬅ Dual-Channel High <br> Performance FET</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/conclusion-and-future-scope">Conclusion and <br> Future Scope  ➡</a></li>
+    </ul>
+<h1
+id="hot-electron-engineering-in-layered-heterojunction-for-efficient-infrared-detection">Hot
+electron engineering in layered heterojunction for efficient infrared
+detection</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Infrared (IR) photodetection is of great importance for a wide
+variety of technologies. Photodetection in the wavelength range in the C
+band (1528–1561 nm) and the L band (1561–1620 nm) is of great interest
+for optical communication systems<span class="citation"
+data-cites="7553489 hui2019introduction"><sup>1,2</sup></span>. IR
+photodetectors also find extensive applications in imaging<span
+class="citation" data-cites="lee2011monolithically"><sup>3</sup></span>,
+spectroscopy<span class="citation"
+data-cites="yeh2023infrared"><sup>4</sup></span>, night vision
+cameras<span class="citation"
+data-cites="wang2023two"><sup>5</sup></span>, and non-invasive
+biomedical applications<span class="citation"
+data-cites="hutchinson2010digital"><sup>6</sup></span>. Conventional
+inter-band photodetectors, where incident photons excite valence band
+electrons to the conduction band, are limited by their bandgap to detect
+long wavelength (lower energy) IR radiation. Thus, one must use narrow
+bandgap semiconductors to detect infrared photons. Unfortunately, these
+low-bandgap materials usually suffer from problems with stability,
+complex growth techniques, challenges in integration into standard
+fabrication flows, and often possess environment-safety-and-health (ESH)
+related concerns<span class="citation"
+data-cites="levine1993quantum phillips2002evaluation guyot2019colloidal"><sup>7–9</sup></span>.</p>
+<p>To this end, two-dimensional layered materials have garnered
+significant attention in the last decade owing to their extraordinary
+electrical, mechanical and optical properties<span class="citation"
+data-cites="fiori2014electronics chhowalla2016two lin2019van mak2016photonics an2022perspectives akinwande2014two"><sup>10–15</sup></span>.
+Gate-tunability and ease of formation of atomically smooth
+heterojunctions, with a large library of materials, made them highly
+attractive for sensitive photodetection applications<span
+class="citation"
+data-cites="murali2019highly nur2020high"><sup>16,17</sup></span>,
+including the IR regime<span class="citation"
+data-cites="guo2016black wu2018design amani2018solution mueller2010graphene kawano2013wide NithinSinglePhoton wang2024multidimensional"><sup>18–24</sup></span>.
+Unfortunately, there are similar concerns, as stated above, regarding
+the narrow bandgap layered materials as well<span class="citation"
+data-cites="NithinSinglePhoton chen2017widely"><sup>23,25</sup></span>.</p>
+<p>Using widely available, air-stable, wide bandgap materials for IR
+detection alleviates most of the above problems. However, the use of
+such materials would require a fundamentally different photodetection
+mechanism. A well-known mechanism is the intraband photo-excitation of
+carriers and subsequent collection of the hot carriers through a
+heterojunction<span class="citation"
+data-cites="1447578 sze2008semiconductor"><sup>26,27</sup></span>, also
+called internal photoemission. Schottky diodes<span class="citation"
+data-cites="1447578 1482595 1484911 78384"><sup>26,28–30</sup></span>,
+and more recently Graphene / 3D semiconductor Schottky junctions<span
+class="citation"
+data-cites="zeng2013monolayer casalino2017vertically goykhman2016chip 6513255"><sup>31–34</sup></span>
+and metal/2D Semiconductor Schottky junctions<span class="citation"
+data-cites="hong2015plasmonic hong2023engineering zhang2022high li2022telecom"><sup>35–38</sup></span>
+have been widely explored for this purpose.</p>
+<p>Unfortunately, due to the reasons stated below, for these Schottky
+junctions, and more so for those which use 2D layered materials, the
+achieved internal quantum efficiency is poor, plaguing the achievable
+photodetection efficiency and hence limiting their widespread
+applications. This work aims to propose and demonstrate a different
+class of intraband IR detector that intrinsically addresses this
+issue.</p>
+<h2 id="internal-quantum-efficiency-bottleneck">Internal quantum
+efficiency bottleneck</h2>
+<p>A typical Schottky photodiode utilizes the heterojunction between a
+metal and a bulk semiconductor as shown in Figure <a href="#key-issue"
+data-reference-type="ref" data-reference="key-issue">1.1</a>a. When the
+metal absorbs photons with energy above the Schottky barrier height
+(SBH), the hot carriers overcome the barrier and get injected into the
+semiconductor<span class="citation"
+data-cites="1484652 5485040"><sup>39,40</sup></span>. The built-in
+electric field in the semiconductor due to band bending pulls the hot
+carriers away from the junction (Figure <a href="#key-issue"
+data-reference-type="ref" data-reference="key-issue">1.1</a>d). The
+primary bottleneck in the internal quantum efficiency arises from the
+large free electron density in the metal, which causes rapid carrier
+relaxation due to ultrafast electron-electron (e-e) scattering. This
+results in a small fraction of the generated hot electrons to overcome
+the Schottky barrier.</p>
+<figure id="key-issue">
+<img src="/Figures/04_01.png" />
+<figcaption><strong>Key issue in hot electron photodetectors and
+proposed solution:</strong>(a) A typical Schottky diode-based
+photodetector with metal emitter (E) and bulk semiconducting collector
+(C). (b) A 2D hot-electron photodetector without any barrier layer. (c)
+The proposed 2D hot-electron photodetector with a barrier layer (shown
+in green) between the emitter and collector. (d) Band diagram of (a)
+along the dashed line. (e-f) Band diagrams of (b) along the horizontal
+black dashed line (e) and along the vertical magenta dashed line (f).
+(g) band diagram of (c) along the dashed line. In each band diagram, the
+brown solid line shows the electron path from being excited in the
+emitter to the collector. The red dashed line shows carrier relaxation
+due to e-e scattering. The grey dashed line denotes the back transfer
+from the collector to the emitter.</figcaption>
+</figure>
+<p>When an ultra-thin layered semiconductor replaces the bulk
+semiconductor (Figure <a href="#key-issue" data-reference-type="ref"
+data-reference="key-issue">1.1</a>b), and the photocarriers are
+extracted laterally, there is an additional mechanism that further
+plagues the quantum efficiency of the photodetector, as explained using
+the band diagrams in Figure <a href="#key-issue"
+data-reference-type="ref" data-reference="key-issue">1.1</a>e-f. These
+two band diagrams are plotted along the lateral dashed black line and
+vertical dashed magenta line in Figure <a href="#key-issue"
+data-reference-type="ref" data-reference="key-issue">1.1</a>b. Note that
+the electric field exponentially drops in the lateral direction within a
+transfer length (<span class="math inline">\(L_T\)</span>) from the
+metal-semiconductor contact edge<span class="citation"
+data-cites="somvanshi2017nature xia2011origins szabo2019electron"><sup>41–43</sup></span>,
+as marked by the dashed box in Figures <a href="#key-issue"
+data-reference-type="ref" data-reference="key-issue">1.1</a>b-e -
+degrading the drift of the photo-generated electrons under the
+metal-semiconductor overlap area. On the other hand, being the
+energetically favourable process, the photo-induced carriers injected
+from metal to the layered material are transferred back to the metal at
+a fast timescale (<span class="math inline">\(\tau_{sm}\)</span>) (see
+Figure <a href="#key-issue" data-reference-type="ref"
+data-reference="key-issue">1.1</a>f). <span
+class="math inline">\(\tau_{sm}\)</span> is far shorter than the time
+(<span class="math inline">\(\tau_l\)</span>) it takes for the carrier
+to traverse the lateral metal-semiconductor overlap area. This results
+in poor carrier injection efficiency unless the photocarrier is
+generated adjacent to the metal-semiconductor edge<span class="citation"
+data-cites="somvanshi2017nature hong2023engineering"><sup>36,41</sup></span>.
+This effectively reduces the active area of the photodetector,
+eventually resulting in a weak photoresponse.</p>
+<h2 id="proposed-device-structure">Proposed device structure</h2>
+<p>To circumvent these problems, we propose to use an asymmetric double
+heterostructure with a thin barrier layer being sandwiched between the
+emitter (carrier injector) and the collector layers (Figure <a
+href="#key-issue" data-reference-type="ref"
+data-reference="key-issue">1.1</a>c). Unlike a typical Schottky barrier
+diode, the collector conduction band (CB) edge is chosen to be
+energetically lower than the emitter, as shown in Figure <a
+href="#key-issue" data-reference-type="ref"
+data-reference="key-issue">1.1</a>g. The proposed structure has several
+important features: (a) The light absorption occurs in a doped
+semiconductor instead of a metal, and we show later that the interplay
+between the availability of free electrons and e-e scattering dictates
+an optimum doping that provides the maximum photoresponse. A gate
+voltage tunes the doping in the absorbing layer. (b) The band-offsets of
+the constituting layers are chosen so that the heterojunction acts as a
+valve. Once the hot electrons are transferred from the emitter layer to
+the collector layer and relax to the band edge, the back transfer
+probability is minimal due to the high energy cost. We note that fast
+carrier relaxation is detrimental in the emitter but is desirable in the
+collector as it reduces back transfer probability. Thus, choosing a
+metal as the collector layer further helps to improve the photoresponse.
+(c) The asymmetric band-offsets also help towards the unidirectional
+flow of photocurrent, improving the overall efficiency (indicated by the
+thickness of arrows in Figure <a href="#schematic-representation"
+data-reference-type="ref"
+data-reference="schematic-representation">1.2</a>). (d) The metal also
+acts as a back reflector for the incident photons, and the thickness of
+the entire stack is optimized to improve absorption.</p>
+<figure id="schematic-representation">
+<img src="/Figures/04_02.png" />
+<figcaption><strong>Proposed structure and relative
+performance:</strong>(a-c) Schematic representation of: (a) D1, -Au
+device without any barrier layer. (b) D2, // device where the  barrier
+layer is sandwiched between the  emitter and  collector. The two layers
+are contacted using a few layer graphene (FLG). (c) D3, //Au device with
+ emitter and Au collector. Gate (G), emitter (E) and collector (C)
+terminals are indicated. The corresponding schematic band diagrams of
+the conduction band edge (CB) are shown in (d), (e) and (f),
+respectively. The strength of the photocurrent in different directions
+is shown by the width of the corresponding arrow.</figcaption>
+</figure>
+<p>We perform a systematic study by fabricating three structures (D1,
+D2, and D3), as schematically depicted in Figures <a
+href="#schematic-representation" data-reference-type="ref"
+data-reference="schematic-representation">1.2</a>a-c. Figures <a
+href="#schematic-representation" data-reference-type="ref"
+data-reference="schematic-representation">1.2</a>d-f show the
+corresponding band diagrams. The thickness of the different layered
+semiconductors (, , and ) used is <span
+class="math inline">\(\sim\)</span>5 nm in all the devices. All the
+devices are encapsulated using h-BN to provide stability from ambient
+conditions. Further, the devices are annealed at 150 <span
+class="math inline">\(\mathrm{^oC}\)</span> in a vacuum for three hours
+to provide good contact between the layers. In D1, we directly place  on
+Au film, making a conventional Schottky photodiode. D2 consists of a
+stack of // layers. The infrared photons excite electrons in the
+conduction band of the  emitter layer, which are collected by the
+ collector through the  barrier layer. However, the electrons excited in
+the  collector layer find it difficult to cross the barrier due to the
+larger barrier to . Finally, in D3, a  barrier layer is sandwiched
+between Au collector and  emitter layers. As shown in Figures <a
+href="#schematic-representation" data-reference-type="ref"
+data-reference="schematic-representation">1.2</a>a-c, all three
+structures are controlled by a gate voltage (<span
+class="math inline">\(V_G\)</span>).</p>
+<figure id="schematic-representation_01">
+<img src="/Figures/04_03.png" />
+<figcaption>(a) Comparative photocurrent of the device structures D1, D2
+and D3 at similar incident power (1550 nm). (b) Gate bias (<span
+class="math inline">\(\mathrm{V_G}\)</span>) dependent collector current
+characteristics of D2 as a function of collector bias. (c)
+Temperature-dependent collector current characteristics of D3 as a
+function of collector bias. (d) Arrhenius plot to extract Schottky
+barrier height for Au injection (0.16 eV) for the device
+D3.</figcaption>
+</figure>
+<p>Figure <a href="#schematic-representation_01"
+data-reference-type="ref"
+data-reference="schematic-representation_01">1.3</a>a shows the relative
+photoresponse of the three structures when excited with the same optical
+power (<span class="math inline">\(P_{op}\)</span>) of 1550 nm
+radiation. D1 shows no measurable photocurrent (<span
+class="math inline">\(I_{ph}\)</span>)<span class="citation"
+data-cites="hong2023engineering"><sup>36</sup></span>, likely due to
+strong backscattering, as discussed above. D2 and D3 exhibit appreciable
+photoresponse; however, <span class="math inline">\(I_{ph}\)</span> from
+D3 is about 1000-fold stronger than that of D2. The enhanced structural
+asymmetry and fast relaxation of the injected carriers in the Au
+collector layer improve the unidirectional flow of <span
+class="math inline">\(I_{ph}\)</span> in D3 (Figures <a
+href="#schematic-representation" data-reference-type="ref"
+data-reference="schematic-representation">1.2</a>e-f).</p>
+<p>To understand the difference in asymmetry between D2 and D3, we
+perform current-voltage characteristics in the dark condition (Figure <a
+href="#schematic-representation_01" data-reference-type="ref"
+data-reference="schematic-representation_01">1.3</a>b-c). The results
+suggest a more diode-like behaviour in D3 compared with D2, which
+results in stronger asymmetry. Further, we show the current-voltage
+characteristics for D3 at different temperatures (Figure <a
+href="#schematic-representation_01" data-reference-type="ref"
+data-reference="schematic-representation_01">1.3</a>b). Note that when
+the electrons are injected from Au to  (negative collector bias), there
+is a strong temperature dependence, indicating thermionic emission. We
+extract an effective SBH of about 0.16 eV from the temperature
+dependence, as shown in Figure <a href="#schematic-representation_01"
+data-reference-type="ref"
+data-reference="schematic-representation_01">1.3</a>d. On the other
+hand, when electrons are injected from  to Au (positive collector bias),
+the temperature dependence is negligible, suggesting that the carriers
+tunnel through the  barrier layer.</p>
+<h2 id="engineering-the-hot-electron-injection">Engineering the hot
+electron injection</h2>
+<p>When illuminated, the electrons in the conduction band of the emitter
+layer are excited to higher energy states. These non-equilibrium high
+energy electrons (hot electrons), in turn, relax initially through e-e
+scattering in an ultrafast time scale (<span
+class="math inline">\(\tau_{ee}\)</span>) and eventually through phonon
+scattering at a relatively longer timescale (<span
+class="math inline">\(\tau_{p}\)</span>)<span class="citation"
+data-cites="mylnikov2024infrared wittenbecher2021unraveling chen2020hot"><sup>44–46</sup></span>.
+However, in the van der Waals junctions under consideration, the hot
+electrons are also transferred from the emitter to the collector at a
+fast timescale (<span class="math inline">\(\tau_{ec}\)</span>), with
+<span class="math inline">\(\tau_{ee} &lt; \tau_{ec} &lt;
+\tau_{p}\)</span>. Thus, essentially, the injection efficiency to the
+collector is controlled by the e-e scattering rate, which, in turn, can
+be controlled by tuning the free electron density in the emitter layer
+through a gate voltage (<span class="math inline">\(V_G\)</span>).</p>
+<figure id="sbh-model">
+<img src="/Figures/04_04.png" />
+<figcaption>(a) Photocurrent as a function of gate bias for device
+structures D2 (left panel) and D3 (right panel). The red stars indicate
+experimental data, and the blue traces indicate model prediction. (b)
+Carrier excitation and relaxation for high gate bias (bottom panel, with
+higher carrier concentration) and low gate bias (top panel, with lower
+carrier concentration). The relaxation time (<span
+class="math inline">\(\tau_{e-e}^E\)</span>) for higher gate bias is
+lower. The thickness of different arrows indicates the relative strength
+of the process. (c) Fitted electron temperature (<span
+class="math inline">\(T_e\)</span>) profile for devices D2 (left panel)
+and D3 (right panel) as a function of gate bias. (d) Schematic band
+profiles for two gate biases: low (solid line) and high (dashed line).
+For each gate bias, the electron distribution is also shown for low
+<span class="math inline">\(T_e\)</span> and high <span
+class="math inline">\(T_e\)</span> in blue and red traces, respectively.
+Arrows indicate the carriers that can cross the barrier.</figcaption>
+</figure>
+<p>We plot the <span class="math inline">\(V_G\)</span> dependence of
+<span class="math inline">\(I_{ph}\)</span> for both D2 and D3 in the
+left and right panels of Figure <a href="#sbh-model"
+data-reference-type="ref" data-reference="sbh-model">1.4</a>a,
+respectively. For both the devices, <span
+class="math inline">\(I_{ph}\)</span> initially increases with an
+increase in <span class="math inline">\(V_G\)</span>, reaching a maximum
+value, followed by a reduction in <span
+class="math inline">\(I_{ph}\)</span> with a further increase in <span
+class="math inline">\(V_G\)</span>. At large <span
+class="math inline">\(V_G\)</span>, we again observe a weak increasing
+trend of <span class="math inline">\(I_{ph}\)</span> with <span
+class="math inline">\(V_G\)</span>. The initial increase in <span
+class="math inline">\(I_{ph}\)</span> is expected due to an increase in
+the available number of electrons that can be excited to higher energy
+states by the incoming infrared radiation (see top panel of Figure <a
+href="#sbh-model" data-reference-type="ref"
+data-reference="sbh-model">1.4</a>b). However, when the electron density
+increases significantly (bottom panel of Figure <a href="#sbh-model"
+data-reference-type="ref" data-reference="sbh-model">1.4</a>b), the fast
+relaxation due to enhanced e-e scattering tends to quench the hot
+electron density, reducing the injection efficiency to the collector,
+thus degrading the net <span class="math inline">\(I_{ph}\)</span>.</p>
+<p>We develop a simple physical model to explain such nonmonotonic
+behaviour quantitatively, as schematically explained in the bottom panel
+of Figure <a href="#sbh-model" data-reference-type="ref"
+data-reference="sbh-model">1.4</a>d. The details of the model are
+described in Appendix <a href="#hot-electron-model"
+data-reference-type="ref"
+data-reference="hot-electron-model">[hot-electron-model]</a>. We solve
+the Poisson equation along the vertical dimension to obtain the
+electrostatic potential of each layer under dark conditions. We assume
+that, under illumination, the nonequilibrium electrons available for
+transfer to the collector can be described by Fermi-Dirac statistics
+with a higher electron temperature (<span
+class="math inline">\(T_e\)</span>) compared to the lattice temperature
+(<span class="math inline">\(T_L\)</span>). <span
+class="math inline">\(T_e\)</span> is primarily governed by the e-e
+scattering under the condition of <span class="math inline">\(\tau_{ee}
+&lt; \tau_{ec} &lt; \tau_{p}\)</span>. A higher <span
+class="math inline">\(T_e\)</span> broadens the electron distribution
+with a longer high energy tail, thus allowing more electrons to cross
+the barrier layer (Figure <a href="#sbh-model" data-reference-type="ref"
+data-reference="sbh-model">1.4</a>d). We use <span
+class="math inline">\(T_e\)</span> as a fitting parameter. The model
+predicted <span class="math inline">\(I_{ph}\)</span> is shown in blue
+traces in Figure <a href="#sbh-model" data-reference-type="ref"
+data-reference="sbh-model">1.4</a>a, and the corresponding fitted <span
+class="math inline">\(T_e\)</span> is depicted as a function of <span
+class="math inline">\(V_G\)</span> in Figure <a href="#sbh-model"
+data-reference-type="ref" data-reference="sbh-model">1.4</a>c.</p>
+<p>Consider the case of small <span class="math inline">\(V_G\)</span>
+in Figure <a href="#sbh-model" data-reference-type="ref"
+data-reference="sbh-model">1.4</a>d. The conduction band edges are shown
+in black solid lines, and the corresponding electron distributions with
+and without photoexcitation are shown in blue and red continuous traces,
+respectively. Both are calculated, keeping the total electron
+concentration in the conduction band fixed. This is achieved by
+calculating a new quasi-Fermi level under illumination. The broader
+electron distribution under illumination allows more carriers to cross
+the barrier.</p>
+<p>At higher <span class="math inline">\(V_G\)</span>, the free electron
+density increases under dark conditions, and the band edges are
+energetically shifted downward (shown in black dashed lines). This
+increment in the available free electron density results in an enhanced
+<span class="math inline">\(I_{ph}\)</span> (the rising part in Figure
+<a href="#sbh-model" data-reference-type="ref"
+data-reference="sbh-model">1.4</a>a). However, with further increase in
+<span class="math inline">\(V_G\)</span>, <span
+class="math inline">\(T_e\)</span> also decreases due to faster e-e
+scattering (Figure <a href="#sbh-model" data-reference-type="ref"
+data-reference="sbh-model">1.4</a>d), resulting in a narrower electron
+distribution (dashed traces in blue and red under dark and illumination
+conditions, respectively), eventually reducing <span
+class="math inline">\(I_{ph}\)</span>. Figure <a href="#sbh-model"
+data-reference-type="ref" data-reference="sbh-model">1.4</a>c indicates
+that the fitted <span class="math inline">\(T_e\)</span> gradually
+reduces with <span class="math inline">\(V_G\)</span> for both D2 and
+D3, as expected. With an even further increase in <span
+class="math inline">\(V_G\)</span>, the increase in electron
+concentration slows down significantly due to screening, which in turn
+flattens out <span class="math inline">\(T_e\)</span> and results in
+either flattening or slight increment in <span
+class="math inline">\(I_{ph}\)</span> again. The results suggest an
+intricate way to tune the quantum efficiency of the photodetector by
+controlling e-e scattering.</p>
+<h2 id="infrared-photodetection-performance">Infrared photodetection
+performance</h2>
+<p>We now focus on device D3 for analyzing the IR detection performance.
+To understand the steady-state <span
+class="math inline">\(I_{ph}\)</span> characteristics under 1550 nm
+excitation, we plot in Figure <a href="#performance"
+data-reference-type="ref" data-reference="performance">1.5</a>a the
+device current of D3 under laser on (shaded regions) and off conditions
+at various collector bias (<span class="math inline">\(V_{CE}\)</span>)
+values. The magnitude of the device current systematically increases
+with <span class="math inline">\(V_{CE}\)</span>. The corresponding
+photocurrent (<span class="math inline">\(I_{ph} =
+I_{light}-I_{dark}\)</span>) is plotted in Figure <a href="#performance"
+data-reference-type="ref" data-reference="performance">1.5</a>b. Due to
+an increased bias, a higher electric field helps the electrons excited
+in the emitter layer to quickly escape to the collector before
+relaxation, increasing <span class="math inline">\(I_{ph}\)</span>.
+However, due to an increase in <span
+class="math inline">\(I_{dark}\)</span>, larger <span
+class="math inline">\(V_{CE}\)</span> also increases the shot noise, as
+clearly observed in Figure <a href="#performance"
+data-reference-type="ref" data-reference="performance">1.5</a>b.</p>
+<figure id="performance">
+<img src="/Figures/04_05.png" />
+<figcaption>(a) Collector current of device D3 with periodic optical
+(1550 nm) excitation. Grey bands indicate the duration when the optical
+excitation is on. (b) Collector bias dependence of
+photocurrent.</figcaption>
+</figure>
+<figure id="performance_01">
+<img src="/Figures/04_06.png" />
+<figcaption>(a) Responsivity (R) of the photodetector as a function of
+input power at a collector bias of <span
+class="math inline">\(\mathrm{4\ V}\)</span>. (b) The detector’s
+signal-to-noise ratio (SNR) as a function of input power at a collector
+bias of <span class="math inline">\(\mathrm{4\ V}\)</span> (red
+triangles), <span class="math inline">\(\mathrm{2\ V}\)</span> (green
+dots) and <span class="math inline">\(\mathrm{0.1\ V}\)</span> (blue
+stars). (c) Normalized photocurrent at zero collector bias at various
+NIR wavelengths.</figcaption>
+</figure>
+<p>The corresponding responsivity (<span
+class="math inline">\(R={I_{ph}}/{P_{op}}\)</span> at <span
+class="math inline">\(V_{CE}=4\)</span> V) is plotted in Figure <a
+href="#performance_01" data-reference-type="ref"
+data-reference="performance_01">1.6</a>a as a function of incident
+optical power (<span class="math inline">\(P_{op}\)</span>), showing a
+maximum <span class="math inline">\(R\)</span> of 42 mA/W. Note that,
+unlike typical 2D material-based photodetectors, <span
+class="math inline">\(R\)</span> remains a weak function of <span
+class="math inline">\(P_{op}\)</span> in the entire range, suggesting a
+negligible role of photocarrier recombination and trapping effects.</p>
+<p>We extract the noise amplitude (<span
+class="math inline">\(N\)</span>) from the low-frequency temporal
+response of D3 (Figure <a href="#performance" data-reference-type="ref"
+data-reference="performance">1.5</a>a) by calculating the standard
+deviation of the device current under optical illumination. The
+corresponding signal-to-noise ratio (<span
+class="math inline">\(\mathrm{SNR} = \frac{I_{ph}}{N}\)</span>) is
+plotted in Figure <a href="#performance_01" data-reference-type="ref"
+data-reference="performance_01">1.6</a>b as a function of <span
+class="math inline">\(P_{op}\)</span>, for different <span
+class="math inline">\(V_{CE}\)</span>. Interestingly, at low <span
+class="math inline">\(P_{op}\)</span>, we obtain higher SNR at <span
+class="math inline">\(V_{CE}=2\)</span> V compared with <span
+class="math inline">\(V_{CE}=4\)</span> V due to enhanced shot noise at
+higher bias. This suggests that an optimal <span
+class="math inline">\(V_{CE}\)</span> exists for weak signal detection
+to maximize SNR.</p>
+<p>The photoresponse of D3 is nearly flat from 1100 nm to 1800 nm
+excitation (Figure <a href="#performance_01" data-reference-type="ref"
+data-reference="performance_01">1.6</a>c). A similar broad response is
+obtained from D2 as well (see Appendix <a href="#wav-response-of-d2"
+data-reference-type="ref"
+data-reference="wav-response-of-d2">[wav-response-of-d2]</a>). This
+broad response arises because the photon energy at this wavelength range
+is significantly higher than the band offset between the emitter and the
+barrier layer. The results from another fabrication run of D3 are shown
+in Appendix <a href="#char-of-d3-device" data-reference-type="ref"
+data-reference="char-of-d3-device">[char-of-d3-device]</a>.</p>
+<h2 id="frequency-response-of-the-detector">Frequency response of the
+detector</h2>
+<p>Next, we measure the frequency response of D3 using a setup shown in
+Figure <a href="#frequency-response" data-reference-type="ref"
+data-reference="frequency-response">1.7</a>a. The detector is connected
+to a <span class="math inline">\(V_{BIAS}=-4\)</span> V through an
+external load resistor (<span class="math inline">\(R_L\)</span>) of 570
+<span class="math inline">\(k\Omega\)</span>, which helps convert the
+output current to a voltage signal. The signal from the photodetector is
+fed to a JFET-based single-stage amplifier with a load resistance (<span
+class="math inline">\(R_D\)</span>) of 100 <span
+class="math inline">\(\Omega\)</span>. The JFET is biased with a <span
+class="math inline">\(V_{DD}=3\)</span> V. The detector, external
+resistors and the JFET are integrated into a printed circuit board (PCB)
+(onset in Figure <a href="#frequency-response" data-reference-type="ref"
+data-reference="frequency-response">1.7</a>a). The signal output is then
+further bandpass-filtered with an input gain of 20 dB and observed in an
+oscilloscope.</p>
+<figure id="frequency-response">
+<img src="/Figures/04_07.png" />
+<figcaption>(a) Circuit diagram representing the setup to measure the
+frequency response. Inset: The 2D photodetector chip integrated into a
+PCB with other off-chip electronics. (b) Temporal response of the
+detector D3 from 100 Hz to 30 kHz. Signal above the noise floor can be
+observed up to 30 kHz. (c) Relative response (<span
+class="math inline">\(V_{OUT} / V_{OUT-100\ Hz}\)</span>) in dB of the
+device D3 as a function of frequency.</figcaption>
+</figure>
+<p>The photodetector is illuminated with a 1550 nm laser at varying
+frequencies. The temporal response of the signal for different
+frequencies is shown in Figure <a href="#frequency-response"
+data-reference-type="ref" data-reference="frequency-response">1.7</a>b.
+The time during which light is illuminated is shown in grey bands in the
+top left panel. The signal output progressively diminishes with higher
+frequencies. A signal above the noise floor could be observed up to
+<span class="math inline">\(\sim\)</span>30 KHz. Figure <a
+href="#frequency-response" data-reference-type="ref"
+data-reference="frequency-response">1.7</a>c shows relative
+photoresponse (in dB) as a function of the laser intensity modulation
+frequency.</p>
+<p>The measured frequency response is primarily limited by the
+gain-bandwidth product of the external measurement setup and not by the
+intrinsic device. The limiting factor likely arises from the relatively
+large input capacitance of the JFET. The intrinsic response from the
+device itself could be much faster, as all the physical processes
+involved in the detection mechanism are fast. In Appendix <a
+href="#freq-red-laser" data-reference-type="ref"
+data-reference="freq-red-laser">[freq-red-laser]</a>, we show the
+device’s response to 633 nm excitation (which allows bandgap absorption
+and hence a stronger signal), demonstrating a detectable response above
+the noise floor up to 100 KHz.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>To conclude, we demonstrate a different class of intra-band
+photodetector with intrinsically improved internal quantum efficiency
+through elegant hot electron management. The simplicity of the design
+makes the device readily integrable with different photo-excitation
+schemes, such as with a waveguide. We also demonstrate the heterogeneous
+integration of the photodetector chip with post-processing electronics
+on a printed circuit board, making it immediately usable at a system
+level.</p>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-7553489" class="csl-entry" role="listitem">
+<sup>1</sup> H. Kaushal, and G. Kaddoum, <span>“<a
+href="https://doi.org/10.1109/COMST.2016.2603518"><span
+class="nocase">Optical Communication in Space: Challenges and Mitigation
+Techniques</span></a>,”</span> IEEE Communications Surveys &amp;
+Tutorials <strong>19</strong>(1), 57–96 (2017).
+</div>
+<div id="ref-hui2019introduction" class="csl-entry" role="listitem">
+<sup>2</sup> R. Hui, <em><span class="nocase">Introduction to
+Fiber-Optic Communications</span></em> (Academic Press, 2019).
+</div>
+<div id="ref-lee2011monolithically" class="csl-entry" role="listitem">
+<sup>3</sup> S.J. Lee, Z. Ku, A. Barve, J. Montoya, W.-Y. Jang, S.
+Brueck, M. Sundaram, A. Reisinger, S. Krishna, and S.K. Noh,
+<span>“<span class="nocase">A monolithically integrated plasmonic
+infrared quantum dot camera</span>,”</span> Nature Communications
+<strong>2</strong>(1), 286 (2011).
+</div>
+<div id="ref-yeh2023infrared" class="csl-entry" role="listitem">
+<sup>4</sup> K. Yeh, I. Sharma, K. Falahkheirkhah, M.P. Confer, A.C.
+Orr, Y.-T. Liu, Y. Phal, R.-J. Ho, M. Mehta, A. Bhargava, and others,
+<span>“<span class="nocase">Infrared spectroscopic laser scanning
+confocal microscopy for whole-slide chemical imaging</span>,”</span>
+Nature Communications <strong>14</strong>(1), 5215 (2023).
+</div>
+<div id="ref-wang2023two" class="csl-entry" role="listitem">
+<sup>5</sup> F. Wang, F. Hu, M. Dai, S. Zhu, F. Sun, R. Duan, C. Wang,
+J. Han, W. Deng, W. Chen, and others, <span>“<span class="nocase">A
+two-dimensional mid-infrared optoelectronic retina enabling simultaneous
+perception and encoding</span>,”</span> Nature Communications
+<strong>14</strong>(1), 1938 (2023).
+</div>
+<div id="ref-hutchinson2010digital" class="csl-entry" role="listitem">
+<sup>6</sup> L. Hutchinson, <span>“<span class="nocase">Digital infrared
+breast scan shows promise for detecting cancer</span>,”</span> Nature
+Reviews Clinical Oncology <strong>7</strong>(9), 483–483 (2010).
+</div>
+<div id="ref-levine1993quantum" class="csl-entry" role="listitem">
+<sup>7</sup> B. Levine, <span>“<span class="nocase">Quantum-well
+infrared photodetectors</span>,”</span> Journal of Applied Physics
+<strong>74</strong>(8), R1–R81 (1993).
+</div>
+<div id="ref-phillips2002evaluation" class="csl-entry" role="listitem">
+<sup>8</sup> J. Phillips, <span>“<span class="nocase">Evaluation of the
+fundamental properties of quantum dot infrared detectors</span>,”</span>
+Journal of Applied Physics <strong>91</strong>(7), 4590–4594 (2002).
+</div>
+<div id="ref-guyot2019colloidal" class="csl-entry" role="listitem">
+<sup>9</sup> P. Guyot-Sionnest, M.M. Ackerman, and X. Tang, <span>“<span
+class="nocase">Colloidal quantum dots for infrared detection beyond
+silicon</span>,”</span> The Journal of Chemical Physics
+<strong>151</strong>(6), (2019).
+</div>
+<div id="ref-fiori2014electronics" class="csl-entry" role="listitem">
+<sup>10</sup> G. Fiori, F. Bonaccorso, G. Iannaccone, T. Palacios, D.
+Neumaier, A. Seabaugh, S.K. Banerjee, and L. Colombo, <span>“<span
+class="nocase">Electronics based on two-dimensional
+materials</span>,”</span> Nature Nanotechnology <strong>9</strong>(10),
+768–779 (2014).
+</div>
+<div id="ref-chhowalla2016two" class="csl-entry" role="listitem">
+<sup>11</sup> M. Chhowalla, D. Jena, and H. Zhang, <span>“<span
+class="nocase">Two-dimensional semiconductors for
+transistors</span>,”</span> Nature Reviews Materials
+<strong>1</strong>(11), 1–15 (2016).
+</div>
+<div id="ref-lin2019van" class="csl-entry" role="listitem">
+<sup>12</sup> Z. Lin, Y. Huang, and X. Duan, <span>“<span
+class="nocase">Van der Waals thin-film electronics</span>,”</span>
+Nature Electronics <strong>2</strong>(9), 378–388 (2019).
+</div>
+<div id="ref-mak2016photonics" class="csl-entry" role="listitem">
+<sup>13</sup> K.F. Mak, and J. Shan, <span>“<span
+class="nocase">Photonics and optoelectronics of 2D semiconductor
+transition metal dichalcogenides</span>,”</span> Nature Photonics
+<strong>10</strong>(4), 216–226 (2016).
+</div>
+<div id="ref-an2022perspectives" class="csl-entry" role="listitem">
+<sup>14</sup> J. An, X. Zhao, Y. Zhang, M. Liu, J. Yuan, X. Sun, Z.
+Zhang, B. Wang, S. Li, and D. Li, <span>“<span
+class="nocase">Perspectives of 2D materials for optoelectronic
+integration</span>,”</span> Advanced Functional Materials
+<strong>32</strong>(14), 2110119 (2022).
+</div>
+<div id="ref-akinwande2014two" class="csl-entry" role="listitem">
+<sup>15</sup> D. Akinwande, N. Petrone, and J. Hone, <span>“<span
+class="nocase">Two-dimensional flexible nanoelectronics</span>,”</span>
+Nature Communications <strong>5</strong>(1), 5678 (2014).
+</div>
+<div id="ref-murali2019highly" class="csl-entry" role="listitem">
+<sup>16</sup> K. Murali, N. Abraham, S. Das, S. Kallatt, and K.
+Majumdar, <span>“<span class="nocase">Highly sensitive, fast graphene
+photodetector with responsivity <span class="math inline">\(&gt;
+10^6\)</span> A/W using a floating quantum well gate</span>,”</span> ACS
+Applied Materials &amp; Interfaces <strong>11</strong>(33), 30010–30018
+(2019).
+</div>
+<div id="ref-nur2020high" class="csl-entry" role="listitem">
+<sup>17</sup> R. Nur, T. Tsuchiya, K. Toprasertpong, K. Terabe, S.
+Takagi, and M. Takenaka, <span>“<span class="nocase">High responsivity
+in  phototransistors based on charge trapping <span
+class="math inline">\(\mathrm{HfO_2}\)</span>
+dielectrics</span>,”</span> Communications Materials
+<strong>1</strong>(1), 103 (2020).
+</div>
+<div id="ref-guo2016black" class="csl-entry" role="listitem">
+<sup>18</sup> Q. Guo, A. Pospischil, M. Bhuiyan, H. Jiang, H. Tian, D.
+Farmer, B. Deng, C. Li, S.-J. Han, H. Wang, and others, <span>“<span
+class="nocase">Black phosphorus mid-infrared photodetectors with high
+gain</span>,”</span> Nano Letters <strong>16</strong>(7), 4648–4655
+(2016).
+</div>
+<div id="ref-wu2018design" class="csl-entry" role="listitem">
+<sup>19</sup> D. Wu, Y. Wang, L. Zeng, C. Jia, E. Wu, T. Xu, Z. Shi, Y.
+Tian, X. Li, and Y.H. Tsang, <span>“<span class="nocase">Design of 2D
+layered <span class="math inline">\(\mathrm{PtSe_2}\)</span>
+heterojunction for the high-performance, room-temperature, broadband,
+infrared photodetector</span>,”</span> Acs Photonics
+<strong>5</strong>(9), 3820–3827 (2018).
+</div>
+<div id="ref-amani2018solution" class="csl-entry" role="listitem">
+<sup>20</sup> M. Amani, C. Tan, G. Zhang, C. Zhao, J. Bullock, X. Song,
+H. Kim, V.R. Shrestha, Y. Gao, K.B. Crozier, and others, <span>“<span
+class="nocase">Solution-synthesized high-mobility tellurium nanoflakes
+for short-wave infrared photodetectors</span>,”</span> ACS Nano
+<strong>12</strong>(7), 7253–7263 (2018).
+</div>
+<div id="ref-mueller2010graphene" class="csl-entry" role="listitem">
+<sup>21</sup> T. Mueller, F. Xia, and P. Avouris, <span>“<span
+class="nocase">Graphene photodetectors for high-speed optical
+communications</span>,”</span> Nature Photonics <strong>4</strong>(5),
+297–301 (2010).
+</div>
+<div id="ref-kawano2013wide" class="csl-entry" role="listitem">
+<sup>22</sup> Y. Kawano, <span>“<span class="nocase">Wide-band
+frequency-tunable terahertz and infrared detection with
+graphene</span>,”</span> Nanotechnology <strong>24</strong>(21), 214004
+(2013).
+</div>
+<div id="ref-NithinSinglePhoton" class="csl-entry" role="listitem">
+<sup>23</sup> N. Abraham, K. Watanabe, T. Taniguchi, and K. Majumdar,
+<span>“<span class="nocase">Room Temperature Single Photon Detection at
+1550 nm Using van der Waals Heterojunction</span>,”</span> Advanced
+Functional Materials, 2406510 (2024).
+</div>
+<div id="ref-wang2024multidimensional" class="csl-entry"
+role="listitem">
+<sup>24</sup> F. Wang, S. Zhu, W. Chen, J. Han, R. Duan, C. Wang, M.
+Dai, F. Sun, Y. Jin, and Q.J. Wang, <span>“<span
+class="nocase">Multidimensional detection enabled by twisted black
+arsenic–phosphorus homojunctions</span>,”</span> Nature Nanotechnology
+<strong>19</strong>(4), 455–462 (2024).
+</div>
+<div id="ref-chen2017widely" class="csl-entry" role="listitem">
+<sup>25</sup> X. Chen, X. Lu, B. Deng, O. Sinai, Y. Shao, C. Li, S.
+Yuan, V. Tran, K. Watanabe, T. Taniguchi, and others, <span>“<span
+class="nocase">Widely tunable black phosphorus mid-infrared
+photodetector</span>,”</span> Nature Communications
+<strong>8</strong>(1), 1672 (2017).
+</div>
+<div id="ref-1447578" class="csl-entry" role="listitem">
+<sup>26</sup> D.W. Peters, <span>“<a
+href="https://doi.org/10.1109/PROC.1967.5648"><span class="nocase">An
+infrared detector utilizing internal photoemission</span></a>,”</span>
+Proceedings of the IEEE <strong>55</strong>(5), 704–705 (1967).
+</div>
+<div id="ref-sze2008semiconductor" class="csl-entry" role="listitem">
+<sup>27</sup> S.M. Sze, <em><span class="nocase">Semiconductor devices:
+physics and technology</span></em> (John wiley &amp; sons, 2008).
+</div>
+<div id="ref-1482595" class="csl-entry" role="listitem">
+<sup>28</sup> H. Elabd, T. Villani, and W. Kosonocky, <span>“<a
+href="https://doi.org/10.1109/EDL.1982.25490"><span
+class="nocase">Palladium-silicide Schottky-barrier IR-CCD for SWIR
+applications at intermediate temperatures</span></a>,”</span> IEEE
+Electron Device Letters <strong>3</strong>(4), 89–90 (1982).
+</div>
+<div id="ref-1484911" class="csl-entry" role="listitem">
+<sup>29</sup> W.F. Kosonocky, F.V. Shallcross, T.S. Villani, and J.V.
+Groppe, <span>“<a href="https://doi.org/10.1109/T-ED.1985.22165"><span
+class="nocase">160 <span class="math inline">\(\times\)</span> 244
+Element PtSi Schottky-barrier IR-CCD image sensor</span></a>,”</span>
+IEEE Transactions on Electron Devices <strong>32</strong>(8), 1564–1573
+(1985).
+</div>
+<div id="ref-78384" class="csl-entry" role="listitem">
+<sup>30</sup> C.K. Chen, B. Nechay, and B.-Y. Tsaur, <span>“<a
+href="https://doi.org/10.1109/16.78384"><span
+class="nocase">Ultraviolet, visible, and infrared response of PtSi
+Schottky-barrier detectors operated in the front-illuminated
+mode</span></a>,”</span> IEEE Transactions on Electron Devices
+<strong>38</strong>(5), 1094–1103 (1991).
+</div>
+<div id="ref-zeng2013monolayer" class="csl-entry" role="listitem">
+<sup>31</sup> L.-H. Zeng, M.-Z. Wang, H. Hu, B. Nie, Y.-Q. Yu, C.-Y. Wu,
+L. Wang, J.-G. Hu, C. Xie, F.-X. Liang, and others, <span>“<span
+class="nocase">Monolayer graphene/germanium Schottky junction as
+high-performance self-driven infrared light
+photodetector</span>,”</span> ACS Applied Materials &amp; Interfaces
+<strong>5</strong>(19), 9362–9366 (2013).
+</div>
+<div id="ref-casalino2017vertically" class="csl-entry" role="listitem">
+<sup>32</sup> M. Casalino, U. Sassi, I. Goykhman, A. Eiden, E.
+Lidorikis, S. Milana, D. De Fazio, F. Tomarchio, M. Iodice, G. Coppola,
+and others, <span>“<span class="nocase">Vertically illuminated, resonant
+cavity enhanced, graphene–silicon Schottky
+photodetectors</span>,”</span> ACS Nano <strong>11</strong>(11),
+10955–10963 (2017).
+</div>
+<div id="ref-goykhman2016chip" class="csl-entry" role="listitem">
+<sup>33</sup> I. Goykhman, U. Sassi, B. Desiatov, N. Mazurski, S.
+Milana, D. De Fazio, A. Eiden, J. Khurgin, J. Shappir, U. Levy, and
+others, <span>“<span class="nocase">On-chip integrated, silicon–graphene
+plasmonic Schottky photodetector with high responsivity and avalanche
+photogain</span>,”</span> Nano Letters <strong>16</strong>(5), 3005–3013
+(2016).
+</div>
+<div id="ref-6513255" class="csl-entry" role="listitem">
+<sup>34</sup> M. Amirmazlaghani, F. Raissi, O. Habibpour, J. Vukusic,
+and J. Stake, <span>“<a
+href="https://doi.org/10.1109/JQE.2013.2261472"><span>Graphene-Si
+Schottky IR Detector</span></a>,”</span> IEEE Journal of Quantum
+Electronics <strong>49</strong>(7), 589–594 (2013).
+</div>
+<div id="ref-hong2015plasmonic" class="csl-entry" role="listitem">
+<sup>35</sup> T. Hong, B. Chamlagain, S. Hu, S.M. Weiss, Z. Zhou, and
+Y.-Q. Xu, <span>“<span class="nocase">Plasmonic hot electron induced
+photocurrent response at –metal junctions</span>,”</span> Acs Nano
+<strong>9</strong>(5), 5357–5363 (2015).
+</div>
+<div id="ref-hong2023engineering" class="csl-entry" role="listitem">
+<sup>36</sup> C. Hong, S. Oh, V.K. Dat, S. Pak, S. Cha, K.-H. Ko, G.-M.
+Choi, T. Low, S.-H. Oh, and J.-H. Kim, <span>“<span
+class="nocase">Engineering electrode interfaces for telecom-band
+photodetection in /Au heterostructures via sub-band light
+absorption</span>,”</span> Light: Science &amp; Applications
+<strong>12</strong>(1), 280 (2023).
+</div>
+<div id="ref-zhang2022high" class="csl-entry" role="listitem">
+<sup>37</sup> Q. Zhang, Y. Ji, S. Hu, Z. Li, C. Li, L. Gu, R. Tian, J.
+Zhang, L. Fang, B. Zhao, and others, <span>“<span
+class="nocase">High-responsivity  hot-electron telecom-band
+photodetector integrated with microring resonator</span>,”</span>
+Applied Physics Letters <strong>120</strong>(26), (2022).
+</div>
+<div id="ref-li2022telecom" class="csl-entry" role="listitem">
+<sup>38</sup> Z. Li, S. Hu, Q. Zhang, R. Tian, L. Gu, Y. Zhu, Q. Yuan,
+R. Yi, C. Li, Y. Liu, and others, <span>“<span
+class="nocase">Telecom-band waveguide-integrated  photodetector assisted
+by hot electrons</span>,”</span> ACS Photonics <strong>9</strong>(1),
+282–289 (2022).
+</div>
+<div id="ref-1484652" class="csl-entry" role="listitem">
+<sup>39</sup> J.M. Mooney, and J. Silverman, <span>“<a
+href="https://doi.org/10.1109/T-ED.1985.21905"><span class="nocase">The
+theory of hot-electron photoemission in Schottky-barrier IR
+detectors</span></a>,”</span> IEEE Transactions on Electron Devices
+<strong>32</strong>(1), 33–39 (1985).
+</div>
+<div id="ref-5485040" class="csl-entry" role="listitem">
+<sup>40</sup> C. Scales, and P. Berini, <span>“<a
+href="https://doi.org/10.1109/JQE.2010.2046720"><span>Thin-Film Schottky
+Barrier Photodetector Models</span></a>,”</span> IEEE Journal of Quantum
+Electronics <strong>46</strong>(5), 633–643 (2010).
+</div>
+<div id="ref-somvanshi2017nature" class="csl-entry" role="listitem">
+<sup>41</sup> D. Somvanshi, S. Kallatt, C. Venkatesh, S. Nair, G. Gupta,
+J.K. Anthony, D. Karmakar, and K. Majumdar, <span>“<span
+class="nocase">Nature of carrier injection in metal/2D-semiconductor
+interface and its implications for the limits of contact
+resistance</span>,”</span> Physical Review B <strong>96</strong>(20),
+205423 (2017).
+</div>
+<div id="ref-xia2011origins" class="csl-entry" role="listitem">
+<sup>42</sup> F. Xia, V. Perebeinos, Y. Lin, Y. Wu, and P. Avouris,
+<span>“<span class="nocase">The origins and limits of metal–graphene
+junction resistance</span>,”</span> Nature Nanotechnology
+<strong>6</strong>(3), 179–184 (2011).
+</div>
+<div id="ref-szabo2019electron" class="csl-entry" role="listitem">
+<sup>43</sup> Á. Szabó, A. Jain, M. Parzefall, L. Novotny, and M.
+Luisier, <span>“<span class="nocase">Electron transport through
+metal/ interfaces: edge-or area-dependent process?</span>”</span> Nano
+Letters <strong>19</strong>(6), 3641–3647 (2019).
+</div>
+<div id="ref-mylnikov2024infrared" class="csl-entry" role="listitem">
+<sup>44</sup> D.A. Mylnikov, M.A. Kashchenko, K.N. Kapralov, D.A.
+Ghazaryan, E.E. Vdovin, S.V. Morozov, K.S. Novoselov, D.A. Bandurin,
+A.I. Chernov, and D.A. Svintsov, <span>“<span class="nocase">Infrared
+photodetection in graphene-based heterostructures: bolometric and
+thermoelectric effects at the tunneling barrier</span>,”</span> Npj 2D
+Materials and Applications <strong>8</strong>(1), 34 (2024).
+</div>
+<div id="ref-wittenbecher2021unraveling" class="csl-entry"
+role="listitem">
+<sup>45</sup> L. Wittenbecher, E. Vinas Bostrom, J. Vogelsang, S.
+Lehman, K.A. Dick, C. Verdozzi, D. Zigmantas, and A. Mikkelsen,
+<span>“<span class="nocase">Unraveling the ultrafast hot electron
+dynamics in semiconductor nanowires</span>,”</span> ACS Nano
+<strong>15</strong>(1), 1133–1144 (2021).
+</div>
+<div id="ref-chen2020hot" class="csl-entry" role="listitem">
+<sup>46</sup> I.-J. Chen, S. Limpert, W. Metaferia, C. Thelander, L.
+Samuelson, F. Capasso, A.M. Burke, and H. Linke, <span>“<span
+class="nocase">Hot-carrier extraction in nanowire-nanoantenna
+photovoltaic devices</span>,”</span> Nano Letters
+<strong>20</strong>(6), 4064–4072 (2020).
+</div>
+</div>
+<ul class="topnav" style="margin-top:2rem;">
+      <li><a class="active" href="/dual-channel-high-performance-fet" style="margin-right: 2rem;">⬅ Dual-Channel High <br> Performance FET</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/conclusion-and-future-scope">Conclusion and <br> Future Scope  ➡</a></li>
+    </ul>
+</body>
+</html>
