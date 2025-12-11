@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Self-Aligned Reconfigurable Heterojunction Transistor — Electronic Devices using Low-Dimensional van der Waals Materials and Their Heterojunctions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="/sakura.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.0.0/tex-mml-chtml-nofont.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<ul class="topnav">
+      <li><a class="active" href="/junctionless-tellurium-nanowire-transistor" style="margin-right: 2rem;">⬅ Junctionless Tellurium <br> Nanowire Transistor</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/dual-channel-high-performance-fet">Dual-Channel High Performance FET ➡</a></li>
+    </ul>
+<h1
+id="electrically-self-aligned-reconfigurable-test-structure-using-wse2snse2-heterojunction-for-tfet-and-mosfet">Electrically
+Self-Aligned, Reconfigurable Test Structure Using
+WSe<sub>2</sub>/SnSe<sub>2</sub> Heterojunction for TFET and MOSFET</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The main driving force behind the rapid growth in digital technology
+has been scaling the transistors to extremely small dimensions. This
+reduction of dimensions has resulted in the possibility of packing more
+transistors in a given area leading to an increase in the computing
+power as well as functionality of electronic devices. Smaller dimensions
+also lead to a smaller capacitance of the devices which helps in
+increasing the frequency of operation of transistors. However, the
+minimum supply voltage possible for transistors has been limited by the
+fundamental Boltzmann limit, according to which, when carriers are
+injected into the channel from the source through thermionic injection,
+the subthreshold slope cannot be less than 60 mV/decade at room
+temperature. This inability to scale supply voltage has led to a rapid
+increase in the power consumption of transistors.</p>
+<p>TFET offers an interesting solution to this problem<span
+class="citation" data-cites="ionescu2011tunnel"><sup>1</sup></span> by
+exploiting band-to-band tunnelling of carriers rather than thermionic
+emission. Promising TFET transistors have been shown previously with
+both homojunction (Silicon and Germanium) and heterojunction (III-V
+semiconductors)<span class="citation"
+data-cites="mohata2011demonstration"><sup>2</sup></span>. However, the
+difficulties in obtaining good material interfaces, a sharp doping
+profile, and efficient gate control are the main challenges in this
+direction. Layered vdW materials can potentially overcome these problems
+since the formation of heterojunction with layered materials is not
+constrained by the lattice matching of the successive layers<span
+class="citation" data-cites="novoselov20162d"><sup>3</sup></span>,
+providing an atomically sharp and ultra-clean interface. In addition,
+due to the atomically thin nature of the layers, it is possible to tune
+the interface effectively using gate voltage.</p>
+<p>Band-to-band tunnelling has been explored in several vdW
+heterojunctions including /<span class="citation"
+data-cites="nourbakhsh2016transport"><sup>4</sup></span>, BP/<span
+class="citation" data-cites="abraham2020astability"><sup>5</sup></span>,
+BP/<span class="citation"
+data-cites="xu2017tunneling"><sup>6</sup></span>, Ge/<span
+class="citation"
+data-cites="sarkar2015subthermionic"><sup>7</sup></span> and /<span
+class="citation"
+data-cites="li2019versatile murali2018gate oliva2020wse roy20162d yan2017tunable"><sup>8–12</sup></span>
+heterojunctions. Among these systems, /heterojunction has led to
+considerable interest<span class="citation"
+data-cites="li2019versatile murali2018gate murali2018self oliva2020wse roy20162d yan2017tunable"><sup>8–13</sup></span>
+due to a broken gap (type-III) band alignment in such a system. Broken
+gap heterojunction relaxes the requirement for a large external electric
+field to achieve a large band-to-band tunnelling current density.</p>
+<p>Self-alignment between the channel and the source/drain regions plays
+a crucial role in MOSFET technology. This is achieved during the
+fabrication process by cleverly sequencing the gate stack fabrication
+and the source/drain doping. However, the lack of a conventional doping
+process (such as ion implantation) hinders such self-alignment in
+devices with layer materials. Instead, a majority of such layer
+material-based field-effect devices depend on gate-induced electrostatic
+doping in the contact region, often confounding the intrinsic device
+operation. It will be thus useful to have a test structure where the
+performance of self-aligned devices can be easily tested.</p>
+<p>Here we report a triple-gated /  heterojunction device test structure
+where we achieve the source-channel self-alignment by using two
+partially overlapping top gates. The mode of operation can be
+electrostatically tuned from an n-MOSFET to a p-TFET, with the latter
+mode providing a sub-60 mV/decade subthreshold slope. The extraction of
+the intrinsic electrical characteristics of such heterojunction is often
+confounded by the contact series resistance offered by the metal
+junction. We get rid of such parasitic effects by the use of this unique
+gate-defined self-aligned structure.</p>
+<h2 id="proposed-device-structure-and-fabrication">Proposed device
+structure and fabrication</h2>
+<p>An optical micrograph of the fabricated device is shown in Figure <a
+href="#fig:(a)-Cross-sectional_01" data-reference-type="ref"
+data-reference="fig:(a)-Cross-sectional_01">1.1</a>(a). During the
+fabrication, pre-patterned Pt metal contacts have been created on
+Si/SiO<span class="math inline">\(_2\)</span> substrate using
+photolithography followed by metal deposition and subsequent lift-off.
+All the layered materials are transferred to the pre-patterned substrate
+using a dry transfer method<span class="citation"
+data-cites="castellanos2014deterministic"><sup>14</sup></span>. First,
+an h-BN (15-20 nm thick) layer is transferred to the top of the back
+gate electrode. A  (3-4 nm thick) flake is then transferred on top of
+the bottom gate with electrical contacts being made of <span> <span
+class="math inline">\(\sim\)</span>40 nm thick Pt metal pad</span>.
+Next, a <span> <span class="math inline">\(\sim\)</span>50 nm
+thick</span>  flake is transferred on top of this  flake.</p>
+<figure id="fig:(a)-Cross-sectional_01">
+<div class="center">
+<img src="/Figures/02_01.png" />
+</div>
+<figcaption>(a) Optical micrograph of the device structure showing
+various layers and electrodes. The top junction gate electrode is made
+of few layer graphene, shorted with the platinum bottom junction gate
+electrode. Both the top and bottom junction gates are shorted (not
+shown). (b) <span> Step-by-step transfer process for the device
+fabrication, as shown in a device cross-section. The final step
+indicates the device cross-section. The dashed line delineates the
+self-aligned source and channel regions.</span> <span
+id="fig:(a)-Cross-sectional_01"
+label="fig:(a)-Cross-sectional_01"></span></figcaption>
+</figure>
+<p>The back gate electrode controls the junction region of the
+structure. A top gate stack is then formed right on top of the
+/ heterojunction by transferring h-BN and few-layer graphene flakes.
+<span> The step-by-step transfer and fabrication flow of the device is
+depicted in Figure <a href="#fig:(a)-Cross-sectional_01"
+data-reference-type="ref"
+data-reference="fig:(a)-Cross-sectional_01">1.1</a>(b). The
+cross-section image of the final step of the process represents the
+cross-section of the device.</span> The top gate is electrically shorted
+with the back gate for a dual-gate structure. Finally, another gate
+stack comprising of h-BN and few-layer graphene is transferred, which
+covers the heterojunction and the /Pt contact junction. The  crystal
+used in this work is of 2H poly-type as suggested by the Raman spectrum
+(). The  flake degenerately n-doped<span class="citation"
+data-cites="krishna2017substrate"><sup>15</sup></span> adds negligibly
+to the series resistance of the device.</p>
+<p>We denote the shorted top and bottom gate electrodes as the
+<em>junction gate</em> since they effectively control the junction
+region and the  region near the junction of the device. This gate does
+not control the contact regions of the device. On the other hand, we
+label the third gate on top as the <em>contact gate</em>. This gate has
+a partial overlap with the top junction gate (see Figure <a
+href="#fig:(a)-Cross-sectional_01" data-reference-type="ref"
+data-reference="fig:(a)-Cross-sectional_01">1.1</a>(b) and is thus
+effectively isolated from controlling the properties of the
+heterojunction due to electrostatic screening of the top junction gate.
+Hence, this gate only controls the /Pt contact region. This way, the
+combination of the two top gates creates the self-aligned structure,
+with the two independent gates controlling the contact and junction
+region, as delineated by the dashed line in Figure <a
+href="#fig:(a)-Cross-sectional_01" data-reference-type="ref"
+data-reference="fig:(a)-Cross-sectional_01">1.1</a>(b). In particular,
+the dual-gate structured <em>junction gate</em> electrodes efficiently
+control the / junction. In contrast, the <em>contact gate</em> on top
+only controls the /metal contact region of the device.</p>
+<h2 id="device-characterization-and-p-type-mode-operation">Device
+characterization and p-type mode operation</h2>
+<figure id="fig:(a)-Cross-sectional_02">
+<div class="center">
+<img src="/Figures/02_02.png" />
+</div>
+<figcaption>(a) Typical temperature-dependent transfer characteristics
+of WSe<sub>2</sub>/SnSe<sub>2</sub> junction. Subthreshold swing is a
+weak (strong) function of temperature in p-TFET (n-MOSFET) mode
+(indicated by the dashed lines). (b) <span> Sub-threshold swing as a
+function of <span class="math inline">\(1000/T\)</span> for both MOSFET
+and TFET showing a weaker dependence of subthreshold slope in the TFET
+operation.</span> <span id="fig:(a)-Cross-sectional_02"
+label="fig:(a)-Cross-sectional_02"></span>.</figcaption>
+</figure>
+<p>The electrical characterization is performed at different
+temperatures under vacuum (<span
+class="math inline">\(5\times10^{-5}\)</span> mbar pressure) in
+Lakeshore CRX-6.5K probe station using a Keithley 4200 parametric
+analyzer. As a control, we first characterize the  channel with Pt
+contacts on both sides and use the <em>contact gate</em> as a top gate.
+The corresponding transfer characteristics exhibit strong ambipolar
+nature (), as is usually observed in typical  channel-based field-effect
+devices<span class="citation"
+data-cites="movva2015high das2013wse2 li2019versatile"><sup>8,16,17</sup></span>.</p>
+<p>Next, we turn our attention to the heterojunction device. First, we
+characterize a single gated / device. By applying a suitable combination
+of biasing configurations, we tune the mode of operation of the device
+from p-TFET to n-MOSFET. Typical temperature-dependent characteristics
+of the / heterojunction are shown in Figure <a
+href="#fig:(a)-Cross-sectional_02" data-reference-type="ref"
+data-reference="fig:(a)-Cross-sectional_02">1.2</a>(a) measured at 7 K
+(blue trace) and 295 K (red trace). We observe that in the p-TFET mode
+(<span class="math inline">\(V_{G}&lt;0\)</span>), the subthreshold
+slope is weakly dependent on temperature. On the other hand, in the
+n-MOSFET mode (<span class="math inline">\(V_{G}&gt;0\)</span>), the
+carrier injection is governed by the thermal process, and the
+subthreshold slope depends strongly on temperature. <span> The same is
+reflected in Figure <a href="#fig:(a)-Cross-sectional_02"
+data-reference-type="ref"
+data-reference="fig:(a)-Cross-sectional_02">1.2</a>(b) where
+sub-threshold swing is plotted as a function of <span
+class="math inline">\(1000/T\)</span></span>.</p>
+<p> devices usually display ambipolar characteristics, which is
+attributed to Fermi level pinning near the middle of the band gap<span
+class="citation" data-cites="pang2021mobility"><sup>18</sup></span>.
+This usually results in larger contact resistance. It has been shown
+previously that a double gate structure can be used to mitigate this
+problem, where one of the gates could be used to create an efficient
+tunnel barrier near the contacts while the other could be used to
+modulate the channel properties<span class="citation"
+data-cites="nasr2019mobility"><sup>19</sup></span>. This, however,
+usually leads to interference between the two gates; the most noticeable
+effect of such a structure is the shifting of the threshold voltage. In
+order to overcome this, we design a double gate structure near the
+channel, where the electrostatic screening prevents interference between
+the contact gate and the junction gate. The region under the contact
+gate in the WSe<span class="math inline">\(_2\)</span> channel can hence
+be switched between p-type and n-type modes of operation without any
+electrical interference with the junction region. We use the p-type
+electrostatic doping for TFET operation and the n-type doping for
+regular MOSFET operation.</p>
+<figure id="fig:(a)-Band-diagram-ptype_01">
+<div class="center">
+<img src="/Figures/02_03.png" />
+</div>
+<figcaption>Schematic band diagram of the device for p-type TFET
+operation, indicating the <em>contact gate</em>, <em>junction gate</em>,
+and WSe<sub>2</sub>/SnSe<sub>2</sub> junction interface regions. The red
+and blue traces indicate the bands at positive and negative <em>junction
+gate</em> voltages, respectively. The top and bottom panels show the
+cases for negative and zero <em>contact gate</em> biases, respectively.
+The junction region is only gated by the bottom <em>junction gate</em>
+due to screening by SnSe<sub>2</sub> from top, while the WSe<sub>2</sub>
+region away from the SnSe<sub>2</sub> interface (but under the
+<em>junction gate</em>) is dual gated from top and bottom, and thus
+exhibits stronger band bending. The blue arrow indicates the tunnelling
+of the carriers.<span id="fig:(a)-Band-diagram-ptype_01"
+label="fig:(a)-Band-diagram-ptype_01"></span></figcaption>
+</figure>
+<p>Next, we describe the characteristics of the proposed device. In each
+mode of operation described below, the <em>contact gate</em> is held at
+a fixed bias, while the <em>junction gate</em> is swept through the
+required voltage range, both in forward and reverse direction. We
+observe negligible hysteresis in the characteristics indicating the
+excellent quality of the interfaces of the graphene/h-BN/WSe<span
+class="math inline">\(_2\)</span> gate stack.</p>
+<p>. The band diagrams and the transfer characteristics of the p-TFET
+are shown in Figures <a href="#fig:(a)-Band-diagram-ptype_01"
+data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ptype_01">1.3</a> and <a
+href="#fig:(a)-Band-diagram-ptype_02" data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ptype_02">1.4</a>(a), respectively.
+In this mode of operation, we keep the electrode contacting  as grounded
+while applying a negative bias to  contact. The <em>junction gate</em>
+is then swept from <span class="math inline">\(-5\)</span> V to <span
+class="math inline">\(+5\)</span> V, while keeping the <em>contact
+gate</em> electrode biased at various negative voltages. Note that, the
+<em>junction gate</em> modulates both the  regions in the / interface as
+well as adjacent to the interface, as shown by the band diagram in the
+top panel of Figure <a href="#fig:(a)-Band-diagram-ptype_01"
+data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ptype_01">1.3</a>. In particular,
+the modulation of the bands in  in the junction region is performed only
+by the bottom gate as the gate field from the top gate is screened by
+the heavily doped layer<span class="citation"
+data-cites="li2014single"><sup>20</sup></span>. However, the  adjacent
+to the junction is efficiently modulated by both top and bottom
+<em>junction gates</em>. With a more negative <em>junction gate</em>
+bias, the tunnelling window for electrons to tunnel from the valence
+band of  to the conduction band of  increases, in turn increasing the
+drain current (indicated by the blue arrow). On the other hand, at a
+more positive <em>junction gate</em> bias, such a band-to-band
+tunnelling process is suppressed, as indicated by the red arrow in the
+band diagram. Thus, the device in this biasing configuration acts more
+like a gated tunnel diode. In the p-type branch of Figure <a
+href="#fig:(a)-Band-diagram-ptype_02" data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ptype_02">1.4</a>(a), we observe
+that the drain current is only weakly dependent on the <em>contact
+gate</em> bias compared with the <em>junction gate</em> bias. The
+<em>contact gate</em> only modulates the series resistance arising from
+the WSe<span class="math inline">\(_2\)</span>/Pt junction.</p>
+<figure id="fig:(a)-Band-diagram-ptype_02">
+<div class="center">
+<img src="/Figures/02_04.png" />
+</div>
+<figcaption>(a) Transfer curves under p-type operation. Here
+WSe<sub>2</sub> contact is biased as drain contact while
+SnSe<sub>2</sub> is grounded. (b) Output characteristics of the p-TFET
+mode showing good current saturation.<span
+id="fig:(a)-Band-diagram-ptype_02"
+label="fig:(a)-Band-diagram-ptype_02"></span></figcaption>
+</figure>
+<p>Interestingly, the n-type branch exhibits a much stronger current
+modulation by the <em>contact gate</em>. In particular, when the
+<em>contact gate</em> is biased at a negative voltage of <span
+class="math inline">\(-5\)</span> V, we observe that the electron
+current is significantly suppressed, and the device displays only a
+p-type character with negligible ambipolar behaviour. However, as the
+bias of the <em>contact gate</em> is made less negative, the current in
+the n-type branch progressively increases, and eventually, the device
+exhibits ambipolar characteristics<span class="citation"
+data-cites="prakash2017understanding"><sup>21</sup></span>. This effect
+is understood by the band diagram in the bottom panel of Figure <a
+href="#fig:(a)-Band-diagram-ptype_01" data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ptype_01">1.3</a>. The <em>contact
+gate</em> primarily controls the electron injection into WSe<span
+class="math inline">\(_2\)</span> channel by modulating the thermionic
+field emission barrier at the /Pt Schottky barrier.</p>
+<p>The output characteristics in this mode of operation, shown in Figure
+<a href="#fig:(a)-Band-diagram-ptype_02" data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ptype_02">1.4</a>(b), are obtained
+by keeping the <em>contact gate</em> at a fixed bias of <span
+class="math inline">\(-5\)</span> V for different <em>junction gate</em>
+biases and exhibit good current saturation behaviour. <span> In this
+mode of operation, this device achieves an on-current of about 8 <span
+class="math inline">\(\mu\)</span>A, and an on-off ratio in excess of
+<span class="math inline">\(10^8\)</span>.</span></p>
+<h2 id="n-type-mode-operation">n-Type mode operation</h2>
+<p>The band diagram and transfer characteristics of the n-type MOSFET
+mode of operation are shown in Figures <a
+href="#fig:(a)-Band-diagram-ntype_01" data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ntype_01">1.5</a> and <a
+href="#fig:(a)-Band-diagram-ntype_01" data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ntype_01">1.5</a>(a) respectively.
+In this mode of operation,  is biased at a positive drain bias, while
+ is kept grounded and acts as the source. The <em>contact gate</em>
+electrode is biased with a positive voltage, while the <em>junction
+gate</em> bias is swept from <span class="math inline">\(-5\)</span> V
+to <span class="math inline">\(+5\)</span> V. Note that the p-type
+branch is nearly suppressed. The n-type branch shows only a weak
+dependence on the <em>contact gate</em> compared with the modulation by
+the <em>junction gate</em><span class="citation"
+data-cites="das2013does prakash2017understanding"><sup>21,22</sup></span>.
+As shown in the band diagram in Figure <a
+href="#fig:(a)-Band-diagram-ntype_01" data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ntype_01">1.5</a>, the <em>junction
+gate</em> efficiently modulates the barrier to the electrons injected
+from the /Pt contact.</p>
+<figure id="fig:(a)-Band-diagram-ntype_01">
+<div class="center">
+<img src="/Figures/02_05.png"></img
+</div>
+<figcaption>Schematic band diagram of the device for n-type MOSFET
+operation, indicating the <em>contact gate</em>, <em>junction gate</em>,
+and WSe<sub>2</sub>/SnSe<sub>2</sub> junction interface regions. The red
+and blue traces indicate the bands at positive and negative <em>junction
+gate</em> voltages, respectively. The top and bottom panels show the
+cases for positive and zero <em>contact gate</em> biases, respectively.
+The junction region is only gated by the bottom <em>junction gate</em>
+due to screening by SnSe<sub>2</sub> from top, while the WSe<sub>2</sub>
+region away from the SnSe<sub>2</sub> interface (but under the
+<em>junction gate</em>) is dual gated from top and bottom, and thus
+exhibits stronger band bending.<span id="fig:(a)-Band-diagram-ntype_01"
+label="fig:(a)-Band-diagram-ntype_01"></span></figcaption>
+</figure>
+<p>The output characteristics of the device shown in Figure <a
+href="#fig:(a)-Band-diagram-ntype_02" data-reference-type="ref"
+data-reference="fig:(a)-Band-diagram-ntype_02">1.6</a>(b) are obtained
+by keeping the <em>contact gate</em> bias fixed at <span
+class="math inline">\(+5\)</span> V while sweeping the drain bias from 0
+to <span class="math inline">\(+3\)</span> V with <em>junction gate</em>
+bias as a parameter. These MOSFET characteristics also show good current
+saturation after pinch-off (<span
+class="math inline">\(V_{G}-V_{th}&lt;V_{D}\)</span>). <span> In the
+MOSFET mode, this device achieves an on-current of about 11 <span
+class="math inline">\(\mu\)</span>A, and an on-off ratio in excess of
+<span class="math inline">\(10^8\)</span>.</span></p>
+<figure id="fig:(a)-Band-diagram-ntype_02">
+<div class="center">
+<embed src="/02_06.pdf" />
+</div>
+<figcaption>(a) Transfer curves under n-type operation. Here
+SnSe<sub>2</sub> contact is biased as drain contact while
+WSe<sub>2</sub> contact is grounded. (b) Output characteristics of the
+n-MOSFET mode showing good current saturation.<span
+id="fig:(a)-Band-diagram-ntype_02"
+label="fig:(a)-Band-diagram-ntype_02"></span></figcaption>
+</figure>
+<p>Comparing both the modes of operations, we observe that the ambipolar
+characteristics of the / heterojunction can be completely suppressed by
+appropriately biasing the gates of the triple-gate structure, achieving
+a purely n-type (governed by the thermionic process) or p-type operation
+(governed by band-to-band tunnelling process). This is achieved by
+adjusting the barrier to carrier injection from metal contacts to . The
+self-aligned structure of the device ensures that the effect of the
+<em>contact gate</em> and <em>junction gate</em> on the device operation
+is independent of each other.</p>
+<figure id="fig:Subthreshold-swing-for">
+<div class="center">
+<img src="/Figures/02_07.png" />
+</div>
+<figcaption>Subthreshold slope for p-type TFET (in blue dots) and n-type
+MOSFET (in red stars) as a function of drain current for drain voltages
+of (a) <span class="math inline">\(\mp50\)</span> mV and (b) <span
+class="math inline">\(\mp1\)</span> V. The <em>contact gate</em> is kept
+fixed at <span class="math inline">\(\mp5\)</span> V. In both cases, the
+subthreshold slope crosses the limit of 60 mV/decade for the TFET mode
+at lower drain currents. The minimum subthreshold slope achieved is 54
+mV/decade when the drain current is significantly above the gate leakage
+floor (indicated by the vertical red dashed lines).<span
+id="fig:Subthreshold-swing-for"
+label="fig:Subthreshold-swing-for"></span></figcaption>
+</figure>
+<h2 id="subthreshold-swing">Subthreshold swing</h2>
+<p>To obtain the subthreshold slope (<span
+class="math inline">\(S\)</span>) in the p-TFET (n-MOSFET) mode of
+operation, we keep the <em>contact gate</em> bias fixed at <span
+class="math inline">\(-5\)</span> V (<span
+class="math inline">\(+5\)</span> V) and sweep the <em>junction
+gate</em> bias. The subthreshold slope for both modes of operation,
+calculated at two different drain voltages (<span
+class="math inline">\(|V_{D}|=50\)</span> mV and <span
+class="math inline">\(1\)</span> V), is plotted as a function of drain
+current in Figure <a href="#fig:Subthreshold-swing-for"
+data-reference-type="ref"
+data-reference="fig:Subthreshold-swing-for">1.7</a>(a-b). The vertical
+red dashed line indicates the gate leakage current floor. The results
+clearly indicate the superior subthreshold characteristics for the TFET
+mode compared with the MOSFET mode. In particular, we reliably extract a
+minimum subthreshold slope of <span class="math inline">\(\sim
+50\)</span> mV/decade in the TFET mode of operation when the drain
+current is significantly above the gate leakage floor, <span> while the
+minimum subthreshold swing in the case of MOSFET is about 75
+mV/dec.</span> The leakage floor of the instrument is between <span
+class="math inline">\(10^{-14}\)</span> to <span
+class="math inline">\(10^{-15}\)</span> A.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, we propose and experimentally demonstrate a
+triple-gated test structure using triple-gated / heterojunction, where a
+self-alignment is achieved between the source and channel region by
+exploiting the screening between two partially overlapped gates. As a
+unique attribute, by tuning the bias at different gate electrodes, the
+test structure can be independently operated as p-type TFET as well as
+n-type MOSFET with complete suppression of ambipolar characteristics.
+<span> With a dual-gated junction control, we obtain excellent
+subthreshold swing and current saturation from the device, with the
+minimum subthreshold slope being less than 60 mV/decade in the TFET
+mode.</span> Such a reconfigurable, multi-functional test structure is
+interesting for quick performance evaluation of layered-material-based
+self-aligned field-effect devices without the need for source/drain
+doping.</p>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-ionescu2011tunnel" class="csl-entry" role="listitem">
+<sup>1</sup> A.M. Ionescu, and H. Riel, <span>“<span
+class="nocase">Tunnel field-effect transistors as energy-efficient
+electronic switches</span>,”</span> Nature <strong>479</strong>(7373),
+329–337 (2011).
+</div>
+<div id="ref-mohata2011demonstration" class="csl-entry" role="listitem">
+<sup>2</sup> D.K. Mohata, R. Bijesh, S. Mujumdar, C. Eaton, R.
+Engel-Herbert, T. Mayer, V. Narayanan, J.M. Fastenau, D. Loubychev, A.K.
+Liu, and S. Datta, <span>“<a
+href="https://doi.org/10.1109/IEDM.2011.6131665"><span
+class="nocase">Demonstration of MOSFET-like on-current performance in
+arsenide/antimonide tunnel FETs with staggered hetero-junctions for
+300mV logic applications</span></a>,”</span> in <em>2011 International
+Electron Devices Meeting</em>, (2011), pp. 33.5.1–33.5.4.
+</div>
+<div id="ref-novoselov20162d" class="csl-entry" role="listitem">
+<sup>3</sup> K. Novoselov, o.A. Mishchenko, o.A. Carvalho, and A.C.
+Neto, <span>“<span class="nocase">2D materials and van der Waals
+heterostructures</span>,”</span> Science <strong>353</strong>(6298),
+(2016).
+</div>
+<div id="ref-nourbakhsh2016transport" class="csl-entry" role="listitem">
+<sup>4</sup> A. Nourbakhsh, A. Zubair, M.S. Dresselhaus, and T.
+Palacios, <span>“<span class="nocase">Transport properties of a
+/ heterojunction transistor and its potential for
+application</span>,”</span> Nano Letters <strong>16</strong>(2),
+1359–1366 (2016).
+</div>
+<div id="ref-abraham2020astability" class="csl-entry" role="listitem">
+<sup>5</sup> N. Abraham, K. Murali, K. Watanabe, T. Taniguchi, and K.
+Majumdar, <span>“<span class="nocase">Astability versus Bistability in
+van der Waals Tunnel Diode for Voltage Controlled Oscillator and Memory
+Applications</span>,”</span> ACS Nano <strong>14</strong>(11),
+15678–15687 (2020).
+</div>
+<div id="ref-xu2017tunneling" class="csl-entry" role="listitem">
+<sup>6</sup> J. Xu, J. Jia, S. Lai, J. Ju, and S. Lee, <span>“<span
+class="nocase">Tunneling field effect transistor integrated with black
+phosphorus- junction and ion gel dielectric</span>,”</span> Applied
+Physics Letters <strong>110</strong>(3), 033103 (2017).
+</div>
+<div id="ref-sarkar2015subthermionic" class="csl-entry" role="listitem">
+<sup>7</sup> D. Sarkar, X. Xie, W. Liu, W. Cao, J. Kang, Y. Gong, S.
+Kraemer, P.M. Ajayan, and K. Banerjee, <span>“<span class="nocase">A
+subthermionic tunnel field-effect transistor with an atomically thin
+channel</span>,”</span> Nature <strong>526</strong>(7571), 91–95 (2015).
+</div>
+<div id="ref-li2019versatile" class="csl-entry" role="listitem">
+<sup>8</sup> W. Li, X. Xiao, and H. Xu, <span>“<span
+class="nocase">Versatile Electronic Devices Based on / Vertical van der
+Waals Heterostructures</span>,”</span> ACS Applied Materials &amp;
+Interfaces <strong>11</strong>(33), 30045–30052 (2019).
+</div>
+<div id="ref-murali2018gate" class="csl-entry" role="listitem">
+<sup>9</sup> K. Murali, M. Dandu, S. Das, and K. Majumdar, <span>“<span
+class="nocase">Gate-tunable / backward diode with ultrahigh-reverse
+rectification ratio</span>,”</span> ACS Applied Materials &amp;
+Interfaces <strong>10</strong>(6), 5657–5664 (2018).
+</div>
+<div id="ref-oliva2020wse" class="csl-entry" role="listitem">
+<sup>10</sup> N. Oliva, J. Backman, L. Capua, M. Cavalieri, M. Luisier,
+and A.M. Ionescu, <span>“<span class="nocase">/ vdW heterojunction
+Tunnel FET with subthermionic characteristic and MOSFET co-integrated on
+same  flake</span>,”</span> Npj 2D Materials and Applications
+<strong>4</strong>(1), 1–8 (2020).
+</div>
+<div id="ref-roy20162d" class="csl-entry" role="listitem">
+<sup>11</sup> T. Roy, M. Tosun, M. Hettick, G.H. Ahn, C. Hu, and A.
+Javey, <span>“<span class="nocase">2D-2D tunneling field-effect
+transistors using / heterostructures</span>,”</span> Applied Physics
+Letters <strong>108</strong>(8), 083111 (2016).
+</div>
+<div id="ref-yan2017tunable" class="csl-entry" role="listitem">
+<sup>12</sup> X. Yan, C. Liu, C. Li, W. Bao, S. Ding, D.W. Zhang, and P.
+Zhou, <span>“<span class="nocase">Tunable / heterostructure tunneling
+field effect transistor</span>,”</span> Small <strong>13</strong>(34),
+1701478 (2017).
+</div>
+<div id="ref-murali2018self" class="csl-entry" role="listitem">
+<sup>13</sup> K. Murali, and K. Majumdar, <span>“Self-powered, highly
+sensitive, high-speed photodetection using ITO/WSe 2/SnSe 2 vertical
+heterojunction,”</span> IEEE Transactions on Electron Devices
+<strong>65</strong>(10), 4141–4148 (2018).
+</div>
+<div id="ref-castellanos2014deterministic" class="csl-entry"
+role="listitem">
+<sup>14</sup> A. Castellanos-Gomez, M. Buscema, R. Molenaar, V. Singh,
+L. Janssen, H.S. Van Der Zant, and G.A. Steele, <span>“<span
+class="nocase">Deterministic transfer of two-dimensional materials by
+all-dry viscoelastic stamping</span>,”</span> 2D Materials
+<strong>1</strong>(1), 011002 (2014).
+</div>
+<div id="ref-krishna2017substrate" class="csl-entry" role="listitem">
+<sup>15</sup> M. Krishna, S. Kallatt, and K. Majumdar, <span>“<span
+class="nocase">Substrate effects in high gain, low operating voltage
+ photoconductor</span>,”</span> Nanotechnology <strong>29</strong>(3),
+035205 (2017).
+</div>
+<div id="ref-movva2015high" class="csl-entry" role="listitem">
+<sup>16</sup> H.C. Movva, A. Rai, S. Kang, K. Kim, B. Fallahazad, T.
+Taniguchi, K. Watanabe, E. Tutuc, and S.K. Banerjee, <span>“<span
+class="nocase">High-mobility holes in dual-gated  field-effect
+transistors</span>,”</span> ACS Nano <strong>9</strong>(10), 10402–10410
+(2015).
+</div>
+<div id="ref-das2013wse2" class="csl-entry" role="listitem">
+<sup>17</sup> S. Das, and J. Appenzeller, <span>“<span
+class="nocase"> field-effect transistors with enhanced ambipolar
+characteristics</span>,”</span> Applied Physics Letters
+<strong>103</strong>(10), 103501 (2013).
+</div>
+<div id="ref-pang2021mobility" class="csl-entry" role="listitem">
+<sup>18</sup> C.-S. Pang, R. Zhou, X. Liu, P. Wu, T.Y. Hung, S. Guo,
+M.E. Zaghloul, S. Krylyuk, A.V. Davydov, and J. Appenzeller,
+<span>“<span class="nocase">Mobility Extraction in 2D Transition Metal
+Dichalcogenide Devices—Avoiding Contact Resistance Implicated
+Overestimation</span>,”</span> Small, 2100940 (2021).
+</div>
+<div id="ref-nasr2019mobility" class="csl-entry" role="listitem">
+<sup>19</sup> J.R. Nasr, D.S. Schulman, A. Sebastian, M.W. Horn, and S.
+Das, <span>“<span class="nocase">Mobility deception in nanoscale
+transistors: an untold contact story</span>,”</span> Advanced Materials
+<strong>31</strong>(2), 1806020 (2019).
+</div>
+<div id="ref-li2014single" class="csl-entry" role="listitem">
+<sup>20</sup> M. Li, D. Esseni, G. Snider, D. Jena, and H. Grace Xing,
+<span>“<span class="nocase">Single particle transport in two-dimensional
+heterojunction interlayer tunneling field effect
+transistor</span>,”</span> Journal of Applied Physics
+<strong>115</strong>(7), 074508 (2014).
+</div>
+<div id="ref-prakash2017understanding" class="csl-entry"
+role="listitem">
+<sup>21</sup> A. Prakash, H. Ilatikhameneh, P. Wu, and J. Appenzeller,
+<span>“<span class="nocase">Understanding contact gating in Schottky
+barrier transistors from 2D channels</span>,”</span> Scientific Reports
+<strong>7</strong>(1), 1–9 (2017).
+</div>
+<div id="ref-das2013does" class="csl-entry" role="listitem">
+<sup>22</sup> S. Das, and J. Appenzeller, <span>“<span
+class="nocase">Where does the current flow in two-dimensional layered
+systems?</span>”</span> Nano Letters <strong>13</strong>(7), 3396–3402
+(2013).
+</div>
+</div>
+
+<ul class="topnav" style="margin-top:2rem;">
+      <li><a class="active" href="/junctionless-tellurium-nanowire-transistor" style="margin-right: 2rem;">⬅ Junctionless Tellurium <br> Nanowire Transistor</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/dual-channel-high-performance-fet">Dual-Channel High Performance FET ➡</a></li>
+    </ul>
+</body>
+</html>
