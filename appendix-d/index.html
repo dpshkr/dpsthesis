@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Appendix D — Electronic Devices using Low-Dimensional van der Waals Materials and Their Heterojunctions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="/sakura.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.0.0/tex-mml-chtml-nofont.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<ul class="topnav">
+      <li><a class="active" href="/appendix-c" style="margin-right: 2rem;">⬅ Appendix C</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+
+    </ul>
+<h1
+id="additional-information-for-hot-electron-engineering-in-layered-heterojunction-for-infrared-detection">Additional
+Information for Hot electron engineering in layered heterojunction for
+infrared detection</h1>
+<h2 id="hot-electron-photocurrent-model">Hot-electron photocurrent model
+<span id="hot-electron-model" label="hot-electron-model"></span></h2>
+<p>The structure used in the physical model for the device is shown in
+the figure below. The emitter, barrier and collector layers are
+considered thin, separated by a physical distance <span
+class="math inline">\(t\)</span>.This distance is typically the van-der
+Waal gap between the material.</p>
+<figure id="device-struct">
+<img src="/Figures/S04_01.png" />
+<figcaption>Device structure considered for simulation</figcaption>
+</figure>
+<p>Since the layers are assumed thin, they are each equipotential, with
+the electrostatic potential of the three layers denoted by <span
+class="math inline">\(\phi_{E}\)</span>, <span
+class="math inline">\(\phi_{B}\)</span> and <span
+class="math inline">\(\phi_{C}\)</span>. The system of equations that
+govern the system are -</p>
+<p><span class="math display">\[\begin{aligned}
+\epsilon \frac{\phi_{E} - V_G}{t_{ins}} +  \epsilon \frac{\phi_{E} -
+\phi_{B}}{t} &amp;= e(N_{DE} - n_{E})\\
+\epsilon \frac{\phi_{B} - \phi_{E}}{t} +  \epsilon \frac{\phi_{B} -
+\phi_{C}}{t} &amp;= e(N_{DB} - n_{B})\\
+\epsilon \frac{\phi_{C} - \phi_{B}}{t} &amp;= e(N_{DC} - n_{C})\
+\end{aligned}\]</span></p>
+<p>where <span class="math inline">\(N_D\)</span> and <span
+class="math inline">\(n\)</span> represent the fixed doping
+concentration and electron concentration inside the respective layer,
+while <span class="math inline">\(e\)</span> is the absolute charge of
+an electron. The carrier concentration is related to the electrostatic
+potential of the layer by -</p>
+<p><span class="math display">\[\begin{aligned}
+n(\phi, T, E_F) =
+\frac{g_sg_vm^*k_BT}{\pi\hbar^2}\log\Big(1+\exp\Big(\frac{e(E_F-D+\phi)}{k_BT}\Big)\Big)
+\end{aligned}\]</span></p>
+<p>where <span class="math inline">\(g_s\)</span> and <span
+class="math inline">\(g_v\)</span> are spin and valley degeneracies,
+respectively. <span class="math inline">\(E_F\)</span> is the fermi
+level. Under dark conditions, <span
+class="math inline">\(E_F=0\)</span>. <span
+class="math inline">\(D\)</span> is the position of the conduction band
+with respect to Fermi level <span class="math inline">\(E_F=0\)</span>
+at <span class="math inline">\(\phi=0\)</span>. This parameter
+represents the doping of the layer.</p>
+<p>Under illumination, we assume the temperature of the electrons to be
+<span class="math inline">\(T_e &gt; T\)</span> in both collector and
+emitter layers. Unlike an inter-band photoexcitation, the number of
+carriers in the conduction band will remain constant. Also, since the
+carrier concentration does not change, we do not expect the
+electrostatic potentials to change either. Using these constraints, we
+can calculate the new quasi-Fermi level, <span
+class="math inline">\(E_{Fe}\)</span> using -</p>
+<p><span class="math display">\[\begin{aligned}
+n(\phi, T, E_F=0) = n(\phi, T_e, E_{Fe})
+\end{aligned}\]</span></p>
+<p>The new quasi-Fermi level and the higher temperature define the
+distribution of electrons in the conduction band under illumination.</p>
+<p>Once the distribution is obtained, the number of carriers in the
+emitter layer with energy higher than the conduction band edge of the
+barrier layer is calculated (<span
+class="math inline">\(n_{E}(T^{E}_{e})\)</span>). Similarly, the number
+of carriers in the  layer with energy greater than the barrier layer
+conduction band edge is calculated ((<span
+class="math inline">\(n_{C}(T^{C}_{e})\)</span>)). The photocurrent,
+then, is proportional to the difference between the two.</p>
+<p><span class="math display">\[I_{ph} \propto n_{E}(T^{E}_{e}) -
+n_{C}(T^{C}_{e})\]</span></p>
+<h2 id="response-of-structure-d2-to-various-wavelengths">Response of
+structure D2 to various wavelengths <span id="wav-response-of-d2"
+label="wav-response-of-d2"></span></h2>
+<p>D2 exhibits a similar wavelength response to various radiation of the
+SWIR spectrum as D3.</p>
+<figure id="D2-wavelenngth">
+<img src="/Figures/S04_02.png" />
+<figcaption>Response of D2 to infrared radiation from 1.1 <span
+class="math inline">\(\mu\)</span>m to 1.8 <span
+class="math inline">\(\mu\)</span>m.</figcaption>
+</figure>
+<h2 id="characterization-of-additional-d3-device">Characterization of
+additional D3 device <span id="char-of-d3-device"
+label="char-of-d3-device"></span></h2>
+<p>The results of the characterization of device D3 from another
+fabrication run are shown in the figure below. The device shows
+qualitatively similar behaviour as the device presented in the main
+text. The device shows a peak responsivity of 12.5 mA/W.</p>
+<figure id="D2-characterization">
+<img src="/Figures/S04_03.png" />
+<figcaption>(a) Dependence of photocurrent on collector bias. (b)
+Responsivity as a function of input power. (c) SNR for various collector
+biases as a function of input power.</figcaption>
+</figure>
+<h2
+id="frequency-response-of-d3-for-excitation-with-633-nm-radiation">Frequency
+response of D3 for excitation with 633 nm radiation <span
+id="freq-red-laser" label="freq-red-laser"></span></h2>
+<p>With 633 nm radiation, we can detect signals up to 100 kHz with the
+same device.</p>
+<figure id="D2-frequncy">
+<img src="/Figures/S04_04.png" />
+<figcaption>(a) Frequency response to excitation with 633 nm radiation.
+(b) Time response of D3 from excitation of 633 nm radiation from 1 kHz
+to 100 kHz. </figcaption>
+</figure>
+<ul class="topnav" style="margin-top:2rem;">
+      <li><a class="active" href="/appendix-c" style="margin-right: 2rem;">⬅ Appendix C</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+
+    </ul>
+</body>
+</html>
