@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Junctionless Tellurium Nanowire Transistor — Electronic Devices using Low-Dimensional van der Waals Materials and Their Heterojunctions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="/sakura.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.0.0/tex-mml-chtml-nofont.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<ul class="topnav">
+      <li><a class="active" href="/introduction" style="margin-right: 2rem;">⬅ Inroduction</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/self-aligned-reconfigurable-heterojunction-transistor">Self-Aligned Reconfigurable Heterojunction Transistor ➡</a></li>
+    </ul>
+<h1
+id="contact-barrier-free-high-mobility-dual-gated-junctionless-transistor-using-tellurium-nanowire">Contact-Barrier
+Free, High Mobility, Dual-Gated Junctionless Transistor Using Tellurium
+Nanowire</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The tight electrostatic control in multi-gated nanowire field effect
+transistor (FET)<span class="citation"
+data-cites="cui2003high singh2006high appenzeller2008toward kuhn2012considerations"><sup>1–4</sup></span>
+makes it one of the most promising candidates for further scaling of
+silicon technology in sub-5 nm technology nodes, and is being actively
+pursued by the semiconductor industry<span class="citation"
+data-cites="bohr2017cmos Samsung_Plans_Mass"><sup>5,6</sup></span>. The
+possible vertical integration of multiple nanowires enhances the drive
+current at a given footprint<span class="citation"
+data-cites="lee2016vertically Samsung_Plans_Mass"><sup>6,7</sup></span>.
+In parallel, several high-mobility, non-silicon channel options are
+being actively pursued as well, particularly for the p-FET<span
+class="citation"
+data-cites="ikeda2012high fang2007vertically wang2003germanium"><sup>8–10</sup></span>.</p>
+<p>Three technological roadblocks must be overcome to achieve these
+high-performance, ultra-scaled devices. First, the source-drain
+electrical isolation in a transistor is usually achieved by doping. The
+required spatial steepness of the doping profile is non-trivial to
+achieve in such ultra-short channel nanowire FETs. It also adds to the
+large variability, resulting in low yield. In this direction,
+junctionless FET has attracted a lot of attention for high
+scalability<span class="citation"
+data-cites="lee2009junctionless gundapaneni2011enhanced"><sup>11,12</sup></span>
+where one uses a narrow conducting channel, and the gate voltage is used
+to deplete the carriers from the channel to turn it off, thus avoiding
+source-drain junction formation through ion implantation. Second, since
+the nanowire must be very narrow to achieve the required gate control,
+the surface roughness scattering is enhanced<span class="citation"
+data-cites="jin2007modeling ramayya2008electron"><sup>13,14</sup></span>,
+significantly degrading the carrier mobility. A nanowire channel with a
+dangling-bond-free surface will be ideally suited to reduce such
+mobility degradation. Third, as the device footprint goes down with
+transistor scaling, the effective contact area at the source and drain
+reduces. This increases the fraction of the contact resistance in the
+total transistor resistance under on condition, which is detrimental to
+the overall drive current, switching speed, current saturation, and
+output resistance<span class="citation"
+data-cites="majumdar2010effects"><sup>15</sup></span>. One must use
+novel techniques to reduce contact resistivity.</p>
+<p>In an attempt to address the above-mentioned issues, this chapter
+presents a dual-gated tellurium (Te) nanowire junctionless transistor.
+The unique chiral nature of the nanowire crystal structure<span
+class="citation"
+data-cites="liang2009synthesis qin2020raman"><sup>16,17</sup></span>
+allows a high hole mobility due to a dangling-bond-free surface, and its
+low electron affinity helps us to achieve zero Schottky barrier at the
+contact interface, reducing the contact resistance. We achieve a drive
+current of <span class="math inline">\(216\,\mathrm{\mu A/\mu
+m}\)</span> with an on-off ratio of <span class="math inline">\(&gt;
+2\times 10^4\)</span> and a high hole mobility of <span
+class="math inline">\(570\,\mathrm{cm^{2}/V\cdot s}\)</span>.</p>
+<p>Te is an element in the chalcogen group, and its crystal structure
+consists of covalently bonded one-dimensional chains of Te along the
+c-axis that are held together by weak van der Waals interactions [inset
+of Figure <a href="#fig:material_char_01" data-reference-type="ref"
+data-reference="fig:material_char_01">1.1</a>(a)]. Thus, the nanowire
+form of Te is predominantly bound by lower energy surfaces that are
+produced by only breaking the weak van der Waals bonds and not the
+strong covalent bonds, leading to the dangling-bond-free surface of the
+nanowire. This unique anisotropic crystal structure of Te provides an
+opportunity to synthesize nanowires of Te down to single chain Te
+atoms<span class="citation"
+data-cites="medeiros2017single qin2020raman"><sup>17,18</sup></span>.</p>
+<p>Tellurium, in its bulk form, has a bandgap of 0.35 eV and exhibits
+<em>p</em>-type nature<span class="citation"
+data-cites="zhao2020evaporated"><sup>19</sup></span> with high carrier
+mobility<span class="citation"
+data-cites="zhu2017multivalency"><sup>20</sup></span>. As the bulk Te is
+reduced to smaller dimensions, it starts exhibiting an indirect bandgap
+of about 0.6 eV<span class="citation"
+data-cites="roy2017manipulation qin2020raman"><sup>17,21</sup></span>.
+In addition to these electrical properties, Te also shows remarkable
+optical, thermoelectric, and piezoelectric properties<span
+class="citation"
+data-cites="lee2013high pradhan2017ultra qiu2019thermoelectric lin2016tellurium"><sup>22–25</sup></span>.</p>
+<h2 id="synthesis-and-characterization-of-te-nanowires">Synthesis and
+characterization of Te nanowires</h2>
+<p>The Te nanowires are synthesized<span class="citation"
+data-cites="roy2017manipulation"><sup>21</sup></span> using <span
+class="math inline">\(\mathrm{Na_{2}TeO_{3}}\)</span> as a precursor in
+the water medium, where hydrazine hydrate is used as a reducing agent,
+Polyvinylpyrrolidone( PVP) as a capping agent, and Ammonia is used to
+maintain proper pH. In a typical experiment, 1 g of PVP (average. M.W.=
+58,000) is dissolved in 20 ml of DI water and 92 mg <span
+class="math inline">\(\mathrm{Na_{2}TeO_{3}}\)</span> is dissolved in 15
+ml DI water separately. Both solutions are mixed at room temperature.
+Into the above solution, 1.5 ml of Hydrazine hydrate and 3.3 ml of 25%
+aqueous ammonia solution are added drop-wise with moderate stirring. The
+transparent solution is then transferred to a 50 ml capacity teflon
+container. Then the hydrothermal reaction is allowed to take place for 4
+hours at <span class="math inline">\(180\mathrm{^{\circ}C}\)</span>.
+After the reaction vessel cools down to room temperature, the solution
+is cleaned twelve times using hot water (<span
+class="math inline">\(60^{\mathrm{\circ}}\mathrm{C}\)</span>) at 8000
+revolutions per minute and subsequently two times using ethanol.</p>
+<figure id="fig:material_char_01">
+<div class="centering">
+<img src="/Figures/01_01.png" />
+</div>
+<figcaption>(a) X-ray diffraction pattern of Te nanowires, which
+correspond to <span class="math inline">\(P3_{1}21\)</span> rhombohedral
+phase of Te. Inset: Crystal structure of hexagonal Te chains along the
+<span class="math inline">\(c\)</span> axis. Solid lines indicate
+covalent bonding, while each chain is bonded to other by van der Waals
+bonds. (b) TEM image of the nanowires. (c) SAED from Te nanowire
+(bright-field image shown in the inset) showing single-crystalline
+nature (corresponding to <span>[</span><span
+class="math inline">\(1\bar{1}0\)</span><span>]</span> zone axis). <span
+id="fig:material_char_01"
+label="fig:material_char_01"></span></figcaption>
+</figure>
+<h5
+id="structural-and-microstructural-characterization-of-te-nanowire">Structural
+and microstructural characterization of Te nanowire:</h5>
+<p>Synthesized Te nanowires have been characterized by X-ray diffraction
+(XRD) using a Rigaku X-ray Diffractometer with Cu <span
+class="math inline">\(\mathrm{K}\alpha\)</span> source. Figure <a
+href="#fig:material_char_01" data-reference-type="ref"
+data-reference="fig:material_char_01">1.1</a>(a) represents the XRD
+pattern of the nanowire which corresponds to the rhombohedral phase
+(<span class="math inline">\(\mathrm{P3_{1}21}\)</span>) of Te (JCPDS :
+361452) with lattice parameters of <span
+class="math inline">\(\mathrm{a=b=4.45\,\mathring{A}}\)</span>, <span
+class="math inline">\(\mathrm{c=5.9\,\mathring{A}}\)</span>).
+Transmission electron micrograph (TEM) in Figure <a
+href="#fig:material_char_01" data-reference-type="ref"
+data-reference="fig:material_char_01">1.1</a>(b) shows the
+one-dimensional morphology as well as the diameter distribution of the
+nanowires. The nanowires have an average diameter of 50 nm and a length
+of tens of micrometres. The selected area electron diffraction (SAED)
+pattern captured from one such nanowire is shown in Figure <a
+href="#fig:material_char_01" data-reference-type="ref"
+data-reference="fig:material_char_01">1.1</a>(c) which suggests the
+single-crystalline nature of the nanowire. The diffraction spots
+correspond to <span>[</span><span
+class="math inline">\(1\bar{1}0\)</span><span>]</span> zone axis pattern
+and can be matched to (<span class="math inline">\(002\)</span>) and
+(<span class="math inline">\(110\)</span>) reflections of Te. The
+lattice fringes in the high-resolution TEM image in Figure <a
+href="#fig:material_char_02" data-reference-type="ref"
+data-reference="fig:material_char_02">1.2</a>(a) confirm the growth
+direction to be <span>[</span>001<span>]</span>. The high-angle annular
+dark field (HAADF) STEM image of the nanowire is shown in Figure <a
+href="#fig:material_char_02" data-reference-type="ref"
+data-reference="fig:material_char_02">1.2</a>(b), where the atomic
+layers of Te are clearly visible.</p>
+<figure id="fig:material_char_02">
+<div class="centering">
+<img src="/Figures/01_02.png" />
+</div>
+<figcaption>(a) HRTEM image of the Te nanowire where the lattice fringes
+correspond to (001) plane of Te. (b) High-resolution HAADF-STEM image of
+Te nanowires showing the atomic layers. (c) Raman spectroscopy of Te
+nanowire showing first order and second order peaks.. <span
+id="fig:material_char_02"
+label="fig:material_char_02"></span></figcaption>
+</figure>
+<p>The nanowires exhibit a strong Raman peak [Figure <a
+href="#fig:material_char_02" data-reference-type="ref"
+data-reference="fig:material_char_02">1.2</a>(c)] at <span
+class="math inline">\(122.8\,\mathrm{cm^{-1}}\)</span> corresponding to
+the <span class="math inline">\(A_1\)</span> mode of lattice vibration
+at the Brillouin zone center<span class="citation"
+data-cites="pine1971raman du2017one"><sup>26,27</sup></span>. The <span
+class="math inline">\(E_{TO}\)</span> zone centre modes of vibration
+manifest as another strong Raman peak at <span
+class="math inline">\(142.6\,\mathrm{cm^{-1}}\)</span> and a weak
+shoulder around <span
+class="math inline">\(103\,\mathrm{cm^{-1}}\)</span><span
+class="citation"
+data-cites="pine1971raman liu2010rapid"><sup>26,28</sup></span>. We
+assign the broad peak around <span
+class="math inline">\(265\,\mathrm{cm^{-1}}\)</span> to second order
+Raman peak corresponding to <span
+class="math inline">\(A_1+E_{TO}\)</span> two-phonon process<span
+class="citation"
+data-cites="song2008superlong"><sup>29</sup></span>.</p>
+<figure id="fig:plasma_clean_01">
+<div class="centering">
+<img src="/Figures/01_03.png" />
+</div>
+<figcaption>Step-by-step process flow of Te nanowire junctionless FET
+fabrication.<span id="fig:plasma_clean_01"
+label="fig:plasma_clean_01"></span></figcaption>
+</figure>
+<h2 id="device-fabrication">Device Fabrication</h2>
+<p>The step-by-step fabrication process of the junctionless FET is
+illustrated in Figure <a href="#fig:plasma_clean_01"
+data-reference-type="ref" data-reference="fig:plasma_clean_01">1.3</a>.
+We drop cast the Te nanowires onto a degenerately doped Si substrate
+coated with 285 nm thick, thermally grown, high quality <span
+class="math inline">\(\mathrm{SiO_{2}}\)</span>. A low-power Ar
+treatment is then performed to remove any residual PVP coating from the
+nanowires. A thin layer of high-quality hBN (<span
+class="math inline">\(\sim\)</span> 15 nm) is immediately transferred
+onto the nanowire using a dry transfer technique<span class="citation"
+data-cites="Castellanos_Gomez_2014"><sup>30</sup></span> to define the
+top gate dielectric. <span>The atomically smooth surface of the
+dangling-bond-free hBN gate dielectric provides an ideal interface with
+the dangling-bond-free Te nanowire channel.</span></p>
+<p>Subsequently, electron beam lithography is performed to define the
+source, the drain, and the gate metallization areas. To remove any
+unintentional residue and surface oxidation<span class="citation"
+data-cites="lan2007dispersibility"><sup>31</sup></span> from the
+source/drain region of the nanowire, a second plasma cleaning step is
+performed, which improves the contact interface quality. Ni/Au is then
+deposited using DC magnetron sputtering, followed by lift-off in acetone
+to complete the device fabrication. More details of the fabrication are
+provided in Appendix <a href="#a01_00" data-reference-type="ref"
+data-reference="a01_00">[a01_00]</a>.</p>
+<p>We find that an optimum plasma cleaning is a crucial step in the
+fabrication, which helps remove residual PVP capping layer and possible
+interfacial oxide, improving the interface quality and reducing the
+contact resistance. A careful optimization shows that Ar plasma cleaning
+for 20 s at a power level of and a pressure of 10 mbar results in the
+optimum device performance. The Figs. <a href="#fig:plasma_clean_02"
+data-reference-type="ref"
+data-reference="fig:plasma_clean_02">1.4</a>(a)-(b) show the STEM images
+of two different nanowires, one without the plasma cleaning and the
+other after plasma cleaning for 20 s, respectively. The plasma-cleaned
+nanowire clearly shows superior surface quality. The electrical
+characteristics of a nanowire without plasma cleaning are shown in
+Figure <a href="#fig:plasma_clean_03" data-reference-type="ref"
+data-reference="fig:plasma_clean_03">1.5</a>(a) at various temperatures
+from 7 to 200 K. The characteristics show very low current levels and
+fast current saturation.</p>
+<figure id="fig:plasma_clean_02">
+<div class="centering">
+<img src="/Figures/01_04.png" />
+</div>
+<figcaption>HAADF-STEM image of Te nanowire (a) without plasma cleaning,
+and (b) with plasma cleaning for a duration of 20 sec.<span
+id="fig:plasma_clean_02"
+label="fig:plasma_clean_02"></span></figcaption>
+</figure>
+<figure id="fig:plasma_clean_03">
+<div class="centering">
+<img src="/Figures/01_05.png" />
+</div>
+<figcaption>(a) Temperature-dependent current-voltage characteristics of
+a nanowire device without plasma cleaning with low current levels and
+abrupt current saturation. (b) Characteristics of the device at room
+temperature with plasma cleaning showing higher current levels and ohmic
+behaviour.<span id="fig:plasma_clean_03"
+label="fig:plasma_clean_03"></span></figcaption>
+</figure>
+<p>Such an observation has also been made previously for devices using
+two-dimensional layer materials<span class="citation"
+data-cites="ho2017high"><sup>32</sup></span>. On the other hand, the
+nanowires with plasma cleaning show a 1000-fold enhancement in the
+current drive at similar external bias, indicating superior contact
+quality as shown in <a href="#fig:plasma_clean_03"
+data-reference-type="ref"
+data-reference="fig:plasma_clean_03">1.5</a>(b)</p>
+<h2 id="te-nanowire-transistor-characteristics">Te nanowire transistor
+characteristics</h2>
+<p>We measured several devices with a typical diameter of the nanowires
+chosen between 30 to 50 nm. <span>The nanowires, with a low
+bandgap</span><span class="citation"
+data-cites="haeffler1996electron"><sup>33</sup></span>, exhibit strong
+p-type conductivity, even without any gating. This allows us to operate
+the fabricated transistor as a dual-gated junctionless nanowire FET, as
+schematically illustrated in Figure <a href="#fig:dual_gate_01"
+data-reference-type="ref" data-reference="fig:dual_gate_01">1.6</a>(a).
+The plan view SEM image of a typical nanowire FET is shown in Figure <a
+href="#fig:dual_gate_01" data-reference-type="ref"
+data-reference="fig:dual_gate_01">1.6</a>(b). The cross-section of the
+device along the white dashed line is provided in Appendix <a
+href="#a01_01" data-reference-type="ref"
+data-reference="a01_01">[a01_01]</a>. The transistor is normally in the
+on state and requires a positive gate voltage to deplete the holes from
+the channel (depletion mode). The top gate using the hBN dielectric
+controls the channel conductivity, while the global back gate can
+control both the channel portion, as well as the underlap regions and
+the metal contact region. This allows us to avoid the need for
+source/drain doping, and the device works as a junctionless
+transistor.</p>
+<figure id="fig:dual_gate_01">
+<div class="centering">
+<img src="/Figures/01_06.png" />
+</div>
+<figcaption>(a) Schematic representation of the dual-gated nanowire
+junctionless FET. (b) Scanning electron micrograph of the device. The
+scale bar is <span class="math inline">\(5\mu\)</span>m.<span
+id="fig:dual_gate_01" label="fig:dual_gate_01"></span></figcaption>
+</figure>
+<figure id="fig:dual_gate_02">
+<div class="centering">
+<img src="/Figures/01_07.png" />
+</div>
+<figcaption>(a) Two-dimensional color plot of the drain current
+magnitude as the top gate <span class="math inline">\(V_{TG}\)</span>
+and back gate <span class="math inline">\(V_{BG}\)</span> voltages are
+varied at <span class="math inline">\(V_{D}=-1.2\,V\)</span>. The bottom
+left corner of the plot shows the on-state of the device, while the
+upper right corner shows the off-state. (b) The magnitude of the drain
+current of the device along the dashed lines shown in (a). Individual
+gates [top gate for (i) and bottom gate for (ii)] do not provide an
+on-off ratio of more than <span class="math inline">\(10^2\)</span>, but
+dual-gating [dashed line along (iii)] shows an on-off ratio of <span
+class="math inline">\(&gt; 2\times10^4\)</span>.<span
+id="fig:dual_gate_02" label="fig:dual_gate_02"></span></figcaption>
+</figure>
+<p>The modulation of the drain current (<span
+class="math inline">\(I_D\)</span>) as a function of both the top (<span
+class="math inline">\(V_{TG}\)</span>) and the bottom (<span
+class="math inline">\(V_{BG}\)</span>) gate voltages is shown as a
+two-dimensional colour plot in Figure <a href="#fig:dual_gate_02"
+data-reference-type="ref" data-reference="fig:dual_gate_02">1.7</a>(a),
+at <span class="math inline">\(V_D=-1.2\)</span> V. A nanowire FET,
+owing to the improved electrostatic control due to their cylindrical
+geometry, exhibits significantly improved on-off ratio compared to
+transistors with planar structure using tellurium nanosheet of similar
+thickness<span class="citation"
+data-cites="wang2018field"><sup>34</sup></span>. The three line cuts
+along the dashed lines (i-iii) in Figure <a href="#fig:dual_gate_02"
+data-reference-type="ref" data-reference="fig:dual_gate_02">1.7</a>(a)
+are shown in Figure <a href="#fig:dual_gate_02"
+data-reference-type="ref" data-reference="fig:dual_gate_02">1.7</a>(b).
+The dual-gate structure along the off-diagonal dashed line (iii)
+achieves superior gate control compared with stand-alone <span
+class="math inline">\(V_{TG}\)</span> [along (i)] or <span
+class="math inline">\(V_{BG}\)</span> [along (ii)]. Since the transistor
+is operated in depletion mode, the application of a negative <span
+class="math inline">\(V_{TG}\)</span> and <span
+class="math inline">\(V_{BG}\)</span> does not improve the drive current
+significantly, as can be seen from the characteristics. However, a
+positive gate voltage efficiently modulates <span
+class="math inline">\(I_D\)</span> by depleting the holes from the
+channel. While the obtained on-off ratio is <span
+class="math inline">\(\sim 10^2\)</span> using either the top or the
+bottom gate separately, we achieve an on-off ratio over <span
+class="math inline">\(2\times10^4\)</span> when the two gates are
+simultaneously used. The results of a coupled electrostatics and carrier
+transport simulation from a junctionless transistor are summarized in
+Appendix <a href="#a01_02" data-reference-type="ref"
+data-reference="a01_02">[a01_02]</a>.</p>
+<figure id="fig:dual_gate_03">
+<div class="centering">
+<img src="/Figures/01_08.png" />
+</div>
+<figcaption>(e) Schottky-like output characteristics of the FET with
+varying <span class="math inline">\(V_{TG}\)</span> at a fixed positive
+back gate bias of <span class="math inline">\(30\)</span> V. (f) Output
+characteristics of the device at a fixed negative <span
+class="math inline">\(V_{BG}\)</span>, measured at 295 K, showing
+MOSFET-like characteristics.<span id="fig:dual_gate_03"
+label="fig:dual_gate_03"></span> </figcaption>
+</figure>
+<p>The output characteristics of the device are shown in Figure <a
+href="#fig:dual_gate_03" data-reference-type="ref"
+data-reference="fig:dual_gate_03">1.8</a>(a-b), which are obtained by
+sweeping <span class="math inline">\(V_{TG}\)</span> while keeping <span
+class="math inline">\(V_{BG}\)</span> at <span
+class="math inline">\(30\)</span> and <span
+class="math inline">\(-30\)</span> V, respectively. Since the global
+back gate can modulate the effective barrier to hole injection, at <span
+class="math inline">\(\mathrm{V_{BG}=30\,V}\)</span>, the barrier to
+hole injection is high, and hence the output characteristics show a
+predominantly Schottky behaviour. However, at <span
+class="math inline">\(\mathrm{V_{BG}=-30\,V}\)</span>, the barrier to
+hole injection is removed, and the underlap regions are
+electrostatically p-doped, leading to output characteristics tending
+towards current saturation behaviour. Thus, by changing the biasing
+configuration, we are able to convert the device operation from a
+Schottky barrier FET (SBFET) to a MOSFET. <span>Similar architecture has
+previously been employed with Silicon nanowire transistors<span
+class="citation"
+data-cites="koo2005enhanced colli2009top"><sup>35,36</sup></span>
+wherein a combination of a top gate and a back gate has been utilized to
+improve the on-off ratio.</span> In the MOSFET mode, we achieve a high
+drive current of <span class="math inline">\(216\,\mathrm{\mu A/\mu
+m}\)</span> (calculated using <span
+class="math inline">\(\frac{I_D}{2\pi r}\)</span> where <span
+class="math inline">\(r\)</span> is the radius of the nanowire) from the
+nanowire FET. Given the relaxed geometry used in this work, this is very
+promising towards high-performance scaled transistors.</p>
+<h2 id="nature-of-te-nanowire-metal-contact">Nature of Te nanowire-metal
+contact </h2>
+<p>A qualitative band diagram of the metal (Ni) - Te junction is shown
+in Figure <a href="#fig:low_temp_01" data-reference-type="ref"
+data-reference="fig:low_temp_01">1.9</a>(a) at equilibrium. <span>The
+electron affinity of Te <span class="math inline">\(\chi_{Te}\approx
+4\,\mathrm{eV}\)</span><span class="citation"
+data-cites="wang2018field"><sup>34</sup></span></span> and Ni has a work
+function <span class="math inline">\(\phi_{m}\approx
+5\,\mathrm{eV}\)</span>. The p-type conductivity suggests that the Fermi
+level in Te is near the valence band, and thus we can see that <span
+class="math inline">\(\phi_{m}\gg\phi_{s}\)</span> where <span
+class="math inline">\(\phi_{s}\)</span> is Te work function. This allows
+the holes to move freely across the contact interface without any
+Schottky barrier and is ideal for an excellent ohmic contact<span
+class="citation"
+data-cites="pierret1996semiconductor"><sup>37</sup></span>.</p>
+<figure id="fig:low_temp_01">
+<div class="centering">
+<img src="/Figures/01_09.png" style="width:85.0%" />
+</div>
+<figcaption>(a) Equilibrium band diagram of the device showing zero
+barrier to hole injection at the metal contact interface. (b) Transfer
+characteristics of the device at various temperatures (showing both
+forward and reverse sweeps), keeping the back gate floating. Off current
+and subthreshold swing reduce steeply with decreasing temperature, while
+the on current increases. <span>The onset of ambipolar characteristics
+is observed at <span class="math inline">\(T = 5\)</span> K (blue
+trace). </span> <span id="fig:low_temp_01"
+label="fig:low_temp_01"></span></figcaption>
+</figure>
+<p>To analyze such contact barrier-free operation in the MOSFET mode, we
+measure the temperature-dependent device characteristics keeping the
+bottom gate floating and varying <span
+class="math inline">\(V_{TG}\)</span> and <span
+class="math inline">\(V_D\)</span>. The transfer characteristics of the
+device from 5 to 270 K are shown in Figure <a href="#fig:low_temp_01"
+data-reference-type="ref" data-reference="fig:low_temp_01">1.9</a>(b).
+It is striking that under on condition (<span
+class="math inline">\(V_{TG}&lt;0\)</span>), <span
+class="math inline">\(I_D\)</span> is a very weak function of
+temperature, even down to temperatures as low as 5 K, and <span
+class="math inline">\(I_D\)</span> increases with a reduction in
+temperature (due to a subsequent increase in hole mobility, as discussed
+later) - clearly suggesting barrier-free hole injection from the
+contact.</p>
+<figure id="fig:low_temp_02">
+<div class="centering">
+<img src="/Figures/01_10.png" style="width:85.0%" />
+</div>
+<figcaption>(a) Extracted activation energy for hole injection in the
+device as obtained from the slope of the Richardson plot. Inset:
+Richardson plot depicting the dependence of drain current on the
+temperature at various <span class="math inline">\(V_{TG}\)</span> and
+<span class="math inline">\(V_D = -0.6\)</span> V. The negative
+extracted values at lower <span class="math inline">\(V_{TG}\)</span>
+correspond to the positive slope of the Richardson plot, which is due to
+an increase in <span class="math inline">\(I_D\)</span> with a reduction
+in temperature, indicating non-thermionic carrier injection at the
+contact interface. (b) Output characteristics of the device at <span
+class="math inline">\(T = 5\)</span> K. <span id="fig:low_temp_02"
+label="fig:low_temp_02"></span></figcaption>
+</figure>
+<p>We further verify this using a modified Richardson equation for
+nanowire<span class="citation"
+data-cites="o2008thermionic"><sup>38</sup></span> in Figure <a
+href="#fig:low_temp_02" data-reference-type="ref"
+data-reference="fig:low_temp_02">1.10</a>(a), wherein the inset, we plot
+<span class="math inline">\(\frac{I_D}{T}\)</span> in the log scale as a
+function of <span class="math inline">\(\frac{1}{T}\)</span> at various
+<span class="math inline">\(V_{TG}\)</span>. The effective barrier
+height, as extracted from the slope of the linear fits, is shown in
+Figure <a href="#fig:low_temp_02" data-reference-type="ref"
+data-reference="fig:low_temp_02">1.10</a>(a). The positive slope (and
+hence the ‘negative’ effective barrier) under on state is due to a
+reduction in <span class="math inline">\(I_D\)</span> with <span
+class="math inline">\(T\)</span>, representing a negligible barrier at
+the contact interface. This is independent of <span
+class="math inline">\(V_{TG}\)</span> as the top gate only controls the
+channel portion. At larger positive <span
+class="math inline">\(V_{TG}\)</span>, the extracted effective barrier
+increases, which corresponds to the <span
+class="math inline">\(V_{TG}\)</span> induced potential barrier created
+between the source underlap and the channel as the channel turns off.
+The output characteristics of the device shown in Figure <a
+href="#fig:low_temp_02" data-reference-type="ref"
+data-reference="fig:low_temp_02">1.10</a>(b) further support the
+negligible Schottky barrier even at <span
+class="math inline">\(T=5\,K\)</span>. The characteristics show strong
+current saturation, particularly at relatively low <span
+class="math inline">\(|V_{TG}|\)</span>, and <span
+class="math inline">\(I_D\)</span> varies approximately in a quadratic
+manner with <span class="math inline">\(V_{TG}\)</span>.</p>
+<h2 id="field-effect-mobility-of-te-nanowire-transistor">Field-effect
+mobility of Te nanowire transistor</h2>
+<p>Using the temperature-dependent transfer characteristics, we extract
+the field effect mobility (<span class="math inline">\(\mu\)</span>) of
+the nanowire FET as<span class="citation"
+data-cites="wang2003germanium sze2006physics"><sup>10,39</sup></span>
+<span
+class="math display">\[\mu=\frac{dI_{D}}{dV_{TG}}\frac{L_{ch}}{C_{ox}}\frac{1}{V^\prime_{D}}\]</span>
+Here <span class="math inline">\(C_{ox}\)</span> is the gate capacitance
+per unit length of the device, <span
+class="math inline">\(L_{ch}\)</span> is the channel length of the
+device, and <span class="math inline">\(V&#39;_{D}\)</span> is the
+effective drain bias after correcting for the series resistance. Since
+the gate does not entirely cover the device, there are significant
+underlap regions, which contribute to the series resistance. This effect
+can be seen in output characteristics shown in Figure <a
+href="#fig:low_temp_02" data-reference-type="ref"
+data-reference="fig:low_temp_02">1.10</a>(b) where at high <span
+class="math inline">\(|V_{TG}|\)</span>, the rate of increase of current
+with <span class="math inline">\(V_{TG}\)</span> decreases, indicating
+that <span class="math inline">\(I_D\)</span> is limited by the series
+resistance. The total series resistance is estimated as <span
+class="math display">\[R_{s}=R_{D}\frac{L_{under}}{L_{wire}}\]</span>
+where <span class="math inline">\(R_D\)</span> is the output resistance
+in the linear regime with <span class="math inline">\(V_{TG}\approx
+0\)</span>, <span class="math inline">\(L_{wire}\)</span> is the total
+length of the nanowire and <span
+class="math inline">\(L_{under}\)</span> (<span
+class="math inline">\(=L_{wire}-L_{ch}\)</span>) is the total length of
+the underlap regions. The corrected drain bias then becomes <span
+class="math display">\[V^\prime_{D}=V_{D}-I_{D}R_{s}\]</span> where
+<span class="math inline">\(V_{DS}\)</span> is the applied drain
+bias.</p>
+<figure id="fig:mob_01">
+<div class="centering">
+<img src="/Figures/01_11.png" />
+</div>
+<figcaption>(a) Schematic cross-section of the nanowire device. (b)
+Scanning electron micrograph of the device cross-section, when cut along
+the white, dashed line in Figure <a href="#fig:dual_gate_01"
+data-reference-type="ref" data-reference="fig:dual_gate_01">1.6</a>(b)
+and corresponds to the schematic in (a). (c) Electrostatic potential
+contour lines and electric field lines of Te nanowire device, as
+obtained from 2D FEM simulation. The simulation is run on the device
+cross-section. <span id="fig:mob_01"
+label="fig:mob_01"></span></figcaption>
+</figure>
+<p>The channel being cylindrical in nature, <span
+class="math inline">\(C_{ox}\)</span> is very sensitive to device
+geometry and can vary up to 10-fold if the correct device structure is
+not taken into account<span class="citation"
+data-cites="khanal2007gate wunnicke2006gate fuhrer2013measurement"><sup>40–42</sup></span>.
+The cross-sectional geometry of the device and the corresponding
+scanning electron micrograph are shown in Figure <a href="#fig:mob_01"
+data-reference-type="ref" data-reference="fig:mob_01">1.11</a>(a-b). To
+accurately capture the gate capacitance, the Laplace equation is solved
+for this device geometry <span
+class="math display">\[\frac{\partial^{2}\phi}{\partial
+x^{2}}+\frac{\partial^{2}\phi}{\partial y^{2}}=0\]</span> using finite
+element method (FEM) as implemented in FreeFEM++ software<span
+class="citation" data-cites="MR3043640"><sup>43</sup></span>. The
+nanowire is assumed to be conducting and hence is equipotential with
+Dirichlet boundary conditions <span
+class="math inline">\(\phi=V\)</span>. The top surface of hBN is assumed
+to have fixed potential at <span class="math inline">\(\phi=0\)</span>.
+Since the bottom gate in the measurement is left floating, the electric
+field at the bottom of 285 nm <span
+class="math inline">\(\mathrm{SiO_{2}}\)</span> is assumed to be zero.
+The total charge (<span class="math inline">\(Q\)</span>) on the
+nanowire is calculated by integrating the normal component of the
+electric field on the nanowire. The gate capacitance is then obtained
+from <span class="math inline">\(C=\frac{Q}{V}\)</span>. The
+electrostatic potential contour lines and the corresponding electric
+field lines, as obtained from the 2D FEM simulation, are shown in Figure
+<a href="#fig:mob_01" data-reference-type="ref"
+data-reference="fig:mob_01">1.11</a>(c). <span>Due to the relatively
+larger diameter of the nanowires used in this work, we have neglected
+the quantum capacitance of the channel<span class="citation"
+data-cites="fickenscher2013optical pemasiri2015quantum lee2012gate"><sup>44–46</sup></span>
+arising from the finite density of states. This quantum capacitance
+comes in series with the gate oxide capacitance calculated above. This
+results in a slight overestimation of the gate capacitance, hence
+underestimating the extracted carrier mobility. Thus, the extracted hole
+mobility values discussed next represent the lower bounds of the true
+mobility.</span></p>
+<p>The extracted <span class="math inline">\(\mu\)</span> is shown in
+Figure <a href="#fig:mob_02" data-reference-type="ref"
+data-reference="fig:mob_02">1.12</a>(a) as a function of <span
+class="math inline">\(V_{TG}\)</span> at different <span
+class="math inline">\(T\)</span>. <span
+class="math inline">\(\mu\)</span> has a peak (<span
+class="math inline">\(\mu_{peak}\)</span>) near the threshold voltage,
+where it shows strong temperature dependence. On the other hand, at
+higher negative <span class="math inline">\(V_{TG}\)</span>, it drops
+due to large gate field<span class="citation"
+data-cites="takagi1994universality"><sup>47</sup></span>, and the strong
+temperature dependence vanishes. The nanowire FET exhibits <span
+class="math inline">\(\mu_{peak}=570\,\mathrm{cm^{2}/V\cdot s}\)</span>
+at 270 K, which is twice of (110) Si hole mobility, and also beats the
+state-of-the-art uniaxially compressed (110) strained Si hole
+mobility<span class="citation"
+data-cites="kuhn2012considerations"><sup>4</sup></span>. <span
+class="math inline">\(\mu_{peak}\)</span> increases monotonously with a
+decrease in the temperature initially and gradually saturates to a value
+of <span class="math inline">\(1390\,\mathrm{cm^{2}/V\cdot s}\)</span>
+at low temperature [Figure <a href="#fig:mob_02"
+data-reference-type="ref" data-reference="fig:mob_02">1.12</a>(b)]. For
+<span class="math inline">\(\mathrm{T&gt;180\,K}\)</span>, <span
+class="math inline">\(\mu_{peak}\)</span> can be fitted to a power law:
+<span class="math display">\[\mu_{peak}\propto T^{-\gamma}\]</span> with
+<span class="math inline">\(\gamma=1.47\)</span>. This indicates that
+for <span class="math inline">\(\mathrm{T&gt;180\,K}\)</span>, <span
+class="math inline">\(\mu_{peak}\)</span> is limited by phonon
+scattering, while at lower temperatures, it is limited by Coulomb
+scattering<span class="citation"
+data-cites="ong2013mobility radisavljevic2013mobility"><sup>48,49</sup></span>.
+For solution synthesized Te nanoflakes, <span
+class="math inline">\(\gamma\)</span> has been found to be 1.03<span
+class="citation" data-cites="amani2018solution"><sup>50</sup></span>
+while in Te thin films grown by molecular beam epitaxy, <span
+class="math inline">\(\gamma\)</span> is found to vary between 0.75 to
+nearly zero<span class="citation"
+data-cites="zhou2018high"><sup>51</sup></span>.</p>
+<figure id="fig:mob_02">
+<div class="centering">
+<img src="/Figures/01_12.png" />
+</div>
+<figcaption>(a) Hole mobility <em>versus</em> <span
+class="math inline">\(V_{TG}\)</span> at different temperatures, as
+extracted from the characteristics in Figure <a href="#fig:low_temp_01"
+data-reference-type="ref" data-reference="fig:low_temp_01">1.9</a>(b).
+(b) Peak hole mobility plotted as a function of temperature. Mobility
+decreases from <span class="math inline">\(1390\,\mathrm{cm^{2}/V\cdot
+s}\)</span> at 5 K to <span
+class="math inline">\(570\,\mathrm{cm^{2}/V\cdot s}\)</span> at 270 K.
+The dashed line shows a fit of the peak mobility as <span
+class="math inline">\(T^{-1.47}\)</span> indicating phonon-limited
+mobility character. <span id="fig:mob_02"
+label="fig:mob_02"></span></figcaption>
+</figure>
+<h2 id="performance-benchmarking">Performance benchmarking</h2>
+<p>A comparison of the performance of the presented Te nanowire
+transistor with other reported Te-based transistors<span
+class="citation"
+data-cites="wang2018field liang2009synthesis zhou2018high amani2018solution tong2020stable qin2020raman"><sup>16,17,34,50–52</sup></span>
+is shown in Figure <a href="#fig:mob_03" data-reference-type="ref"
+data-reference="fig:mob_03">1.13</a>(a-b) in terms of drive current and
+on-off ratio. To make a fair comparison by accommodating varied device
+dimensions and biasing conditions in reported data from the literature,
+we scale the drive current (<span class="math inline">\(I_{ON}\)</span>)
+by the drain field and the circumference of the nanowire (channel width
+in case of 2D flakes) as follows: <span
+class="math display">\[I_{scaled} = \frac{I_{ON} L_{wire}}{2\pi r
+V_{DS}}\]</span></p>
+<figure id="fig:mob_03">
+<div class="centering">
+<img src="/Figures/01_13.png" />
+</div>
+<figcaption>(a) Comparison of performance of various Te-based field
+effect transistors in terms of on-off ratio and drive channel
+thickness/diameter. (b) Comparison of performance of various Te-based
+field effect transistors in terms of on-off ratio and drive current
+(scaled by drain field and nanowire circumference or channel width). The
+blue and red symbols indicate existing reports on 2D Te channel and 1D
+nanowire FETs, respectively, while the red star denotes the present
+work.<span id="fig:mob_03" label="fig:mob_03"></span></figcaption>
+</figure>
+<p>Previous reports suggest that Te exhibits high mobility for thicker
+films (and wider nanowires); however, it becomes challenging to turn the
+channel off at such channel thickness. On the other hand, for thin
+channels, where the on-off ratio is improved, the carrier mobility
+degrades significantly, and Te loses its attractiveness as a
+high-mobility channel. Figure <a href="#fig:mob_03"
+data-reference-type="ref" data-reference="fig:mob_03">1.13</a>(a) shows
+the on-off ratio achieved in various Te-based transistor structures
+reported earlier as a function of the channel thickness (or diameter),
+suggesting a strong degradation of the on-off ratio for thicker
+channels. From the same figure, we observe that the advantage of the
+improved electrostatics <span>due to dual-gated nanowire structure in
+the present work is remarkable, allowing us to achieve an on-off ratio
+of <span class="math inline">\(2\times10^4\)</span> (<span
+class="math inline">\(@V_{ds}=-1.2\)</span> V) at a relatively larger
+nanowire diameter. However, the device’s subthreshold swing is still
+relatively large, and there is scope for further optimization on the
+gate electrostatics and nanowire-dielectric interface.</span> In Figure
+<a href="#fig:mob_03" data-reference-type="ref"
+data-reference="fig:mob_03">1.13</a>(b), we compare the performance of
+different reports in the on-off ratio and drive current space. We note
+from the figure that the present work provides comparable performance
+with the best reports in terms of drive current while maintaining a
+superior on-off ratio.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In summary, we presented the synthesis, fabrication, and electrical
+characterization of high-performance dual-gated p-type Te nanowire
+junctionless transistors. The unique combination of contact-barrier-free
+hole injection, high hole mobility (<span
+class="math inline">\(570\)</span> and <span
+class="math inline">\(1390\,\mathrm{cm^{2}/V\cdot s}\)</span> at 270 and
+5 K, respectively), <span>dangling-bond-free, clean interface between
+the nanowire channel and hBN dielectric,</span> and dual-gated operation
+allows us to achieve an on-off ratio in excess of <span
+class="math inline">\(2\times10^{4}\)</span> with a high on-current of
+<span class="math inline">\(216\,\mu A/\mu m\)</span> even at a
+relatively small drain field, which is superior to existing p-type
+nanowire FETs. Te nanowires are thus a promising candidate for
+next-generation ultra-scaled transistors, as well as for other
+nanowire-based electronic applications, including highly scaled memory,
+biosensing, fast infrared sensing, and spectroscopy.</p>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-cui2003high" class="csl-entry" role="listitem">
+<sup>1</sup> Y. Cui, Z. Zhong, D. Wang, W.U. Wang, and C.M. Lieber,
+<span>“<span class="nocase">High performance silicon nanowire field
+effect transistors</span>,”</span> Nano Letters <strong>3</strong>(2),
+149–152 (2003).
+</div>
+<div id="ref-singh2006high" class="csl-entry" role="listitem">
+<sup>2</sup> N. Singh, A. Agarwal, L. Bera, T. Liow, R. Yang, S.
+Rustagi, C. Tung, R. Kumar, G. Lo, N. Balasubramanian, and others,
+<span>“<span class="nocase">High-performance fully depleted silicon
+nanowire (diameter <span class="math inline">\(\le\)</span> 5 nm)
+gate-all-around CMOS devices</span>,”</span> IEEE Electron Device
+Letters <strong>27</strong>(5), 383–386 (2006).
+</div>
+<div id="ref-appenzeller2008toward" class="csl-entry" role="listitem">
+<sup>3</sup> J. Appenzeller, J. Knoch, M.T. Bjork, H. Riel, H. Schmid,
+and W. Riess, <span>“<span class="nocase">Toward nanowire
+electronics</span>,”</span> IEEE Transactions on Electron Devices
+<strong>55</strong>(11), 2827–2845 (2008).
+</div>
+<div id="ref-kuhn2012considerations" class="csl-entry" role="listitem">
+<sup>4</sup> K.J. Kuhn, <span>“<span class="nocase">Considerations for
+ultimate CMOS scaling</span>,”</span> IEEE Transactions on Electron
+Devices <strong>59</strong>(7), 1813–1828 (2012).
+</div>
+<div id="ref-bohr2017cmos" class="csl-entry" role="listitem">
+<sup>5</sup> M.T. Bohr, and I.A. Young, <span>“<span class="nocase">CMOS
+scaling trends and beyond</span>,”</span> IEEE Micro
+<strong>37</strong>(6), 20–29 (2017).
+</div>
+<div id="ref-Samsung_Plans_Mass" class="csl-entry" role="listitem">
+<sup>6</sup> L. Armasu, <span>“<a
+href="https://www.tomshardware.com/news/samsung-3nm-gaafet-production-2021,38426.html"
+class="uri">Https://www.tomshardware.com/news/samsung-3nm-gaafet-production-2021,38426.html</a>,”</span>
+(2019 (accessed June 26, 2020) ).
+</div>
+<div id="ref-lee2016vertically" class="csl-entry" role="listitem">
+<sup>7</sup> B.-H. Lee, J. Hur, M.-H. Kang, T. Bang, D.-C. Ahn, D. Lee,
+K.-H. Kim, and Y.-K. Choi, <span>“<span class="nocase">A vertically
+integrated junctionless nanowire transistor</span>,”</span> Nano Letters
+<strong>16</strong>(3), 1840–1847 (2016).
+</div>
+<div id="ref-ikeda2012high" class="csl-entry" role="listitem">
+<sup>8</sup> K. Ikeda, M. Ono, D. Kosemura, K. Usuda, M. Oda, Y.
+Kamimuta, T. Irisawa, Y. Moriyama, A. Ogura, and T. Tezuka, <span>“<span
+class="nocase">High-mobility and low-parasitic resistance
+characteristics in strained Ge nanowire pMOSFETs with metal source/drain
+structure formed by doping-free processes</span>,”</span> in <em>2012
+Symposium on VLSI Technology (VLSIT)</em>, (IEEE, 2012), pp. 165–166.
+</div>
+<div id="ref-fang2007vertically" class="csl-entry" role="listitem">
+<sup>9</sup> W.-W. Fang, N. Singh, L.K. Bera, H.S. Nguyen, S.C. Rustagi,
+G. Lo, N. Balasubramanian, and D.-L. Kwong, <span>“<span
+class="nocase">Vertically stacked SiGe nanowire array channel CMOS
+transistors</span>,”</span> IEEE Electron Device Letters
+<strong>28</strong>(3), 211–213 (2007).
+</div>
+<div id="ref-wang2003germanium" class="csl-entry" role="listitem">
+<sup>10</sup> D. Wang, Q. Wang, A. Javey, R. Tu, H. Dai, H. Kim, P.C.
+McIntyre, T. Krishnamohan, and K.C. Saraswat, <span>“<span
+class="nocase">Germanium nanowire field-effect transistors with <span
+class="math inline">\(\mathrm{SiO_2}\)</span> and high-<span
+class="math inline">\(\kappa\)</span> <span
+class="math inline">\(\mathrm{HfO_2}\)</span> gate
+dielectrics</span>,”</span> Applied Physics Letters
+<strong>83</strong>(12), 2432–2434 (2003).
+</div>
+<div id="ref-lee2009junctionless" class="csl-entry" role="listitem">
+<sup>11</sup> C.-W. Lee, A. Afzalian, N.D. Akhavan, R. Yan, I. Ferain,
+and J.-P. Colinge, <span>“<span class="nocase">Junctionless multigate
+field-effect transistor</span>,”</span> Applied Physics Letters
+<strong>94</strong>(5), 053511 (2009).
+</div>
+<div id="ref-gundapaneni2011enhanced" class="csl-entry" role="listitem">
+<sup>12</sup> S. Gundapaneni, S. Ganguly, and A. Kottantharayil,
+<span>“<span class="nocase">Enhanced Electrostatic Integrity of
+Short-Channel Junctionless Transistor With High-<span
+class="math inline">\(\kappa\)</span> Spacers</span>,”</span> IEEE
+Electron Device Letters <strong>32</strong>(10), 1325–1327 (2011).
+</div>
+<div id="ref-jin2007modeling" class="csl-entry" role="listitem">
+<sup>13</sup> S. Jin, M.V. Fischetti, and T. Tang, <span>“<span
+class="nocase">Modeling of electron mobility in gated silicon nanowires
+at room temperature: Surface roughness scattering, dielectric screening,
+and band nonparabolicity</span>,”</span> Journal of Applied Physics
+<strong>102</strong>(8), 083715 (2007).
+</div>
+<div id="ref-ramayya2008electron" class="csl-entry" role="listitem">
+<sup>14</sup> E. Ramayya, D. Vasileska, S. Goodnick, and I. Knezevic,
+<span>“<span class="nocase">Electron transport in silicon nanowires: The
+role of acoustic phonon confinement and surface roughness
+scattering</span>,”</span> Journal of Applied Physics
+<strong>104</strong>(6), 063711 (2008).
+</div>
+<div id="ref-majumdar2010effects" class="csl-entry" role="listitem">
+<sup>15</sup> K. Majumdar, N. Bhat, P. Majhi, and R. Jammy, <span>“<span
+class="nocase">Effects of parasitics and interface traps on ballistic
+nanowire FET in the ultimate quantum capacitance limit</span>,”</span>
+IEEE Transactions on Electron Devices <strong>57</strong>(9), 2264–2273
+(2010).
+</div>
+<div id="ref-liang2009synthesis" class="csl-entry" role="listitem">
+<sup>16</sup> F. Liang, and H. Qian, <span>“<span
+class="nocase">Synthesis of tellurium nanowires and their transport
+property</span>,”</span> Materials Chemistry and Physics
+<strong>113</strong>(2-3), 523–526 (2009).
+</div>
+<div id="ref-qin2020raman" class="csl-entry" role="listitem">
+<sup>17</sup> J.-K. Qin, P.-Y. Liao, M. Si, S. Gao, G. Qiu, J. Jian, Q.
+Wang, S.-Q. Zhang, S. Huang, A. Charnas, and others, <span>“<span
+class="nocase">Raman response and transport properties of tellurium
+atomic chains encapsulated in nanotubes</span>,”</span> Nature
+Electronics <strong>3</strong>(3), 141–147 (2020).
+</div>
+<div id="ref-medeiros2017single" class="csl-entry" role="listitem">
+<sup>18</sup> P.V. Medeiros, S. Marks, J.M. Wynn, A. Vasylenko, Q.M.
+Ramasse, D. Quigley, J. Sloan, and A.J. Morris, <span>“<span
+class="nocase">Single-atom scale structural selectivity in Te nanowires
+encapsulated inside ultranarrow, single-walled carbon
+nanotubes</span>,”</span> ACS Nano <strong>11</strong>(6), 6178–6185
+(2017).
+</div>
+<div id="ref-zhao2020evaporated" class="csl-entry" role="listitem">
+<sup>19</sup> C. Zhao, C. Tan, D.-H. Lien, X. Song, M. Amani, M.
+Hettick, H.Y.Y. Nyein, Z. Yuan, L. Li, M.C. Scott, and others,
+<span>“<span class="nocase">Evaporated tellurium thin films for p-type
+field-effect transistors and circuits</span>,”</span> Nature
+Nanotechnology <strong>15</strong>(1), 53–58 (2020).
+</div>
+<div id="ref-zhu2017multivalency" class="csl-entry" role="listitem">
+<sup>20</sup> Z. Zhu, X. Cai, S. Yi, J. Chen, Y. Dai, C. Niu, Z. Guo, M.
+Xie, F. Liu, J.-H. Cho, and others, <span>“Multivalency-driven formation
+of te-based monolayer materials: A combined first-principles and
+experimental study,”</span> Physical Review Letters
+<strong>119</strong>(10), 106101 (2017).
+</div>
+<div id="ref-roy2017manipulation" class="csl-entry" role="listitem">
+<sup>21</sup> A. Roy, K.R. Amin, S. Tripathi, S. Biswas, A.K. Singh, A.
+Bid, and N. Ravishankar, <span>“<span class="nocase">Manipulation of
+Optoelectronic Properties and Band Structure Engineering of Ultrathin Te
+Nanowires by Chemical Adsorption</span>,”</span> ACS Applied Materials
+&amp; Interfaces <strong>9</strong>(23), 19462–19469 (2017).
+</div>
+<div id="ref-lee2013high" class="csl-entry" role="listitem">
+<sup>22</sup> T.I. Lee, S. Lee, E. Lee, S. Sohn, Y. Lee, S. Lee, G.
+Moon, D. Kim, Y.S. Kim, J.M. Myoung, and others, <span>“<span>High-Power
+Density Piezoelectric Energy Harvesting Using Radially Strained
+Ultrathin Trigonal Tellurium Nanowire Assembly</span>,”</span> Advanced
+Materials <strong>25</strong>(21), 2920–2925 (2013).
+</div>
+<div id="ref-pradhan2017ultra" class="csl-entry" role="listitem">
+<sup>23</sup> A. Pradhan, A. Roy, S. Tripathi, A. Som, D. Sarkar, J.K.
+Mishra, K. Roy, T. Pradeep, N. Ravishankar, and A. Ghosh, <span>“<span
+class="nocase">Ultra-high sensitivity infra-red detection and
+temperature effects in a graphene–tellurium nanowire binary
+hybrid</span>,”</span> Nanoscale <strong>9</strong>(27), 9284–9290
+(2017).
+</div>
+<div id="ref-qiu2019thermoelectric" class="csl-entry" role="listitem">
+<sup>24</sup> G. Qiu, S. Huang, M. Segovia, P.K. Venuthurumilli, Y.
+Wang, W. Wu, X. Xu, and P.D. Ye, <span>“<span
+class="nocase">Thermoelectric performance of 2D tellurium with
+accumulation contacts</span>,”</span> Nano Letters
+<strong>19</strong>(3), 1955–1962 (2019).
+</div>
+<div id="ref-lin2016tellurium" class="csl-entry" role="listitem">
+<sup>25</sup> S. Lin, W. Li, Z. Chen, J. Shen, B. Ge, and Y. Pei,
+<span>“<span class="nocase">Tellurium as a high-performance elemental
+thermoelectric</span>,”</span> Nature Communications
+<strong>7</strong>(1), 1–6 (2016).
+</div>
+<div id="ref-pine1971raman" class="csl-entry" role="listitem">
+<sup>26</sup> A. Pine, and G. Dresselhaus, <span>“<span
+class="nocase">Raman spectra and lattice dynamics of
+tellurium</span>,”</span> Physical Review B <strong>4</strong>(2), 356
+(1971).
+</div>
+<div id="ref-du2017one" class="csl-entry" role="listitem">
+<sup>27</sup> Y. Du, G. Qiu, Y. Wang, M. Si, X. Xu, W. Wu, and P.D. Ye,
+<span>“<span class="nocase">One-dimensional van der Waals material
+tellurium: Raman spectroscopy under strain and
+magneto-transport</span>,”</span> Nano Letters <strong>17</strong>(6),
+3965–3973 (2017).
+</div>
+<div id="ref-liu2010rapid" class="csl-entry" role="listitem">
+<sup>28</sup> J.-W. Liu, F. Chen, M. Zhang, H. Qi, C.-L. Zhang, and
+S.-H. Yu, <span>“<span class="nocase">Rapid microwave-assisted synthesis
+of uniform ultralong Te nanowires, optical property, and chemical
+stability</span>,”</span> Langmuir <strong>26</strong>(13), 11372–11377
+(2010).
+</div>
+<div id="ref-song2008superlong" class="csl-entry" role="listitem">
+<sup>29</sup> J.-M. Song, Y.-Z. Lin, Y.-J. Zhan, Y.-C. Tian, G. Liu, and
+S.-H. Yu, <span>“<span class="nocase">Superlong high-quality tellurium
+nanotubes: synthesis, characterization, and optical
+property</span>,”</span> Crystal Growth and Design
+<strong>8</strong>(6), 1902–1908 (2008).
+</div>
+<div id="ref-Castellanos_Gomez_2014" class="csl-entry" role="listitem">
+<sup>30</sup> A. Castellanos-Gomez, M. Buscema, R. Molenaar, V. Singh,
+L. Janssen, H.S.J. van der Zant, and G.A. Steele, <span>“<a
+href="https://doi.org/10.1088/2053-1583/1/1/011002"><span
+class="nocase">Deterministic transfer of two-dimensional materials by
+all-dry viscoelastic stamping</span></a>,”</span> 2D Materials
+<strong>1</strong>(1), 011002 (2014).
+</div>
+<div id="ref-lan2007dispersibility" class="csl-entry" role="listitem">
+<sup>31</sup> W.-J. Lan, S.-H. Yu, H.-S. Qian, and Y. Wan, <span>“<span
+class="nocase">Dispersibility, stabilization, and chemical stability of
+ultrathin tellurium nanowires in acetone: morphology change,
+crystallization, and transformation into <span><span
+class="math inline">\(\mathrm{TeO_2}\)</span></span> in different
+solvents</span>,”</span> Langmuir <strong>23</strong>(6), 3409–3417
+(2007).
+</div>
+<div id="ref-ho2017high" class="csl-entry" role="listitem">
+<sup>32</sup> P.-H. Ho, Y.-R. Chang, Y.-C. Chu, M.-K. Li, C.-A. Tsai,
+W.-H. Wang, C.-H. Ho, C.-W. Chen, and P.-W. Chiu, <span>“<span
+class="nocase">High-mobility InSe transistors: the role of surface
+oxides</span>,”</span> ACS Nano <strong>11</strong>(7), 7362–7370
+(2017).
+</div>
+<div id="ref-haeffler1996electron" class="csl-entry" role="listitem">
+<sup>33</sup> G. Haeffler, A.E. Klinkmüller, J. Rangell, U. Berzinsh,
+and D. Hanstorp, <span>“<span class="nocase">The electron affinity of
+tellurium</span>,”</span> Zeitschrift f<span>ü</span>r Physik D Atoms,
+Molecules and Clusters <strong>38</strong>(3), 211–214 (1996).
+</div>
+<div id="ref-wang2018field" class="csl-entry" role="listitem">
+<sup>34</sup> Y. Wang, G. Qiu, R. Wang, S. Huang, Q. Wang, Y. Liu, Y.
+Du, W.A. Goddard, M.J. Kim, X. Xu, and others, <span>“<span
+class="nocase">Field-effect transistors made from solution-grown
+two-dimensional tellurene</span>,”</span> Nature Electronics
+<strong>1</strong>(4), 228–236 (2018).
+</div>
+<div id="ref-koo2005enhanced" class="csl-entry" role="listitem">
+<sup>35</sup> S.-M. Koo, Q. Li, M.D. Edelstein, C.A. Richter, and E.M.
+Vogel, <span>“<span class="nocase">Enhanced channel modulation in
+dual-gated silicon nanowire transistors</span>,”</span> Nano Letters
+<strong>5</strong>(12), 2519–2523 (2005).
+</div>
+<div id="ref-colli2009top" class="csl-entry" role="listitem">
+<sup>36</sup> A. Colli, A. Tahraoui, A. Fasoli, J.M. Kivioja, W.I.
+Milne, and A.C. Ferrari, <span>“<span class="nocase">Top-gated silicon
+nanowire transistors in a single fabrication step</span>,”</span> ACS
+Nano <strong>3</strong>(6), 1587–1593 (2009).
+</div>
+<div id="ref-pierret1996semiconductor" class="csl-entry"
+role="listitem">
+<sup>37</sup> R.F. Pierret, <em><span class="nocase">Semiconductor
+device fundamentals</span></em> (Pearson Education India, 1996).
+</div>
+<div id="ref-o2008thermionic" class="csl-entry" role="listitem">
+<sup>38</sup> M.F. O’Dwyer, R.A. Lewis, and C. Zhang, <span>“<span
+class="nocase">Thermionic refrigeration in low-dimensional
+structures</span>,”</span> Microelectronics Journal
+<strong>39</strong>(3-4), 597–600 (2008).
+</div>
+<div id="ref-sze2006physics" class="csl-entry" role="listitem">
+<sup>39</sup> S.M. Sze, and K.K. Ng, <em><span class="nocase">Physics of
+semiconductor devices</span></em> (John wiley &amp; sons, 2006).
+</div>
+<div id="ref-khanal2007gate" class="csl-entry" role="listitem">
+<sup>40</sup> D. Khanal, and J. Wu, <span>“<span class="nocase">Gate
+coupling and charge distribution in nanowire field effect
+transistors</span>,”</span> Nano Letters <strong>7</strong>(9),
+2778–2783 (2007).
+</div>
+<div id="ref-wunnicke2006gate" class="csl-entry" role="listitem">
+<sup>41</sup> O. Wunnicke, <span>“<span class="nocase">Gate capacitance
+of back-gated nanowire field-effect transistors</span>,”</span> Applied
+Physics Letters <strong>89</strong>(8), 083102 (2006).
+</div>
+<div id="ref-fuhrer2013measurement" class="csl-entry" role="listitem">
+<sup>42</sup> M.S. Fuhrer, and J. Hone, <span>“<span
+class="nocase">Measurement of mobility in dual-gated MoS2
+transistors</span>,”</span> Nature Nanotechnology <strong>8</strong>(3),
+146–147 (2013).
+</div>
+<div id="ref-MR3043640" class="csl-entry" role="listitem">
+<sup>43</sup> F. Hecht, <span>“<a href="https://freefem.org/"><span
+class="nocase">New development in FreeFem++</span></a>,”</span> J.
+Numer. Math. <strong>20</strong>(3-4), 251–265 (2012).
+</div>
+<div id="ref-fickenscher2013optical" class="csl-entry" role="listitem">
+<sup>44</sup> M. Fickenscher, T. Shi, H.E. Jackson, L.M. Smith, J.M.
+Yarrison-Rice, C. Zheng, P. Miller, J. Etheridge, B.M. Wong, Q. Gao, and
+others, <span>“<span class="nocase">Optical, structural, and numerical
+investigations of <span>GaAs/AlGaAs</span> core–multishell nanowire
+quantum well tubes</span>,”</span> Nano Letters <strong>13</strong>(3),
+1016–1022 (2013).
+</div>
+<div id="ref-pemasiri2015quantum" class="csl-entry" role="listitem">
+<sup>45</sup> K. Pemasiri, H.E. Jackson, L.M. Smith, B. Wong, S. Paiman,
+Q. Gao, H. Tan, and C. Jagadish, <span>“<span class="nocase">Quantum
+confinement of excitons in wurtzite <span>InP</span>
+nanowires</span>,”</span> Journal of Applied Physics
+<strong>117</strong>(19), 194306 (2015).
+</div>
+<div id="ref-lee2012gate" class="csl-entry" role="listitem">
+<sup>46</sup> Y. Lee, K. Kakushima, K. Natori, and H. Iwai, <span>“<span
+class="nocase">Gate capacitance modeling and diameter-dependent
+performance of nanowire MOSFETs</span>,”</span> IEEE Transactions on
+Electron Devices <strong>59</strong>(4), 1037–1045 (2012).
+</div>
+<div id="ref-takagi1994universality" class="csl-entry" role="listitem">
+<sup>47</sup> S. Takagi, A. Toriumi, M. Iwase, and H. Tango,
+<span>“<span class="nocase">On the universality of inversion layer
+mobility in Si MOSFET’s: Part I-effects of substrate impurity
+concentration</span>,”</span> IEEE Transactions on Electron Devices
+<strong>41</strong>(12), 2357–2362 (1994).
+</div>
+<div id="ref-ong2013mobility" class="csl-entry" role="listitem">
+<sup>48</sup> Z.-Y. Ong, and M.V. Fischetti, <span>“<span
+class="nocase">Mobility enhancement and temperature dependence in
+top-gated single-layer <span
+class="math inline">\(\mathrm{MoS2}\)</span></span>,”</span> Physical
+Review B <strong>88</strong>(16), 165316 (2013).
+</div>
+<div id="ref-radisavljevic2013mobility" class="csl-entry"
+role="listitem">
+<sup>49</sup> B. Radisavljevic, and A. Kis, <span>“<span
+class="nocase">Mobility engineering and a metal–insulator transition in
+monolayer <span
+class="math inline">\(\mathrm{MoS_2}\)</span></span>,”</span> Nature
+Materials <strong>12</strong>(9), 815–820 (2013).
+</div>
+<div id="ref-amani2018solution" class="csl-entry" role="listitem">
+<sup>50</sup> M. Amani, C. Tan, G. Zhang, C. Zhao, J. Bullock, X. Song,
+H. Kim, V.R. Shrestha, Y. Gao, K.B. Crozier, and others, <span>“<span
+class="nocase">Solution-synthesized high-mobility tellurium nanoflakes
+for short-wave infrared photodetectors</span>,”</span> ACS Nano
+<strong>12</strong>(7), 7253–7263 (2018).
+</div>
+<div id="ref-zhou2018high" class="csl-entry" role="listitem">
+<sup>51</sup> G. Zhou, R. Addou, Q. Wang, S. Honari, C.R. Cormier, L.
+Cheng, R. Yue, C.M. Smyth, A. Laturia, J. Kim, and others, <span>“<span
+class="nocase">High-Mobility Helical Tellurium Field-Effect Transistors
+Enabled by Transfer-Free, Low-Temperature Direct Growth</span>,”</span>
+Advanced Materials <strong>30</strong>(36), 1803109 (2018).
+</div>
+<div id="ref-tong2020stable" class="csl-entry" role="listitem">
+<sup>52</sup> L. Tong, X. Huang, P. Wang, L. Ye, M. Peng, L. An, Q. Sun,
+Y. Zhang, G. Yang, Z. Li, and others, <span>“<span class="nocase">Stable
+mid-infrared polarization imaging based on quasi-2D tellurium at room
+temperature</span>,”</span> Nature Communications
+<strong>11</strong>(1), 1–10 (2020).
+</div>
+</div>
+
+<ul class="topnav" style="margin-top:2rem;">
+      <li><a class="active" href="/introduction" style="margin-right: 2rem;">⬅ Inroduction</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/self-aligned-reconfigurable-heterojunction-transistor">Self-Aligned Reconfigurable Heterojunction Transistor ➡</a></li>
+    </ul>
+</body>
+</html>
