@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Introduction — Electronic Devices using Low-Dimensional van der Waals Materials and Their Heterojunctions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="/sakura.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.0.0/tex-mml-chtml-nofont.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<ul class="topnav">
+      <li><a class="active" href="/keywords" style="margin-right: 2rem;">⬅ Keywords</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/junctionless-tellurium-nanowire-transistor">Junctionless Tellurium Nanowire Transistor ➡</a></li>
+    </ul>
+<h1 id="introduction">Introduction</h1>
+<h2 id="low-dimensional-material">Low-dimensional material</h2>
+<p>Low-dimensional materials are materials in which the constituent
+atoms/molecules are strongly bonded (usually by covalent bonds) along
+some dimensions while weakly (van der Waals bonds) bonded along others.
+This leads to two possibilities - two-dimensional and one-dimensional
+materials. In two-dimensional materials, strong bonding is along a 2D
+plane, while along the third dimension, the bonding is weak. In
+one-dimensional materials, strong bonding is along a 1D line, while the
+bonding is weak along the other two dimensions.</p>
+<p>The discovery of extremely thin (single layer of carbon atoms) yet
+stable 2D layers like graphene<span class="citation"
+data-cites="novoselov2005two"><sup>1</sup></span> and ultra-thin
+single-wall carbon nanotubes<span class="citation"
+data-cites="iijima1993single"><sup>2</sup></span> has led numerous
+researchers across the globe to dive into the exciting world of
+low-dimensional materials to address problems of technological
+importance as well as fundamental understanding of nature.</p>
+<h2
+id="promise-of-low-dimensional-materials-in-transistor-scaling">Promise
+of low-dimensional materials in transistor scaling</h2>
+<p>Transistors are fundamental building blocks of all modern
+computational systems. Therefore, the efficiency of a transistor, in
+terms of energy and speed, will have a major impact on the overall
+system’s performance. The number of transistors in a computational
+system has grown remarkably since the 1960s, guided by Moore’s law<span
+class="citation" data-cites="moore1998cramming"><sup>3</sup></span>. The
+transistor dimensions have consistently reduced, making it possible to
+pack more transistors into a single chip with the same area<span
+class="citation" data-cites="dennard1974design"><sup>4</sup></span>.
+Interestingly, this has consistently led computation systems to perform
+better for lower costs over the past half-century. In a very short time,
+this exponential growth greatly impacted human society’s social,
+economic, and cultural aspects. Silicon, a three-dimensional material,
+has been the material for transistor channels. However, as the silicon
+transistors enter the sub-10nm technology node, the technological
+challenges are also ever-increasing. To overcome these challenges, novel
+device architectures and materials to make transistors are being
+continuously explored by the global research community.</p>
+<p>Transistors are switches in which the current between two terminals
+(source and drain) is controlled by a third terminal (gate). The
+electrostatics of the transistor channel mainly governs the transistor’s
+properties.</p>
+<p><span class="math display">\[\frac{d^2\phi (x)}{dx^2} -
+\frac{\phi(x)}{\lambda^2} = 0\]</span></p>
+<p>where <span class="math inline">\(\phi (x)\)</span> is the
+electrostatic potential along the channel of the device, while <span
+class="math inline">\(\lambda=\sqrt{\frac{t_bt_{ox}\epsilon_b}{\epsilon_{ox}}}\)</span>
+is called the characteristic length of the transistor. A smaller
+characteristic length allows for a smaller transistor without affecting
+the performance. Here <span class="math inline">\(t_b\)</span>, <span
+class="math inline">\(\epsilon_b\)</span>, <span
+class="math inline">\(t_{ox}\)</span>, and <span
+class="math inline">\(\epsilon_{ox}\)</span> are the thickness and
+dielectric constants of the semiconducting channel and the gate
+dielectric, respectively. A significant effort has been put into
+improving the gate stack by reducing <span
+class="math inline">\(t_{ox}\)</span> and increasing <span
+class="math inline">\(\epsilon_{ox}\)</span>. At the same time, efforts
+to reduce the thickness of the transistor channel, <span
+class="math inline">\(t_b\)</span>, have also been significant. However,
+the effort to reduce <span class="math inline">\(t_b\)</span> has always
+been met with challenges like increased surface roughness, device
+variability, and poor interfaces due to dangling bonds. These effects
+are most significantly visible in the degradation of field-effect
+mobility of the transistors with decreasing <span
+class="math inline">\(t_b\)</span> due to an increase in carrier
+scattering.</p>
+<p>Here is where low-dimensional materials have come to the rescue. Due
+to their weak van der Waals bonding along some dimensions, they can be
+arbitrarily thinned down along those dimensions without significantly
+degrading the channel and interface properties<span class="citation"
+data-cites="liu2021promises"><sup>5</sup></span>. A two-dimensional
+material can be scaled down to a monolayer without degrading its
+properties<span class="citation"
+data-cites="novoselov2005two radisavljevic2011single"><sup>1,6</sup></span>.
+Similarly, a one-dimensional material can be scaled to a single chain of
+atoms/molecules.</p>
+<p>However, low-dimensional semiconductors come with a different set of
+challenges, which the research community is trying to address. Foremost
+among these is the lack of proper contact with the material. Inefficient
+metal-semiconductor contacts lead to large contact resistance,
+significantly degrading the transistor performance<span class="citation"
+data-cites="ngo2020control"><sup>7</sup></span>. Also, the lack of
+proper doping techniques and the dependence on intrinsic doping of the
+material often leads to significant device-to-device variations. The
+lack of doping has also made implementing complementary logic
+(<em>n</em>-type and <em>p</em>-type) challenging. Finally, the
+wafer-scale fabrication of integrated circuits also remains a
+challenge.</p>
+<h2
+id="low-dimensional-materials-for-optoelectronics-and-photonics">Low-dimensional
+materials for optoelectronics and photonics</h2>
+<p>Low-dimensional materials have many interesting properties that can
+be utilized for various optoelectronic<span class="citation"
+data-cites="wang2012electronics an2022perspectives"><sup>8,9</sup></span>
+applications like photodetectors<span class="citation"
+data-cites="murali2019highly amani2018solution"><sup>10,11</sup></span>,
+solar cells<span class="citation"
+data-cites="koo2024mesoporous tsai2014monolayer"><sup>12,13</sup></span>,
+light-emitting devices<span class="citation"
+data-cites="withers2015wse2 lien2018large"><sup>14,15</sup></span>,
+single photon emitters<span class="citation"
+data-cites="chhaperwal2024simultaneously"><sup>16</sup></span> and
+single photon detectors<span class="citation"
+data-cites="NithinSinglePhoton"><sup>17</sup></span>. The availability
+of a large library of these materials with a wide range of bandgaps has
+made them suitable for photodetectors for a wide spectrum of
+electromagnetic radiation. The thickness-dependent tunability of the
+bandgap has further added to their advantage<span class="citation"
+data-cites="nidhi2022impact buscema2014fast"><sup>18,19</sup></span>.
+Semimetals like graphene have been used for ultrafast broadband
+photoresponse<span class="citation"
+data-cites="xia2009ultrafast"><sup>20</sup></span>. Many low-dimensional
+materials (partly due to strong quantum confinement) show interesting
+properties from quasiparticles like excitons, trions, etc<span
+class="citation"
+data-cites="chatterjee2023harmonic"><sup>21</sup></span>.</p>
+<p>Another major advantage of low-dimensional materials in
+optoelectronics arises from the ability to form heterojunctions.
+Heterojunctions with a wide variety of properties can be fabricated for
+efficient carrier generation and collection in the case of
+photodetectors and carrier recombination and light emission in the case
+of light-emitting devices. The gain-bandwidth tradeoff has been one of
+the major limitations of optoelectronics using low-dimensional
+materials<span class="citation"
+data-cites="kufer2015highly"><sup>22</sup></span>. This comes from traps
+at the semiconductor-substrate interfaces<span class="citation"
+data-cites="han2019ambient"><sup>23</sup></span> and the lack of
+integration with sensing and detection circuits and systems.</p>
+<h2 id="motivation">Motivation</h2>
+<p>In the previous sections, we have discussed the opportunities and
+challenges for low-dimensional material-based devices. In this thesis,
+we try to address some of these challenges. The main challenge for
+transistor applications is getting high-performance devices at lower
+energies. This often involves mitigating contact resistance. For
+optoelectronic devices, the challenge has been to get stable devices to
+detect even low-energy electromagnetic radiation with high responsivity
+and good speed. These challenges have been the main motivational guiding
+forces behind this work.</p>
+<h2 id="thesis-organizatiom">Thesis Organizatiom</h2>
+<p>The rest of the thesis is organized into the following chapters -</p>
+<p><strong>Chapter 2</strong>: Here, we explore gate-all-around
+junctionless transistor architecture, a suitable structure for sub-5nm
+technology node due to its excellent electrostatics, using the tellurium
+nanowires. Further, we use h-BN, a two-dimensional insulator, as the
+gate dielectric. The combination of the unique material properties and
+the device architecture helped us fabricate p-type transistors with
+field-effect mobility of 570 <span
+class="math inline">\(\mathrm{cm^2/V\cdot s}\)</span>, a high drive
+current of 216 mA/mm and an on-off ratio of <span
+class="math inline">\(\mathrm{2\times 10^4}\)</span>.</p>
+<p><strong>Chapter 3</strong>: Using partially overlapping gates, we
+present an electrically defined self-aligned <span
+class="math inline">\(\mathrm{SnSe_2}\)</span>/<span
+class="math inline">\(\mathrm{WSe_2}\)</span> heterostructure device.
+The device operates as n-type and p-type transistors by applying
+appropriate gate biases. The device can also be used as a test platform
+to discern the properties of the heterojunction without confounding the
+effects of contact resistance. This device can be operated as a tunnel
+transistor as well. At room temperature, the device exhibits a
+subthreshold swing of less than 60 mV/dec.</p>
+<p><strong>Chapter 4</strong>: In this chapter, we present a vertically
+integrated double-channel transistor based on ultrathin 2D material to
+meet these challenges. The device structure effectively increases the
+contact area, thus reducing the contact resistance by about a factor of
+two without compromising the device footprint or electrostatic
+integrity. The proposed device structure achieves a high drive current
+of over 400 mA/mm.</p>
+<p><strong>Chapter 5</strong>: Here, we present infra-red detection
+using stable wide-bandgap material heterostructure and electron
+transition from one material’s conduction band to the other’s conduction
+band. We propose multiple device architectures to understand the
+mechanism of the device operation from their bias-dependent photo
+response and simple physical models. The device exhibits the
+responsivity of  40 mA/W when excited with 1550 nm wavelength IR
+radiation. The device operates and exhibits a nearly flat response up to
+1800 nm, and a signal above the noise floor could be observed up to 30
+kHz.</p>
+<p><strong>Chapter 6</strong> concludes the findings of this work and
+discusses the future scope.</p>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-novoselov2005two" class="csl-entry" role="listitem">
+<sup>1</sup> K.S. Novoselov, A.K. Geim, S.V. Morozov, D. Jiang, M.I.
+Katsnelson, I.V. Grigorieva, S.V. Dubonos, and A.A. Firsov, <span>“<span
+class="nocase">Two-dimensional gas of massless Dirac fermions in
+graphene</span>,”</span> Nature <strong>438</strong>(7065), 197–200
+(2005).
+</div>
+<div id="ref-iijima1993single" class="csl-entry" role="listitem">
+<sup>2</sup> S. Iijima, and T. Ichihashi, <span>“<span
+class="nocase">Single-shell carbon nanotubes of 1-nm
+diameter</span>,”</span> Nature <strong>363</strong>(6430), 603–605
+(1993).
+</div>
+<div id="ref-moore1998cramming" class="csl-entry" role="listitem">
+<sup>3</sup> G.E. Moore, <span>“<span class="nocase">Cramming more
+components onto integrated circuits</span>,”</span> Proceedings of the
+IEEE <strong>86</strong>(1), 82–85 (1998).
+</div>
+<div id="ref-dennard1974design" class="csl-entry" role="listitem">
+<sup>4</sup> R.H. Dennard, F.H. Gaensslen, H.-N. Yu, V.L. Rideout, E.
+Bassous, and A.R. LeBlanc, <span>“<span class="nocase">Design of
+ion-implanted MOSFET’s with very small physical
+dimensions</span>,”</span> IEEE Journal of Solid-State Circuits
+<strong>9</strong>(5), 256–268 (1974).
+</div>
+<div id="ref-liu2021promises" class="csl-entry" role="listitem">
+<sup>5</sup> Y. Liu, X. Duan, H.-J. Shin, S. Park, Y. Huang, and X.
+Duan, <span>“Promises and prospects of two-dimensional
+transistors,”</span> Nature <strong>591</strong>(7848), 43–53 (2021).
+</div>
+<div id="ref-radisavljevic2011single" class="csl-entry" role="listitem">
+<sup>6</sup> B. Radisavljevic, A. Radenovic, J. Brivio, V. Giacometti,
+and A. Kis, <span>“Single-layer MoS2 transistors.”</span> Nature
+Nanotechnology <strong>6</strong>(3), 147–150 (2011).
+</div>
+<div id="ref-ngo2020control" class="csl-entry" role="listitem">
+<sup>7</sup> T.D. Ngo, M. Lee, Z. Yang, F. Ali, I. Moon, and W.J. Yoo,
+<span>“Control of the schottky barrier and contact resistance at
+metal–WSe2 interfaces by polymeric doping,”</span> Advanced Electronic
+Materials <strong>6</strong>(10), 2000616 (2020).
+</div>
+<div id="ref-wang2012electronics" class="csl-entry" role="listitem">
+<sup>8</sup> Q.H. Wang, K. Kalantar-Zadeh, A. Kis, J.N. Coleman, and
+M.S. Strano, <span>“Electronics and optoelectronics of two-dimensional
+transition metal dichalcogenides,”</span> Nature Nanotechnology
+<strong>7</strong>(11), 699–712 (2012).
+</div>
+<div id="ref-an2022perspectives" class="csl-entry" role="listitem">
+<sup>9</sup> J. An, X. Zhao, Y. Zhang, M. Liu, J. Yuan, X. Sun, Z.
+Zhang, B. Wang, S. Li, and D. Li, <span>“<span
+class="nocase">Perspectives of 2D materials for optoelectronic
+integration</span>,”</span> Advanced Functional Materials
+<strong>32</strong>(14), 2110119 (2022).
+</div>
+<div id="ref-murali2019highly" class="csl-entry" role="listitem">
+<sup>10</sup> K. Murali, N. Abraham, S. Das, S. Kallatt, and K.
+Majumdar, <span>“<span class="nocase">Highly sensitive, fast graphene
+photodetector with responsivity <span class="math inline">\(&gt;
+10^6\)</span> A/W using a floating quantum well gate</span>,”</span> ACS
+Applied Materials &amp; Interfaces <strong>11</strong>(33), 30010–30018
+(2019).
+</div>
+<div id="ref-amani2018solution" class="csl-entry" role="listitem">
+<sup>11</sup> M. Amani, C. Tan, G. Zhang, C. Zhao, J. Bullock, X. Song,
+H. Kim, V.R. Shrestha, Y. Gao, K.B. Crozier, and others, <span>“<span
+class="nocase">Solution-synthesized high-mobility tellurium nanoflakes
+for short-wave infrared photodetectors</span>,”</span> ACS Nano
+<strong>12</strong>(7), 7253–7263 (2018).
+</div>
+<div id="ref-koo2024mesoporous" class="csl-entry" role="listitem">
+<sup>12</sup> D. Koo, Y. Choi, U. Kim, J. Kim, J. Seo, E. Son, H. Min,
+J. Kang, and H. Park, <span>“Mesoporous structured MoS2 as an electron
+transport layer for efficient and stable perovskite solar cells,”</span>
+Nature Nanotechnology, 1–8 (2024).
+</div>
+<div id="ref-tsai2014monolayer" class="csl-entry" role="listitem">
+<sup>13</sup> M.-L. Tsai, S.-H. Su, J.-K. Chang, D.-S. Tsai, C.-H. Chen,
+C.-I. Wu, L.-J. Li, L.-J. Chen, and J.-H. He, <span>“Monolayer MoS2
+heterojunction solar cells,”</span> ACS Nano <strong>8</strong>(8),
+8317–8322 (2014).
+</div>
+<div id="ref-withers2015wse2" class="csl-entry" role="listitem">
+<sup>14</sup> F. Withers, O. Del Pozo-Zamudio, S. Schwarz, S.
+Dufferwiel, P. Walker, T. Godde, A. Rooney, A. Gholinia, C. Woods, P.
+Blake, and others, <span>“WSe2 light-emitting tunneling transistors with
+enhanced brightness at room temperature,”</span> Nano Letters
+<strong>15</strong>(12), 8223–8228 (2015).
+</div>
+<div id="ref-lien2018large" class="csl-entry" role="listitem">
+<sup>15</sup> D.-H. Lien, M. Amani, S.B. Desai, G.H. Ahn, K. Han, J.-H.
+He, J.W. Ager III, M.C. Wu, and A. Javey, <span>“Large-area and bright
+pulsed electroluminescence in monolayer semiconductors,”</span> Nature
+Communications <strong>9</strong>(1), 1229 (2018).
+</div>
+<div id="ref-chhaperwal2024simultaneously" class="csl-entry"
+role="listitem">
+<sup>16</sup> M. Chhaperwal, H.M. Tongale, P. Hays, K. Watanabe, T.
+Taniguchi, S.A. Tongay, and K. Majumdar, <span>“Simultaneously enhancing
+brightness and purity of WSe2 single photon emitter using
+high-aspect-ratio nanopillar array on metal,”</span> Nano Letters
+<strong>24</strong>(40), 12461–12468 (2024).
+</div>
+<div id="ref-NithinSinglePhoton" class="csl-entry" role="listitem">
+<sup>17</sup> N. Abraham, K. Watanabe, T. Taniguchi, and K. Majumdar,
+<span>“<span class="nocase">Room Temperature Single Photon Detection at
+1550 nm Using van der Waals Heterojunction</span>,”</span> Advanced
+Functional Materials, 2406510 (2024).
+</div>
+<div id="ref-nidhi2022impact" class="csl-entry" role="listitem">
+<sup>18</sup> Nidhi, S. Das, and T. Nautiyal, <span>“Impact of the
+channel thickness on the photoresponse of black arsenic mid-infrared
+photodetectors,”</span> ACS Applied Materials &amp; Interfaces
+<strong>14</strong>(23), 27444–27455 (2022).
+</div>
+<div id="ref-buscema2014fast" class="csl-entry" role="listitem">
+<sup>19</sup> M. Buscema, D.J. Groenendijk, S.I. Blanter, G.A. Steele,
+H.S. Van Der Zant, and A. Castellanos-Gomez, <span>“Fast and broadband
+photoresponse of few-layer black phosphorus field-effect
+transistors,”</span> Nano Letters <strong>14</strong>(6), 3347–3352
+(2014).
+</div>
+<div id="ref-xia2009ultrafast" class="csl-entry" role="listitem">
+<sup>20</sup> F. Xia, T. Mueller, Y. Lin, A. Valdes-Garcia, and P.
+Avouris, <span>“Ultrafast graphene photodetector,”</span> Nature
+Nanotechnology <strong>4</strong>(12), 839–843 (2009).
+</div>
+<div id="ref-chatterjee2023harmonic" class="csl-entry" role="listitem">
+<sup>21</sup> S. Chatterjee, M. Dandu, P. Dasika, R. Biswas, S. Das, K.
+Watanabe, T. Taniguchi, V. Raghunathan, and K. Majumdar, <span>“Harmonic
+to anharmonic tuning of moir<span>é</span> potential leading to
+unconventional stark effect and giant dipolar repulsion in WS2/WSe2
+heterobilayer,”</span> Nature Communications <strong>14</strong>(1),
+4679 (2023).
+</div>
+<div id="ref-kufer2015highly" class="csl-entry" role="listitem">
+<sup>22</sup> D. Kufer, and G. Konstantatos, <span>“Highly sensitive,
+encapsulated MoS2 photodetector with gate controllable gain and
+speed,”</span> Nano Letters <strong>15</strong>(11), 7307–7313 (2015).
+</div>
+<div id="ref-han2019ambient" class="csl-entry" role="listitem">
+<sup>23</sup> P. Han, E.R. Adler, Y. Liu, L. St Marie, A. El Fatimy, S.
+Melis, E. Van Keuren, and P. Barbara, <span>“Ambient effects on
+photogating in MoS2 photodetectors,”</span> Nanotechnology
+<strong>30</strong>(28), 284004 (2019).
+</div>
+</div>
+
+<ul class="topnav" style="margin-top:2rem;">
+      <li><a class="active" href="/keywords" style="margin-right: 2rem;">⬅ Keywords</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/junctionless-tellurium-nanowire-transistor">Junctionless Tellurium Nanowire Transistor ➡</a></li>
+    </ul>
+</body>
+</html>
