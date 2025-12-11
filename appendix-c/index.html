@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Appendix C — Electronic Devices using Low-Dimensional van der Waals Materials and Their Heterojunctions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="/sakura.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.0.0/tex-mml-chtml-nofont.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<ul class="topnav">
+      <li><a class="active" href="/appendix-b" style="margin-right: 2rem;">⬅ Appendix B</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/appendix-d">Appendix D  ➡</a></li>
+    </ul>
+<h1
+id="additional-information-for-dual-channel-fet-for-high-current-and-low-contact-resistance-transistors">Additional
+Information for Dual Channel FET for High Current and Low Contact
+Resistance Transistors</h1>
+<h2
+id="two-dimensional-drift-diffusion-simulation-of-2d-material-based-transistor">Two-dimensional
+drift-diffusion simulation of 2D material based transistor <span
+id="transistor-sim" label="transistor-sim"></span></h2>
+<p>A typical double-gate monolayer 2D material-based transistor is shown
+in the figure below.</p>
+<figure id="fig:double_gate_sim">
+<div class="centering">
+<img src="/Figures/S03_01.png" />
+</div>
+<figcaption>A typical double gate monolayer transistor structure with
+the green layer representing a monolayer semiconductor channel. <span
+id="fig:double_gate_sim"
+label="fig:double_gate_sim"></span></figcaption>
+</figure>
+<p>The channel is considered infinitely thin. In the insulating regions,
+electrostatic potential is obtained by solving the Laplace equation.</p>
+<p><span class="math display">\[\frac{\partial^2\phi}{\partial x^2} +
+\frac{\partial^2\phi}{\partial x^2} = 0\]</span></p>
+<p>Along the semiconductor channel, electrostatic potential is obtained
+by satisfying the discontinuity condition of the displacement vector by
+surface charge density.</p>
+<p><span class="math display">\[\epsilon_{ins}(E_1 + E_2) = q(N_D - n +
+p)\]</span></p>
+<p>where <span class="math inline">\(E_1\)</span> and <span
+class="math inline">\(E_2\)</span> are electric fields, as shown in the
+figure above. <span class="math inline">\(N_D\)</span>, <span
+class="math inline">\(n\)</span> and <span
+class="math inline">\(p\)</span> are surface dopant, electron and hole
+concentrations, respectively, and <span class="math inline">\(q\)</span>
+is the fundamental electron concentration. For <span
+class="math inline">\(n\)</span>-type wide bandgap material like <span
+class="math inline">\(\mathrm{MoS_2}\)</span>, the hole concentration
+<span class="math inline">\(p\)</span> can be neglected. These equations
+are solved using a finite differences numerical scheme.</p>
+<p>The electron concentration <span class="math inline">\(n\)</span> is
+obtained by solving the current (<span
+class="math inline">\(J_e\)</span>) continuity equation in the
+channel.</p>
+<p><span class="math display">\[\vec{\nabla}\cdot \vec{J}_e =
+0\]</span></p>
+<p>When coupled with drift-diffusion transport, the continuity equation
+is solved efficiently using the Gummel-Scharfetter numerical scheme. The
+continuity equation is then solved self-consistently with the Laplace
+equation to obtain electrostatic potential and the charge concentration
+in the device.</p>
+<p><strong>Boundary conditions</strong> At open boundaries, the electric
+field normal to the surface is considered zero (Neumann boundary
+condition). At the terminals (source, drain and gate), the electrostatic
+potential is assigned the value of the given terminal potential
+(Dirichlet boundary condition). Similarly, at the boundaries (i.e. at
+the contacts), the electron concentration in the channel is assigned the
+equilibrium electron concentration (inherently, this assumes an infinite
+recombination velocity at the contacts).</p>
+<h2
+id="characteristics-of-another-double-channel-device">Characteristics of
+another double-channel device <span id="another-transistor-char"
+label="another-transistor-char"></span></h2>
+<figure id="fig:char-of-another-device">
+<div class="centering">
+<img src="/Figures/S03_02.png" />
+</div>
+<figcaption>(a) Output characteristics (b) Transfer characteristics of
+another double-channel device. <span id="fig:char-of-another-device"
+label="fig:char-of-another-device"></span></figcaption>
+</figure>
+<ul class="topnav" style="margin-top:2rem;">
+      <li><a class="active" href="/appendix-b" style="margin-right: 2rem;">⬅ Appendix B</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/appendix-d">Appendix D  ➡</a></li>
+    </ul>
+</body>
+</html>
