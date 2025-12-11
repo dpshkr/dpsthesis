@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Dual-Channel High Performance FET — Electronic Devices using Low-Dimensional van der Waals Materials and Their Heterojunctions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="/sakura.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.0.0/tex-mml-chtml-nofont.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<ul class="topnav">
+      <li><a class="active" href="/self-aligned-reconfigurable-heterojunction-transistor" style="margin-right: 2rem;">⬅ Self-Aligned Reconfigurable <br> Heterojunction Transistor</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/hot-electron-engineering-for-infrared-detection">Hot Electron Engineering for <br> Infrared Detection ➡</a></li>
+    </ul>
+<h1
+id="dual-channel-fet-for-high-current-and-low-contact-resistance-transistors">Dual
+Channel FET for High Current and Low Contact Resistance Transistors</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Scaling transistors to tiny dimensions has been one of the key
+reasons behind the onset of the information era. The spread of
+artificial intelligence and machine learning algorithms on massive data
+sets has created extreme computing requirements. Such high-performance
+computing would require transistors that give large current drives with
+low footprints so that larger systems can be integrated into smaller
+areas. MBCFETs (Multi-channel bridge FETs) have been promising
+transistor designs that offer a planar solution to device scaling<span
+class="citation" data-cites="lee2004three"><sup>1</sup></span>. Since 2D
+transition metal dichalcogenides (TMDs) can be scaled down to a
+monolayer limit along the vertical dimensions, they are the ideal
+semiconducting channel materials for MBCFETs. Multibridge channel FET
+(MBCFET) have been demonstrated in multiple technologies, including
+Silicon<span class="citation"
+data-cites="BarraudVLSITech BaeIEDM"><sup>2,3</sup></span> and 2D
+materials<span class="citation"
+data-cites="hiteshMBCFET huang2021ultrathin xia2022wafer XiongIEDM"><sup>4–7</sup></span>.</p>
+<p>Contact resistance has been one of the key issues in the failure to
+achieve high-performance 2D transistors<span class="citation"
+data-cites="das2021transistors somvanshi2017nature"><sup>8,9</sup></span>.
+Many solutions have been proposed to mitigate this problem<span
+class="citation"
+data-cites="shen2021ultralow kwon2022interaction english2016improved chou2021antimony jin2022contact"><sup>10–14</sup></span>.
+The most successful solutions to date have been to use novel contact
+materials, especially semimetals like Bismuth<span class="citation"
+data-cites="shen2021ultralow jin2022contact"><sup>10,14</sup></span> or
+Antimony<span class="citation"
+data-cites="chou2021antimony"><sup>13</sup></span>. In<span
+class="citation" data-cites="kwon2022interaction"><sup>11</sup></span>,
+a selenium buffer layer has been used to decrease metal-semiconductor
+interactions and improve contact resistance. In<span class="citation"
+data-cites="english2016improved"><sup>12</sup></span>, . All these
+methods utilize special contact material or deposition techniques to
+improve contact resistance. These methods might be, therefore, difficult
+to integrate into standard process flows.</p>
+<p>This chapter proposes a slightly modified 2-channel MBCFET using 2D
+semiconductors as channel material. We also use graphite, another 2D
+material, as the contact material. This structure leads to a reduction
+in the effective contact resistance of the transistor and can be
+extended to any contact metal if need be. We demonstrate an on-current
+of 0.43 mA/<span class="math inline">\(\mathrm{\mu m}\)</span> at a
+channel length of 1.5 <span class="math inline">\(\mathrm{\mu
+m}\)</span> and an on-off ratio of more than <span
+class="math inline">\(\mathrm{10^8}\)</span>.</p>
+<h2 id="device-structure-and-fabrication">Device structure and
+fabrication</h2>
+<p>Figure <a href="#device-struct-frab" data-reference-type="ref"
+data-reference="device-struct-frab">1.1</a>(f) schematically shows the
+device structure. Two monolayer channels are stacked on each other,
+separated by the few-layer graphene contacts acting as source and drain.
+Two gates are also provided to control both channels. The device is
+completely symmetric with respect to each channel. Both gates are
+essential for effective electrostatic control of the channels. These
+gates have been labelled TG (Top Gate) and BG (Bottom Gate) in Figure <a
+href="#device-struct-frab" data-reference-type="ref"
+data-reference="device-struct-frab">1.1</a>(f). However, owing to the
+symmetric structure of the device, both gates are equivalent.</p>
+<p>The device fabrication is shown schematically in Figure <a
+href="#device-struct-frab" data-reference-type="ref"
+data-reference="device-struct-frab">1.1</a>(d-f). The corresponding
+optical micrographs are shown in Figure <a href="#device-struct-frab"
+data-reference-type="ref"
+data-reference="device-struct-frab">1.1</a>(a-c). Ti/Au (20 nm/40 nm)
+contacts are initially patterned on a Silicon substrate with 280 nm
+<span class="math inline">\(\mathrm{SiO_2}\)</span> deposited using
+optical lithography and DC sputtering. A 10 - 15 nm thick h-BN is then
+dry transferred on the gate contact.<span class="citation"
+data-cites="castellanos2014deterministic"><sup>15</sup></span>.</p>
+<figure id="device-struct-frab">
+<img src="/Figures/03_01.png" />
+<figcaption>(a-c) show the optical micrographs of the device. (a) A
+single gate device with one channel. (b) Another channel is transferred
+on top of the previous channel. (c) The final device with top gate
+stack. (d-f) show the corresponding schematics of the device
+cross-section.<span id="device-struct-frab"
+label="device-struct-frab"></span></figcaption>
+</figure>
+<p>This is followed by dry transfer of a monolayer <span
+class="math inline">\(\mathrm{MoS_2}\)</span> and the two graphite
+layers (10 - 15 nm), which act as source and drain. As described in the
+previous section, Graphite can provide ultra-thin contacts (down to
+monolayer) while maintaining good stability, which is crucial for device
+scaling. <a href="#device-struct-frab" data-reference-type="ref"
+data-reference="device-struct-frab">1.1</a> (a) and (d) show the device
+in this state. The channel length is kept as small as possible, about
+1.5 <span class="math inline">\(\mathrm{\mu}\)</span>m. The device is
+annealed at this stage in a high vacuum at <span
+class="math inline">\(\mathrm{200^oC}\)</span> for three hours. Next
+(shown in Figure <a href="#device-struct-frab" data-reference-type="ref"
+data-reference="device-struct-frab">1.1</a>(b) and (e)), another
+monolayer is transferred on top of this stack, closely aligning with the
+previous monolayer. Finally, the top h-BN and the top gate are
+transferred (acting as the top-gate stack) to complete the device. The
+device is again annealed in a high vacuum at for three hours. The final
+device is shown in Figures <a href="#device-struct-frab"
+data-reference-type="ref" data-reference="device-struct-frab">1.1</a>(c)
+and (f).</p>
+<h2 id="scalability-of-the-proposed-device">Scalability of the proposed
+device</h2>
+<figure id="sim-structure">
+<img src="/Figures/03_02.png" />
+<figcaption>Cross-section of the simulated device structures (a) Single
+channel device with a single gate, (b) Single channel device with double
+gates, and (c) dual-channel device with double gates. Gate (G), Drain
+(D) and Source (S) terminals are also shown. The dashed lines mark the
+simulation region. <span id="sim-structure"
+label="sim-structure"></span></figcaption>
+</figure>
+<p>Its scalability is the major advantage of a 2D material-based over a
+3D material-based (like Silicon) transistor. Hence, it is important to
+analyze the short-channel performance of the proposed device structure
+to be sure that we are not sacrificing the key advantage of the 2D
+material used for the channel. To analyze the scalability of our
+proposed design, we simulate three device structures shown in Figure <a
+href="#sim-structure" data-reference-type="ref"
+data-reference="sim-structure">1.2</a>. Figure <a href="#sim-structure"
+data-reference-type="ref" data-reference="sim-structure">1.2</a>(a)
+shows the cross-section of a single gate device with a monolayer
+semiconductor as the semiconducting channel. This structure has only a
+bottom gate. The simulation details are given in Appendix <a
+href="#transistor-sim" data-reference-type="ref"
+data-reference="transistor-sim">[transistor-sim]</a>. Although the top
+side of the channel is covered with an insulator, the whole interface is
+assumed to be electrostatically open. Figure <a href="#sim-structure"
+data-reference-type="ref" data-reference="sim-structure">1.2</a>b shows
+the cross-section of a double-gated device with a single monolayer
+semiconducting channel. In this structure, the top interface is tied to
+the gate potential. Figure <a href="#sim-structure"
+data-reference-type="ref" data-reference="sim-structure">1.2</a>c shows
+the proposed device structure. This structure has two monolayer
+semiconducting channels. Both top and bottom interfaces are gated. The
+simulation was performed by solving the 2D Poisson equation
+self-consistently with the drift-diffusion equation.<span
+class="citation" data-cites="CaoCompactModel"><sup>16</sup></span>. We
+do not consider any source/drain underlap region in all three
+structures, as underlap regions may contribute to series resistances and
+increase the device footprint. Each of the structures is characterized
+by three parameters - <span class="math inline">\(t_{ins}\)</span>, the
+thickness of the insulator, <span class="math inline">\(t_{sd}\)</span>,
+the thickness of source and drain contacts and <span
+class="math inline">\(L_{ch}\)</span>, the channel length.</p>
+<p>These parameters are schematically shown for each structure in Figure
+<a href="#sim-structure" data-reference-type="ref"
+data-reference="sim-structure">1.2</a>. The source/drain thickness <span
+class="math inline">\(t_{sd}\)</span> is an essential parameter for 2D
+transistors, as the short channel effects are influenced by the fringing
+fields arising from the source/drain contacts<span class="citation"
+data-cites="suryavanshi2021scaling"><sup>17</sup></span>. We select
+small <span class="math inline">\(t_{sd}=2\)</span> nm to keep the short
+channel effects from such fringing fields at a minimum. The requirement
+for such a small thickness of the source/drain contacts can be fulfilled
+by using 2D conductors like graphite. The insulator thickness <span
+class="math inline">\(t_{ins}\)</span> is taken to be 2 nm. The relative
+dielectric permittivity of the insulator is assumed to be <span
+class="math inline">\(\kappa = 5\)</span>. As it has been previously
+shown<span class="citation"
+data-cites="TaurShortChannel suryavanshi2021scaling"><sup>17,18</sup></span>,
+in the case of monolayer 2D semiconducting channels, <span
+class="math inline">\(\kappa\)</span> does not play a very significant
+role in device scaling, and only <span
+class="math inline">\(t_{ins}\)</span> does.</p>
+<figure id="subthreshold-swing">
+<img src="/Figures/03_03.png" />
+<figcaption>Cross-section of the simulated device structures (a) Single
+channel device with a single gate, (b) Single channel device with double
+gates, and (c) dual-channel device with double gates. Gate (G), Drain
+(D) and Source (S) terminals are also shown. The dashed lines mark the
+simulation region. <span id="subthreshold-swing"
+label="subthreshold-swing"></span></figcaption>
+</figure>
+<p>The subthreshold swing as a function of the channel length <span
+class="math inline">\(L_{ch}\)</span> is shown in Figure <a
+href="#subthreshold-swing" data-reference-type="ref"
+data-reference="subthreshold-swing">1.3</a>. <span
+class="math inline">\(L_{ch}\)</span> varies from 10 nm to 20 nm. As
+expected, the single gate device shows a higher subthreshold swing
+(shown in blue dots) due to poor gate electrostatic control. However,
+the subthreshold swing of the double gated single channel device (shown
+in green stars) and the double-channel device (shown in red crosses) is
+nearly the same. The double-gated device exhibits slightly better
+subthreshold swing compared to the dual-channel device. Although in the
+dual-channel device, there is only one gate per channel, compared to two
+gates per channel in a double-gate device, the stacking of the two
+monolayer channels on top of each other improves the electrostatics of
+the device. However, in the case of the single-gated device structure,
+the top side of the channel is electrostatically open, degrading the
+device’s performance.</p>
+<h2 id="contact-resistance-and-gate-capacitance">Contact resistance and
+gate capacitance</h2>
+<p>Gate capacitance is also an important factor along with the
+on-current for overall circuit speed. A higher gate capacitance would,
+in general, mean a slower speed. The gate capacitance of a single
+channel device in the on condition with a single gate is given by <span
+class="math inline">\(C_{0} = WL\epsilon_{ins}/t_{ins}\)</span>, where
+<span class="math inline">\(L\)</span> is the channel length and <span
+class="math inline">\(t_{ins}\)</span> is the thickness of the gate
+dielectric with a dielectric constant <span
+class="math inline">\(\epsilon_{ins}\)</span>. As shown in Figure <a
+href="#capacitance-resistance" data-reference-type="ref"
+data-reference="capacitance-resistance">1.4</a>(b), the proposed device
+structure is equivalent to two single-channel devices and a gate
+capacitance <span class="math inline">\(C_{DC}=2C_0\)</span>. Similarly,
+a double-gate transistor also has a gate capacitance <span
+class="math inline">\(C_{DG}=2C_0\)</span>.</p>
+<p>The current injection mechanisms of single-channel and double-channel
+devices are shown in Figure <a href="#capacitance-resistance"
+data-reference-type="ref"
+data-reference="capacitance-resistance">1.4</a>(a), top and bottom
+panels, respectively. Since we use a very low resistance contact like
+graphite, the current injection is not limited by the contact itself but
+by the <em>interface</em> between the contact and the semiconductor.
+Therefore, providing two channels to the contact will improve the
+contact resistance by approximately a factor of two.</p>
+<p><strong>Comparison with single gate device</strong>: Regarding
+on-current and gate capacitance, our proposed device structure is
+equivalent to a single gate device with twice the channel width <span
+class="math inline">\(2W\)</span>. However, as the previous section
+shows, a single-gate device performs poorly at shorter channel lengths.
+Therefore, placing the channel vertically, as in our proposed structure,
+improves the drain current and the electrostatic integrity.</p>
+<p><strong>Comparison with double gate device</strong>: A double-gate
+device should ideally give the same drain current for a similar gate
+overdrive voltage since the current in a transistor is given by</p>
+<p><span class="math display">\[I_D = \frac{\mu
+C_{ins}W}{L}(V_{GS}-V_T)^2\]</span></p>
+<p>However, this is not the case practically since the current situation
+is limited by contact resistance. This is shown in Figure <a
+href="#capacitance-resistance" data-reference-type="ref"
+data-reference="capacitance-resistance">1.4</a>(c). The figure shows the
+transfer characteristics of a single-channel device with a single gate
+and double gates. As can be seen, although the drain current improves
+slightly, it does not double as expected. This is because the current is
+limited by contact resistance. However, as shown in Figure <a
+href="#capacitance-resistance" data-reference-type="ref"
+data-reference="capacitance-resistance">1.4</a>(d), the current nearly
+doubles for the proposed double-channel device, with the same gate
+capacitance as that of the double-gate structure compared to a
+single-channel single-gated device.</p>
+<p>Therefore, the proposed double channel effectively reduces the
+contact resistance without increasing the device footprint and gate
+capacitance, maintaining good electrostatic integrity.</p>
+<figure id="capacitance-resistance">
+<img src="/Figures/03_04.png" />
+<figcaption>(a) Current paths in a single channel (top) and
+double-channel transistor (bottom). (b) Structures to evaluate gate
+capacitance of the double gate (left) and a dual-channel transistor
+(right). Due to the symmetry of the structure, both channels are at the
+same electrostatic potential in a dual-channel structure (c) Drain
+current as a function of gate overdrive for a single-channel transistor
+with two gates and a single gate. (d) Drain current as a function of
+gate overdrive for a single-channel transistor and a dual-channel
+transistor. <span id="capacitance-resistance"
+label="capacitance-resistance"></span></figcaption>
+</figure>
+<h2 id="device-characteristics">Device characteristics</h2>
+<p>Next, the device’s characteristics are shown with two semiconducting
+channels in Figures <a href="#dual-channel-chars"
+data-reference-type="ref"
+data-reference="dual-channel-chars">1.5</a>(a-b). Figure <a
+href="#dual-channel-chars" data-reference-type="ref"
+data-reference="dual-channel-chars">1.5</a>(a) shows the output
+characteristics of the device. As can be seen, the device offers an
+on-current of about 430 <span class="math inline">\(\mathrm{\mu
+A}\)</span>/<span class="math inline">\(\mathrm{\mu A}\)</span> at a
+drain bias of 10 V and a gate bias of 12 V. Due to a larger channel
+length, a higher drain bias is applied to provide a sufficient electric
+field. Channel length scaling to lower dimensions may ease this
+requirement. We also note that the device current is somewhat restricted
+by the contact resistance of the Graphite-<span
+class="math inline">\(\mathrm{MoS_2}\)</span> interface. This phenomenon
+can be observed at the high gate and drain bias, where the
+characteristics start crowding together and no longer increase with
+linear or square dependence, as the conventional MOSFET theory suggests.
+The transfer characteristics of the device are shown . The device offers
+an on-off ratio of more than <span
+class="math inline">\(\mathrm{10^8}\)</span>. The subthreshold slope of
+the device at a drain bias of 1 V is about 120 mV/dec. Characterization
+of another device is given in Appendix <a
+href="#another-transistor-char" data-reference-type="ref"
+data-reference="another-transistor-char">[another-transistor-char]</a>.</p>
+<figure id="dual-channel-chars">
+<img src="/Figures/03_05.png" />
+<figcaption>(a) Output characteristics of a double-gated device with two
+channels. (b) Transfer characteristics of the double-gated device with
+two channels. <span id="dual-channel-chars"
+label="dual-channel-chars"></span> </figcaption>
+</figure>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, we have analyzed and demonstrated a double channel
+device design that exhibits an on-current of about 430 <span
+class="math inline">\(\mathrm{\mu A/ \mu m}\)</span> with a good on-off
+ratio and subthreshold swing. The fabrication process of the device is
+simple, and the device design is scalable to lower channel lengths,
+improving the effective contact resistance of the device.</p>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-lee2004three" class="csl-entry" role="listitem">
+<sup>1</sup> S.-Y. Lee, S.-M. Kim, E.-J. Yoon, C.W. Oh, I. Chung, D.
+Park, and K. Kim, <span>“<span class="nocase">Three-dimensional MBCFET
+as an ultimate transistor</span>,”</span> IEEE Electron Device Letters
+<strong>25</strong>(4), 217–219 (2004).
+</div>
+<div id="ref-BarraudVLSITech" class="csl-entry" role="listitem">
+<sup>2</sup> S. Barraud, B. Previtali, C. Vizioz, J.M. Hartmann, J.
+Sturm, J. Lassarre, C. Perrot, Ph. Rodriguez, V. Loup, A.
+Magalhaes-Lucas, R. Kies, G. Romano, M. Cassé, N. Bernier, A. Jannaud,
+A. Grenier, and F. Andrieu, <span>“<a
+href="https://doi.org/10.1109/VLSITechnology18217.2020.9265025"><span
+class="nocase">7-Levels-Stacked Nanosheet GAA Transistors for High
+Performance Computing</span></a>,”</span> in <em>2020 IEEE Symposium on
+VLSI Technology</em>, (2020), pp. 1–2.
+</div>
+<div id="ref-BaeIEDM" class="csl-entry" role="listitem">
+<sup>3</sup> G. Bae, D.-I. Bae, M. Kang, S.M. Hwang, S.S. Kim, B. Seo,
+T.Y. Kwon, T.J. Lee, C. Moon, Y.M. Choi, K. Oikawa, S. Masuoka, K.Y.
+Chun, S.H. Park, H.J. Shin, J.C. Kim, K.K. Bhuwalka, D.H. Kim, W.J. Kim,
+J. Yoo, H.Y. Jeon, M.S. Yang, S.-J. Chung, D. Kim, B.H. Ham, K.J. Park,
+W.D. Kim, S.H. Park, G. Song, Y.H. Kim, M.S. Kang, K.H. Hwang, C.-H.
+Park, J.-H. Lee, D.-W. Kim, S.-M. Jung, and H.K. Kang, <span>“<a
+href="https://doi.org/10.1109/IEDM.2018.8614629">3nm GAA technology
+featuring multi-bridge-channel FET for low power and high performance
+applications</a>,”</span> in <em>2018 IEEE International Electron
+Devices Meeting (IEDM)</em>, (2018), pp. 28.7.1–28.7.4.
+</div>
+<div id="ref-hiteshMBCFET" class="csl-entry" role="listitem">
+<sup>4</sup> S. Hitesh, P. Dasika, K. Watanabe, T. Taniguchi, and K.
+Majumdar, <span>“<a
+href="https://doi.org/10.1109/LED.2022.3206866"><span
+class="nocase">Integration of 3-Level  Multibridge Channel FET With 2D
+Layered Contact and Gate Dielectric</span></a>,”</span> IEEE Electron
+Device Letters <strong>43</strong>(11), 1993–1996 (2022).
+</div>
+<div id="ref-huang2021ultrathin" class="csl-entry" role="listitem">
+<sup>5</sup> X. Huang, C. Liu, S. Zeng, Z. Tang, S. Wang, X. Chen, D.W.
+Zhang, and P. Zhou, <span>“<span class="nocase">Ultrathin multibridge
+channel transistor enabled by van der Waals assembly</span>,”</span>
+Advanced Materials <strong>33</strong>(37), 2102201 (2021).
+</div>
+<div id="ref-xia2022wafer" class="csl-entry" role="listitem">
+<sup>6</sup> Y. Xia, L. Zong, Y. Pan, X. Chen, L. Zhou, Y. Song, L.
+Tong, X. Guo, J. Ma, S. Gou, and others, <span>“<span
+class="nocase">Wafer-Scale Demonstration of MBC-FET and C-FET Arrays
+Based on Two-Dimensional Semiconductors</span>,”</span> Small
+<strong>18</strong>(20), 2107650 (2022).
+</div>
+<div id="ref-XiongIEDM" class="csl-entry" role="listitem">
+<sup>7</sup> X. Xiong, A. Tong, X. Wang, S. Liu, X. Li, R. Huang, and Y.
+Wu, <span>“<a
+href="https://doi.org/10.1109/IEDM19574.2021.9720533"><span
+class="nocase">Demonstration of Vertically-stacked CVD Monolayer
+Channels:  Nanosheets GAA-FET with <span
+class="math inline">\(\mathrm{I_{on}&gt;700}\)</span> µA/µm and
+/ CFET</span></a>,”</span> in <em>2021 IEEE International Electron
+Devices Meeting (IEDM)</em>, (2021), pp. 7.5.1–7.5.4.
+</div>
+<div id="ref-das2021transistors" class="csl-entry" role="listitem">
+<sup>8</sup> S. Das, A. Sebastian, E. Pop, C.J. McClellan, A.D.
+Franklin, T. Grasser, T. Knobloch, Y. Illarionov, A.V. Penumatcha, J.
+Appenzeller, and others, <span>“<span class="nocase">Transistors based
+on two-dimensional materials for future integrated
+circuits</span>,”</span> Nature Electronics <strong>4</strong>(11),
+786–799 (2021).
+</div>
+<div id="ref-somvanshi2017nature" class="csl-entry" role="listitem">
+<sup>9</sup> D. Somvanshi, S. Kallatt, C. Venkatesh, S. Nair, G. Gupta,
+J.K. Anthony, D. Karmakar, and K. Majumdar, <span>“<span
+class="nocase">Nature of carrier injection in metal/2D-semiconductor
+interface and its implications for the limits of contact
+resistance</span>,”</span> Physical Review B <strong>96</strong>(20),
+205423 (2017).
+</div>
+<div id="ref-shen2021ultralow" class="csl-entry" role="listitem">
+<sup>10</sup> P.-C. Shen, C. Su, Y. Lin, A.-S. Chou, C.-C. Cheng, J.-H.
+Park, M.-H. Chiu, A.-Y. Lu, H.-L. Tang, M.M. Tavakoli, and others,
+<span>“<span class="nocase">Ultralow contact resistance between
+semimetal and monolayer semiconductors</span>,”</span> Nature
+<strong>593</strong>(7858), 211–217 (2021).
+</div>
+<div id="ref-kwon2022interaction" class="csl-entry" role="listitem">
+<sup>11</sup> G. Kwon, Y.-H. Choi, H. Lee, H.-S. Kim, J. Jeong, K.
+Jeong, M. Baik, H. Kwon, J. Ahn, E. Lee, and others, <span>“<span
+class="nocase">Interaction-and defect-free van der Waals contacts
+between metals and two-dimensional semiconductors</span>,”</span> Nature
+Electronics <strong>5</strong>(4), 241–247 (2022).
+</div>
+<div id="ref-english2016improved" class="csl-entry" role="listitem">
+<sup>12</sup> C.D. English, G. Shine, V.E. Dorgan, K.C. Saraswat, and E.
+Pop, <span>“<span class="nocase">Improved contacts to  transistors by
+ultra-high vacuum metal deposition</span>,”</span> Nano Letters
+<strong>16</strong>(6), 3824–3830 (2016).
+</div>
+<div id="ref-chou2021antimony" class="csl-entry" role="listitem">
+<sup>13</sup> A.-S. Chou, T. Wu, C.-C. Cheng, S.-S. Zhan, I.-C. Ni,
+S.-Y. Wang, Y.-C. Chang, S.-L. Liew, E. Chen, W.-H. Chang, and others,
+<span>“<span class="nocase">Antimony semimetal contact with enhanced
+thermal stability for high performance 2D electronics</span>,”</span> in
+<em>2021 IEEE International Electron Devices Meeting (IEDM)</em>, (IEEE,
+2021), pp. 7–2.
+</div>
+<div id="ref-jin2022contact" class="csl-entry" role="listitem">
+<sup>14</sup> L. Jin, and S.J. Koester, <span>“<span
+class="nocase">Contact gating in dual-gated  MOSFETs with semi-metallic
+Bi contacts</span>,”</span> IEEE Electron Device Letters
+<strong>43</strong>(9), 1575–1578 (2022).
+</div>
+<div id="ref-castellanos2014deterministic" class="csl-entry"
+role="listitem">
+<sup>15</sup> A. Castellanos-Gomez, M. Buscema, R. Molenaar, V. Singh,
+L. Janssen, H.S. Van Der Zant, and G.A. Steele, <span>“<span
+class="nocase">Deterministic transfer of two-dimensional materials by
+all-dry viscoelastic stamping</span>,”</span> 2D Materials
+<strong>1</strong>(1), 011002 (2014).
+</div>
+<div id="ref-CaoCompactModel" class="csl-entry" role="listitem">
+<sup>16</sup> W. Cao, J. Kang, W. Liu, and K. Banerjee, <span>“<a
+href="https://doi.org/10.1109/TED.2014.2365028"><span class="nocase">A
+Compact Current–Voltage Model for 2D Semiconductor Based Field-Effect
+Transistors Considering Interface Traps, Mobility Degradation, and
+Inefficient Doping Effect</span></a>,”</span> IEEE Transactions on
+Electron Devices <strong>61</strong>(12), 4282–4290 (2014).
+</div>
+<div id="ref-suryavanshi2021scaling" class="csl-entry" role="listitem">
+<sup>17</sup> S.V. Suryavanshi, C.D. English, H.-S. Wong, and E. Pop,
+<span>“<span class="nocase">Scaling theory of two-dimensional field
+effect transistors</span>,”</span> arXiv Preprint arXiv:2105.10791,
+(2021).
+</div>
+<div id="ref-TaurShortChannel" class="csl-entry" role="listitem">
+<sup>18</sup> Y. Taur, J. Wu, and J. Min, <span>“<a
+href="https://doi.org/10.1109/TED.2016.2547949"><span class="nocase">A
+Short-Channel <span class="math inline">\(I\)</span> – <span
+class="math inline">\(V\)</span> Model for 2-D
+MOSFETs</span></a>,”</span> IEEE Transactions on Electron Devices
+<strong>63</strong>(6), 2550–2555 (2016).
+</div>
+</div>
+<ul class="topnav" style="margin-top:2rem;">
+      <li><a class="active" href="/self-aligned-reconfigurable-heterojunction-transistor" style="margin-right: 2rem;">⬅ Self-Aligned Reconfigurable <br> Heterojunction Transistor</a></li>
+      <li class="center"><a href="/contents">Contents</a></li>
+      <li class="right"><a href="/hot-electron-engineering-for-infrared-detection">Hot Electron Engineering for <br> Infrared Detection ➡</a></li>
+    </ul>
+</body>
+</html>
